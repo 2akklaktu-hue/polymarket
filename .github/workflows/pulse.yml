@@ -1,0 +1,100 @@
+# Монитор резких движений: снимок рынка + разбор скачков в Telegram.
+#
+# Два скрипта за один прогон:
+#   20_snapshot.py — пишет снимок цен и оборота (копит историю с шагом в 10 минут,
+#                    которой нет ни в одном публичном источнике)
+#   21_pulse.py    — ищет скачки и присылает разбор
+#
+# Бесплатно только для ПУБЛИЧНОГО репозитория: приватному дают 2000 минут
+# в месяц, а прогон каждые 10 минут съест их за несколько дней.
+#
+# Настройка: Settings -> Secrets and variables -> Actions -> New secret
+#   TELEGRAM_BOT_TOKEN  — токен от @BotFather
+#   TELEGRAM_CHAT_ID    — печатает scripts/setup_telegram.py
+
+name: pulse
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "Пробный прогон без отправки"
+        type: boolean
+        default: false
+
+concurrency:
+  group: pulse            # снимки дописываются в один файл, параллельно нельзя
+  cancel-in-progress: false
+
+permissions:
+  contents: write         # нужно, чтобы коммитить накопленные снимки
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      # Состояние между запусками: last.json нужен, чтобы в снимок попадали
+      # только изменения, pulse_sent.json — чтобы один и тот же скачок
+      # не присылался каждые 10 минут.
+      - name: Восстановить состояние
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/live/last.json
+            data/out/pulse_sent.json
+          key: pulse-${{ github.run_id }}
+          restore-keys: pulse-
+
+      - name: Снимок рынка
+        run: python scripts/20_snapshot.py
+
+      - name: Разбор скачков
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "${{ inputs.dry }}" = "true" ]; then
+            python scripts/21_pulse.py --dry
+          else
+            python scripts/21_pulse.py
+          fi
+
+      # Снимки нужны надолго, а кэш Actions вытесняется через неделю без
+      # обращений — поэтому история уезжает в сам репозиторий.
+      - name: Сохранить снимки в репозиторий
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # папки может не быть, если репозиторий залит без снимков:
+          # git add по несуществующему пути завершается ошибкой
+          mkdir -p data/live
+          git add -A data/live
+          if git diff --cached --quiet; then
+            echo "новых снимков нет"
+          else
+            git commit -m "снимки рынка $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+            git pull --rebase --autostash origin ${{ github.ref_name }}
+            git push
+          fi
+
+      - name: Сохранить состояние
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/live/last.json
+            data/out/pulse_sent.json
+          key: pulse-${{ github.run_id }}
