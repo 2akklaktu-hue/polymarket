@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 import sys
 import time
@@ -200,6 +201,55 @@ def comments(api: Api, event_id: str | None, hours: float = 48.0,
     return out
 
 
+def load_fit() -> tuple[float, float]:
+    """Коэффициенты калибровки logit(p_true) = a + b*logit(p_market).
+
+    Лежат в models/calibration.json, пересчитываются scripts/08_refit.py по
+    свежему году. Нет файла — работаем без поправки (a=0, b=1), то есть
+    считаем цену честной оценкой вероятности.
+    """
+    f = ROOT / "models/calibration.json"
+    if not f.exists():
+        return 0.0, 1.0
+    try:
+        d = json.loads(f.read_text(encoding="utf-8"))
+        return float(d["a"]), float(d["b"])
+    except (json.JSONDecodeError, KeyError, OSError, TypeError, ValueError):
+        return 0.0, 1.0
+
+
+def sides(bid: float, ask: float) -> dict:
+    """Обе стороны ставки: цена входа, шанс выиграть, ожидание.
+
+    Шанс считается по калибровочной модели, а не по самой цене, иначе ответ
+    выходит тавтологией: сторона дороже 50c всегда «вероятнее». Но она же и
+    платит меньше, поэтому решает не шанс, а ожидание — его и сравниваем.
+
+    Калибровка подогнана на всех рынках с горизонтом 7 дней, а не на
+    пост-скачковых, поэтому поправка слабая и ожидание у обеих сторон обычно
+    отрицательное. Это не поломка расчёта, а честный результат: см. README,
+    раздел 6.
+    """
+    a, b = load_fit()
+    mid = (bid + ask) / 2.0
+    m = min(max(mid, 1e-6), 1.0 - 1e-6)
+    lg = math.log(m / (1.0 - m))
+    p_yes = 1.0 / (1.0 + math.exp(-(a + b * lg)))      # оценка шанса ДА
+
+    out: dict = {}
+    for name, px, p in (("ДА", ask, p_yes), ("НЕТ", 1.0 - bid, 1.0 - p_yes)):
+        cost = px + taker_fee_per_share(px, DEFAULT_FEE_RATE)
+        out[name] = {
+            "cost": cost,
+            "chance": p,
+            "ev": (p / cost - 1.0) if cost > 1e-9 else -1.0,
+            # цена с издержками и есть шанс, нужный для безубыточности
+            "breakeven": cost,
+        }
+    out["лучшая"] = "ДА" if out["ДА"]["ev"] >= out["НЕТ"]["ev"] else "НЕТ"
+    return out
+
+
 def verdict(vol24: float) -> str:
     """Что говорит история при таком объёме. Без обещаний — их нет.
 
@@ -259,6 +309,25 @@ def build_message(m: dict, p_before: float, mid: float, win_h: float,
     L.append("<b>Что говорят данные:</b>")
     L.append(esc("Проверка на 2589 скачках 2023-2026 не подтвердила перевес "
                  "ни одной из сторон. Сейчас " + verdict(vol24)))
+
+    s = sides(bid, ask)
+    best = s["лучшая"]
+    other = "ДА" if best == "НЕТ" else "НЕТ"
+    L.append("")
+    L.append("<b>Что брать:</b>")
+    for nm in (best, other):
+        d = s[nm]
+        L.append(f"• <b>{nm}</b> по {d['cost']:.3f} — шанс "
+                 f"{d['chance'] * 100:.0f}%, ожидание {d['ev'] * 100:+.1f}%")
+    if s[best]["ev"] > 0:
+        L.append(f"→ Брать <b>{best}</b>: единственная сторона с "
+                 f"положительным ожиданием.")
+    else:
+        L.append(f"→ Из двух лучше <b>{best}</b>, но ожидание минусовое у "
+                 f"обеих. Смысл есть только если твоя оценка шанса {best} "
+                 f"выше <b>{s[best]['breakeven'] * 100:.0f}%</b>.")
+    L.append(esc("Шанс — по калибровке проекта, ожидание — после наценки "
+                 "входа и комиссии."))
     L.append("")
     L.append(f'<a href="{url}">Открыть рынок</a>')
     L.append("<i>Это не рекомендация. Решение за тобой.</i>")
