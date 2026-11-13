@@ -1,26 +1,55 @@
-# Монитор резких движений: снимок рынка + разбор скачков в Telegram.
+# Ежечасный прогон: снимок рынка + поиск дешёвых исходов с подтверждением.
 #
 # Два скрипта за один прогон:
-#   20_snapshot.py — пишет снимок цен и оборота (копит историю с шагом в 10 минут,
-#                    которой нет ни в одном публичном источнике)
-#   21_pulse.py    — ищет скачки и присылает разбор
+#   20_snapshot.py  — пишет снимок цен и оборота (копит историю, которой нет
+#                     ни в одном публичном источнике)
+#   22_longshots.py — ищет исходы по 3-15 центов, про которые новости, другие
+#                     площадки или крупные игроки говорят, что шанс выше цены.
+#                     Сильный сигнал шлёт сразу, сводку трёх лучших — раз в сутки.
+#
+# Прежний разбор скачков (21_pulse.py) из расписания убран: он присылал уже
+# выросшие рынки с выводом, который следовал из самой цены. Запустить его
+# вручную по-прежнему можно: python scripts/21_pulse.py --dry
 #
 # Бесплатно только для ПУБЛИЧНОГО репозитория: приватному дают 2000 минут
-# в месяц, а прогон каждые 10 минут съест их за несколько дней.
+# в месяц, а ежечасный прогон съест их за две-три недели.
 #
-# Настройка: Settings -> Secrets and variables -> Actions -> New secret
-#   TELEGRAM_BOT_TOKEN  — токен от @BotFather
-#   TELEGRAM_CHAT_ID    — печатает scripts/setup_telegram.py
+# Настройка: Settings -> Secrets and variables -> Actions
+#   вкладка Secrets:
+#     TELEGRAM_BOT_TOKEN  — токен от @BotFather
+#     TELEGRAM_CHAT_ID    — печатает scripts/setup_telegram.py
+#     OPENROUTER_API_KEY  — ключ openrouter.ai: новости оценивает бесплатная
+#                           модель (50 запросов в сутки без оплаты)
+#     ANTHROPIC_API_KEY   — ключ Claude, платно; если задан, используется он
+#     Оба ключа необязательны: без них работают только площадки и игроки,
+#     а новости прикладываются заголовками без оценки.
+#   вкладка Variables (необязательно):
+#     PM_OR_MODELS        — бесплатные модели OpenRouter через запятую, по
+#                           порядку попыток; по умолчанию список из pmlib/judge.py
+#     PM_AI_MODEL         — модель Claude, по умолчанию claude-opus-5-5
+#     PM_AI_PER_DAY       — потолок оценок ИИ в сутки: по умолчанию 16 для
+#                           OpenRouter и 6 для Claude
+#     PM_DIGEST_HOUR_UTC  — с какого часа (UTC) слать суточную сводку, по умолчанию 9
 
 name: pulse
 
 on:
   schedule:
-    - cron: "3,13,23,33,43,53 * * * *"
+    # Раз в час, а не каждые 10 минут — решение по факту, а не по желанию.
+    # Частые расписания на бесплатном тарифе прореживаются: за вечер из
+    # шести запусков в час состоялся ОДИН, и смещение минут не помогло.
+    # Редкие GitHub исполняет надёжно, а 24 снимка в сутки лучше, чем
+    # обещанные 144 и один по факту. Минута 7, а не 0: на круглых минутах
+    # планировщик перегружен сильнее всего.
+    - cron: "7 * * * *"
   workflow_dispatch:
     inputs:
       dry:
         description: "Пробный прогон без отправки"
+        type: boolean
+        default: false
+      digest:
+        description: "Прислать сводку сейчас, не дожидаясь её часа"
         type: boolean
         default: false
 
@@ -46,30 +75,36 @@ jobs:
       - run: pip install -r requirements.txt
 
       # Состояние между запусками: last.json нужен, чтобы в снимок попадали
-      # только изменения, pulse_sent.json — чтобы один и тот же скачок
-      # не присылался каждые 10 минут.
+      # только изменения; longshots_state.json хранит собранные подтверждения,
+      # оценки ИИ и то, что уже отправлено, — без него бот каждый час заново
+      # тратил бы запросы и присылал один и тот же сигнал.
       - name: Восстановить состояние
         uses: actions/cache/restore@v4
         with:
           path: |
             data/live/last.json
-            data/out/pulse_sent.json
+            data/out/longshots_state.json
           key: pulse-${{ github.run_id }}
           restore-keys: pulse-
 
       - name: Снимок рынка
         run: python scripts/20_snapshot.py
 
-      - name: Разбор скачков
+      - name: Дешёвые исходы
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PM_OR_MODELS: ${{ vars.PM_OR_MODELS }}
+          PM_AI_MODEL: ${{ vars.PM_AI_MODEL }}
+          PM_AI_PER_DAY: ${{ vars.PM_AI_PER_DAY }}
+          PM_DIGEST_HOUR_UTC: ${{ vars.PM_DIGEST_HOUR_UTC }}
         run: |
-          if [ "${{ inputs.dry }}" = "true" ]; then
-            python scripts/21_pulse.py --dry
-          else
-            python scripts/21_pulse.py
-          fi
+          args=""
+          if [ "${{ inputs.dry }}" = "true" ]; then args="$args --dry"; fi
+          if [ "${{ inputs.digest }}" = "true" ]; then args="$args --digest"; fi
+          python scripts/22_longshots.py $args
 
       # Снимки нужны надолго, а кэш Actions вытесняется через неделю без
       # обращений — поэтому история уезжает в сам репозиторий.
@@ -84,10 +119,23 @@ jobs:
           git add -A data/live
           if git diff --cached --quiet; then
             echo "новых снимков нет"
+            exit 0
+          fi
+          git commit -m "снимки рынка $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+          # Снимки дописываются в общие файлы, и слить две версии git не может:
+          # snap-*.csv.gz бинарный. Если пока мы работали, в origin появился
+          # более свежий снимок, свой пропускаем — один снимок из сотни ничего
+          # не меняет, а падение шага ломает всю цепочку. Та же ситуация у
+          # Re-run старого прогона: он работает со СТАРЫМ срезом репозитория и
+          # конфликтует всегда, поэтому для этого workflow нужен не Re-run,
+          # а новый запуск (Run workflow).
+          git fetch origin "${{ github.ref_name }}"
+          if git rebase "origin/${{ github.ref_name }}"; then
+            git push && echo "снимок сохранён"
           else
-            git commit -m "снимки рынка $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
-            git pull --rebase --autostash origin ${{ github.ref_name }}
-            git push
+            git rebase --abort || true
+            git reset --hard "origin/${{ github.ref_name }}"
+            echo "! снимок пропущен: в origin уже есть более свежий коммит"
           fi
 
       - name: Сохранить состояние
@@ -96,5 +144,5 @@ jobs:
         with:
           path: |
             data/live/last.json
-            data/out/pulse_sent.json
+            data/out/longshots_state.json
           key: pulse-${{ github.run_id }}
