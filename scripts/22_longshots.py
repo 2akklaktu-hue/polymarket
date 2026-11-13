@@ -67,7 +67,10 @@ _PRICE_LEVEL = re.compile(
     r"(?:\b(?:close|closes|finish|finishes|settle|settles)\s+(?:above|below|at)\b)"
     r"|(?:\b(?:dip|drop|fall|rise|reach|hit)s?\s+(?:to\s+)?\$)"
     r"|(?:\b(?:above|below|over|under)\s+\$[\d,.]+)"
-    r"|(?:\bFDV\b)|(?:\bmarket cap\b)|(?:\ball[- ]time high\b)", re.I)
+    r"|(?:\bFDV\b)|(?:\bmarket cap\b)|(?:\ball[- ]time high\b)"
+    # счётчики и уровни: число твитов, доходность облигаций — та же история,
+    # что с курсами: исход решает цифра, а не новость
+    r"|(?:\btweets?\b)|(?:\byield\b)", re.I)
 
 # --- сколько работы за прогон --------------------------------------------
 N_EVIDENCE = 12           # самых «оживших» — на сбор подтверждений
@@ -432,6 +435,10 @@ def digest_message(rows: list[tuple], n_cands: int, n_strong: int,
     if not rows:
         L += ["", "Сегодня показать нечего: подходящих исходов не нашлось. "
                   "Так бывает, и это не поломка."]
+    elif all(a["level"] == 0 for _c, _ev, _ai, a in rows):
+        # главное — первой строкой, чтобы не приходилось вычитывать её из пометок
+        L += ["", "<b>Сегодня сигналов нет:</b> ни у одного исхода нет "
+                  "подтверждения. Ниже три самых заметных — только для наблюдения."]
     for i, (c, ev, ai, a) in enumerate(rows, 1):
         if a["p_est"] is not None:
             est = f", оценка {pct(a['p_est'])}"
@@ -441,8 +448,8 @@ def digest_message(rows: list[tuple], n_cands: int, n_strong: int,
               f"{c['side']} по {cents(c['cost'])} (выплата {1.0 / c['cost']:.0f}×) · "
               f"рынок {pct(c['mkt'])}{est} · <b>{STRENGTH_RU[a['level']]}</b>"]
         # без подтверждений исход попадает сюда только по активности торгов
-        L += why_lines(c, ai, a) or ["• Подтверждений нет. Попал в сводку как "
-                                     "один из самых активных за сутки."]
+        L += why_lines(c, ai, a) or ["• Подтверждений нет: показан как один из "
+                                     "самых активных за сутки."]
         if not ai:
             L += news_lines(c, ev, now)
         L.append(f'<a href="{esc(c["url"])}">Открыть рынок</a> · '
@@ -683,7 +690,11 @@ def main() -> int:
         if ai and now - float(ai.get("ts") or 0) >= AI_STALE_H * 3600.0:
             ai = None                      # протухшая оценка хуже, чем никакой
         rated.append((c, ev_of(c), ai, assess(c, ev_of(c), ai)))
-    rated.sort(key=lambda t: (-t[3]["level"], -t[3]["ratio"], -t[0]["score2"]))
+    # При равной силе вперёд идут исходы, которые ИИ уже оценил: у них есть
+    # объяснение. Иначе сводку занимали неоценённые — у них «запас» считается
+    # от голой цены и почти одинаков, так что порядок выходил случайным.
+    rated.sort(key=lambda t: (-t[3]["level"], 0 if t[2] else 1,
+                              -t[3]["ratio"], -t[0]["score2"]))
     strong = [t for t in rated if t[3]["level"] == 2]
     print(f"оценено: {len(rated)} | сильных: {len(strong)} | средних: "
           f"{sum(1 for t in rated if t[3]['level'] == 1)} | с оценкой ИИ: "
