@@ -242,6 +242,19 @@ def venue_plausible(c: dict, pv: float) -> bool:
     return pv <= max(VENUE_MAX_RATIO * c["mkt"], c["mkt"] + VENUE_MAX_GAP)
 
 
+def venue_bid(c: dict, v: dict, pv: float) -> float:
+    """По какой цене нашу сторону готовы КУПИТЬ на той площадке.
+
+    Середина между покупкой и продажей при широком разбросе ничего не значит:
+    бид 1c и аск 11c дают «6%», хотя платить столько никто не готов. Настоящее
+    расхождение — когда тамошние покупатели дают не меньше здешней цены входа.
+    """
+    bid, ask = v.get("bid", v["prob"]), v.get("ask", v["prob"])
+    # pv ближе к цене ДА того рынка — значит, наша сторона там тоже ДА
+    same_side = abs(pv - v["prob"]) <= abs(pv - (1.0 - v["prob"]))
+    return bid if same_side else 1.0 - ask
+
+
 def venue_guess(c: dict, ev: dict) -> tuple[dict, float] | None:
     """Без ИИ: похожий рынок другой площадки и его оценка нашей стороны.
 
@@ -302,7 +315,8 @@ def assess(c: dict, ev: dict | None, ai: dict | None) -> dict:
                       and ai["p"] >= AI_RATIO * cost
                       and a["p_est"] >= EST_RATIO * cost)
     a["venue_ok"] = (a["pv"] is not None and a["pv"] >= VENUE_RATIO * cost
-                     and a["venue"]["venue"] in REAL_MONEY)
+                     and a["venue"]["venue"] in REAL_MONEY
+                     and venue_bid(c, a["venue"], a["pv"]) >= cost)
 
     a["smart_for"] = _smart_usd(w, "smart_for")
     a["smart_against"] = _smart_usd(w, "smart_against")

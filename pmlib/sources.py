@@ -213,6 +213,7 @@ def kalshi(question: str, query: str, n: int = 4) -> list[dict]:
                                            sub) if x)
             out.append({
                 "venue": "Kalshi", "title": name, "prob": (bid + ask) / 2.0,
+                "bid": bid, "ask": ask,
                 "close": str(mk.get("close_ts") or "")[:10],
                 "url": f"https://kalshi.com/markets/{series.lower()}",
                 "sim": similarity(question, name),
@@ -242,7 +243,8 @@ def manifold(question: str, query: str, n: int = 2) -> list[dict]:
                  if ct == ct and 0 < ct < 4e12 else "")
         out.append({
             "venue": "Manifold", "title": str(x.get("question") or ""),
-            "prob": p, "close": close, "url": str(x.get("url") or ""),
+            "prob": p, "bid": p, "ask": p, "close": close,
+            "url": str(x.get("url") or ""),
             "sim": similarity(question, str(x.get("question") or "")),
         })
     out.sort(key=lambda x: -x["sim"])
