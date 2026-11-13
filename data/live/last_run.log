@@ -1,12 +1,15 @@
-живых рынков: 2100 | дешёвых исходов: 135
-подтверждения собраны по 5 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 6 оценок из 16, бесплатно
-оценено: 28 | сильных: 0 | средних: 2 | с оценкой ИИ: 5
-  средний  ДА   5.1¢ рынок  4.6% | ИИ не оценивал | venue | Will Jensen Huang be arrested by December 31, 2026?
-  средний  ДА   7.3¢ рынок  6.5% | ИИ не оценивал | venue | Will Jensen Huang be the #1 searched person on Google this year?
+живых рынков: 2100 | дешёвых исходов: 126
+подтверждения собраны по 16 исходам
+  ИИ: 7.2% (low) при цене 8.1¢ — Next GPT Sol (6.2+) released by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 4.5% (medium) при цене 4.9¢ — Will Jensen Huang be arrested by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 8.5% (low) при цене 9.0¢ — US x Cuba military clash in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 9 оценок из 16, бесплатно
+оценено: 27 | сильных: 0 | средних: 1 | с оценкой ИИ: 6
+  средний  ДА   4.9¢ рынок  4.5% | ИИ 4.5% (medium) -> оценка 4.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang be arrested by December 31, 2026?
+  слабый   ДА  10.0¢ рынок  9.5% | ИИ 11.0% (low) -> оценка 9.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | US strike on Cuba by December 31?
+  слабый   ДА   9.0¢ рынок  8.5% | ИИ 8.5% (low) -> оценка 8.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | US x Cuba military clash in 2026?
   слабый   ДА   8.0¢ рынок  7.5% | ИИ 7.5% (medium) -> оценка 7.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Ukraine signs peace deal with Russia by December 31, 2026?
-  слабый   ДА  12.0¢ рынок 11.0% | ИИ 11.0% (low) -> оценка 11.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | US strike on Cuba by December 31?
-  слабый   ДА   8.4¢ рынок  7.6% | ИИ 7.4% (low) -> оценка 7.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang join SpaceX by December 31, 2026?
-  слабый   ДА   4.5¢ рынок  4.1% | ИИ 3.0% (low) -> оценка 4.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang be arrested by November 30, 2026?
+  слабый   ДА   8.1¢ рынок  7.5% | ИИ 7.4% (low) -> оценка 7.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang join SpaceX by December 31, 2026?
+  слабый   НЕТ  8.1¢ рынок  7.2% | ИИ 7.2% (low) -> оценка 7.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Next GPT Sol (6.2+) released by December 31, 2026?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 33
+сильных сигналов: 0 отправлено | запросов к Polymarket: 42
