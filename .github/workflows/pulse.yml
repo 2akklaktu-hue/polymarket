@@ -104,7 +104,13 @@ jobs:
           args=""
           if [ "${{ inputs.dry }}" = "true" ]; then args="$args --dry"; fi
           if [ "${{ inputs.digest }}" = "true" ]; then args="$args --digest"; fi
-          python scripts/22_longshots.py $args
+          # Отчёт прогона дублируется в файл и уезжает в репозиторий вместе со
+          # снимками: логи Actions скачиваются не из всех сетей, а так видно,
+          # что ответил ИИ и почему. В файл идёт ТОЛЬКО stdout. Трассировки
+          # ошибок (stderr) остаются в логе Actions: в них бывает адрес запроса
+          # к Telegram с токеном, а репозиторий открытый.
+          set -o pipefail
+          python scripts/22_longshots.py $args | tee data/live/last_run.log
 
       # Снимки нужны надолго, а кэш Actions вытесняется через неделю без
       # обращений — поэтому история уезжает в сам репозиторий.

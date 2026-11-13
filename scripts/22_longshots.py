@@ -686,7 +686,17 @@ def main() -> int:
     rated.sort(key=lambda t: (-t[3]["level"], -t[3]["ratio"], -t[0]["score2"]))
     strong = [t for t in rated if t[3]["level"] == 2]
     print(f"оценено: {len(rated)} | сильных: {len(strong)} | средних: "
-          f"{sum(1 for t in rated if t[3]['level'] == 1)}", flush=True)
+          f"{sum(1 for t in rated if t[3]['level'] == 1)} | с оценкой ИИ: "
+          f"{sum(1 for t in rated if t[2])}", flush=True)
+    # Верх списка — в отчёт прогона: по нему видно, что бот думает о рынках,
+    # даже когда в Telegram ничего не ушло.
+    for c, _ev, ai, asm in rated[:6]:
+        told = (f"ИИ {ai['p'] * 100:.1f}% ({ai['confidence']}) -> оценка "
+                f"{asm['p_est'] * 100:.1f}% [{ai.get('model', '?')}]" if ai
+                else "ИИ не оценивал")
+        print(f"  {STRENGTH_RU[asm['level']]:8s} {c['side']:3s} {c['cost'] * 100:4.1f}¢ "
+              f"рынок {c['mkt'] * 100:4.1f}% | {told} | "
+              f"{asm['sources'] or 'без подтверждений'} | {c['q'][:70]}", flush=True)
 
     tg = None if a.dry else Telegram()
     log = log_load()
