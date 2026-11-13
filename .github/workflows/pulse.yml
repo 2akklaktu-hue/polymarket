@@ -130,7 +130,12 @@ jobs:
           # конфликтует всегда, поэтому для этого workflow нужен не Re-run,
           # а новый запуск (Run workflow).
           git fetch origin "${{ github.ref_name }}"
-          if git rebase "origin/${{ github.ref_name }}"; then
+          # --autostash обязателен: в репозитории лежат скомпилированные .pyc,
+          # Python перезаписывает их при каждом прогоне, а rebase при любых
+          # незакоммиченных изменениях отказывается работать. Без этого флага
+          # шаг уходил в ветку «снимок пропущен» на КАЖДОМ прогоне и молча
+          # выбрасывал и снимок, и журнал сигналов.
+          if git rebase --autostash "origin/${{ github.ref_name }}"; then
             git push && echo "снимок сохранён"
           else
             git rebase --abort || true
