@@ -1790,3 +1790,14 @@ id,cid,slug,question,end,neg
 1789,0x36dc076e4fd3aea50301f37821d7e78458c9a8638d5a33eb52add798d7b7c29e,bitcoin-above-70k-on-november-15-2026,"Will the price of Bitcoin be above $70,000 on November 15?",2026-11-15T17:00:00Z,0
 1790,0x4963818c88f83f47103eb69c2f0710ed6bfc8c24dbffb764ce897a606b622af0,bitcoin-above-68k-on-november-15-2026,"Will the price of Bitcoin be above $68,000 on November 15?",2026-11-15T17:00:00Z,0
 1791,0xbff3eff0b3eadbedfc67536269b0b0f7a33fc4fa82b3a64a0ac5f1ac44d346ac,elon-musk-of-tweets-november-10-november-17-2026-160-179,"Will Elon Musk post 160-179 tweets from November 10 to November 17, 2026?",2026-11-17T17:00:00Z,1
+1792,0x662a09ac7a32e3458056c358ac394fd823e12aa19037d4407744628ab839f978,cs2-ts7-furia-2026-11-15,Counter-Strike: Spirit vs FURIA (BO5) - BLAST Rivals Playoffs,2026-11-15T14:00:00Z,0
+1793,0xe5911fe31ff6ada47f633e9cc21c8edfb3d1be97d580ebffe01d7e953f440a9c,nfl-ne-det-2026-11-15-spread-home-2pt5,Spread: Lions (-2.5),2026-11-15T14:30:00Z,0
+1794,0x39605ffa16456a7b84b238d7a2305443fbc971cbbf94bf84c34c76cd5410180a,will-gold-gc-hit-low-3000-by-end-of-december,"Will Gold (GC) dip to (LOW) $3,000 by end of December?",2026-12-31T00:00:00Z,0
+1795,0x8673e7528f9bb7ec0c027daa8f16f23316221ab4967d2e1c0de48a7642f5fb43,will-bitcoin-dip-to-58k-november-9-15-2026,"Will Bitcoin dip to $58,000 November 9-15?",2026-11-16T05:00:00Z,0
+1796,0x60126676efb1f1e6f92477e8429f3d7b0cf8a57f6a5ea95d02aea17a07e04b79,cs2-hero-mgc-2026-11-15,Counter-Strike: Heroic vs magic (BO3) - PGL Cluj-Napoca: Closed Qualifier Playoffs,2026-11-15T15:00:00Z,0
+1797,0x7a6370972fde961af078357c412a993160341e20ddf3afd76ccf70b04362605d,will-ethereum-dip-to-1300-in-november-2026,"Will Ethereum dip to $1,300 in November?",2026-12-01T05:00:00Z,0
+1798,0x8ffeb9191f79ab34509862aa0d74afb7e32334d16e7bb934257b5b22e887bb7d,will-ethereum-dip-to-1700-november-9-15-2026,"Will Ethereum dip to $1,700 November 9-15?",2026-11-16T05:00:00Z,0
+1799,0x470cb4d422132549e81681852197ddec3f8039a41898d6d6625dc96c149bda30,will-ouras-market-cap-be-between-15b-and-17pt5b-at-market-close-on-ipo-day,Will Oura's market cap be between $15B and $17.5B at market close on IPO day?,2027-01-01T04:59:00Z,1
+1800,0x013f06c497ac738ed8dff2412b3c4165120393baf8bf1a680615355568bfd71a,will-benjamin-netanyahu-be-time-person-of-the-year-2026,Will Benjamin Netanyahu be TIME Person of the Year 2026?,2027-07-01T03:59:00Z,0
+1801,0x6008e6f64728d215f88d81297cdb52c098120f8cdcce523caf43d9ded7ade813,will-hyperliquid-dip-to-30-by-december-31-2026-from-june-8-794,"Will Hyperliquid dip to $30 by December 31, 2026?",2027-01-01T05:00:00Z,0
+1802,0x4e217b91f484e4b1169728aca5eebe858015bca82719140cfd240e8a3f39736f,will-bitcoin-reach-70k-in-november-2026,"Will Bitcoin reach $70,000 in November?",2026-12-01T05:00:00Z,0
