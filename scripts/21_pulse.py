@@ -81,8 +81,16 @@ def fetch_markets(api: Api) -> list[dict]:
 
     Сортировка по volume24hr, а не по общему объёму: нас интересует то, где
     торгуют сейчас. Глубже offset ~2100 gamma отвечает 422 — это нормально.
+
+    Страницы листаются по offset, а оборот меняется прямо во время листания:
+    рынок с конца одной страницы съезжает в начало следующей и приходит
+    дважды (14.11.2026 так задвоился «US strike on Cuba» в сводке). Повтор
+    отбрасываем, оставляя первое вхождение. Сосед, который при этом выпал,
+    вернётся в следующем прогоне — стабильная сортировка не выход: она
+    отдала бы 2100 случайных рынков вместо самых торгуемых.
     """
     out: list[dict] = []
+    seen: set[str] = set()
     off = 0
     while off < MAX_OFFSET:
         try:
@@ -94,7 +102,12 @@ def fetch_markets(api: Api) -> list[dict]:
             break
         if not batch:
             break
-        out.extend(batch)
+        for m in batch:
+            k = str(m.get("conditionId") or m.get("id") or "")
+            if k and k in seen:
+                continue
+            seen.add(k)
+            out.append(m)
         off += PAGE
         if len(batch) < PAGE:
             break
