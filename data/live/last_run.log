@@ -1,16 +1,15 @@
-живых рынков: 2095 | дешёвых исходов: 108
+живых рынков: 2072 | дешёвых исходов: 103
 подтверждения собраны по 16 исходам
-  ИИ: 2.0% (high) при цене 3.2¢ — Anthropic IPO before 2027? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 6.0% (medium) при цене 15.0¢ — Russia x Ukraine ceasefire agreement by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ! ИИ: nvidia/nemotron-3-ultra-550b-a55b:free не ответила (502: Provider returned error)
-  ИИ: 3.1% (low) при цене 3.5¢ — China x Taiwan military clash before 2027? [baidu/ernie-5.5-flash-preview:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 9 оценок из 16, бесплатно
-оценено: 33 | сильных: 0 | средних: 3 | с оценкой ИИ: 13
-  средний  ДА   3.2¢ рынок  3.0% | ИИ 4.5% (medium) -> оценка 3.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang be arrested by December 31, 2026?
-  средний  ДА   3.9¢ рынок  3.7% | ИИ 7.4% (low) -> оценка 4.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang join SpaceX by December 31, 2026?
-  средний  НЕТ 13.0¢ рынок 12.3% | ИИ 16.0% (medium) -> оценка 13.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Trump declassifies new UFO files by December 31?
+  ИИ: 12.0% (low) при цене 12.7¢ — Will Jensen Huang rejoin NVIDIA by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 22.0% (medium) при цене 13.2¢ — Next Astra Model (6.1+) released by November 30, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 5.0% (low) при цене 7.2¢ — Fetterman leaves the Democrats by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 12 оценок из 16, бесплатно
+оценено: 35 | сильных: 0 | средних: 3 | с оценкой ИИ: 11
+  средний  НЕТ 14.4¢ рынок 13.9% | ИИ 16.0% (medium) -> оценка 14.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Trump declassifies new UFO files by December 31?
+  средний  ДА   3.8¢ рынок  3.5% | ИИ 4.5% (medium) -> оценка 3.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang be arrested by December 31, 2026?
+  средний  НЕТ  9.4¢ рынок  8.5% | ИИ не оценивал | venue | Will "The Gospel of Christmas" be the #2 US Netflix movie this week?
+  слабый   НЕТ 13.2¢ рынок 12.3% | ИИ 22.0% (medium) -> оценка 15.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Next Astra Model (6.1+) released by November 30, 2026?
   слабый   ДА   9.0¢ рынок  8.5% | ИИ 11.0% (low) -> оценка 8.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | US strike on Cuba by December 31?
-  слабый   ДА   7.0¢ рынок  6.5% | ИИ 7.5% (medium) -> оценка 6.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Ukraine signs peace deal with Russia by December 31, 2026?
-  слабый   ДА  14.5¢ рынок 13.5% | ИИ 14.0% (low) -> оценка 13.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Fourth Jensen Huang affair reported by November 20?
+  слабый   ДА  12.7¢ рынок 12.2% | ИИ 12.0% (low) -> оценка 12.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 46
+сильных сигналов: 0 отправлено | запросов к Polymarket: 52
