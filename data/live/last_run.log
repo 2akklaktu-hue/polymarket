@@ -1,15 +1,15 @@
-живых рынков: 2096 | дешёвых исходов: 113
+живых рынков: 2065 | дешёвых исходов: 109
 подтверждения собраны по 16 исходам
-  ИИ: 20.0% (medium) при цене 7.6¢ — Next Astra Model (6.1+) released by December 15, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 6.5% (low) при цене 7.0¢ — Will Kuwait join the Abraham Accords before 2027? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 8.0% (low) при цене 8.3¢ — Will PP win the most seats in La Rioja in the 2026 Spanish g [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 5 оценок из 16, бесплатно
-оценено: 27 | сильных: 0 | средних: 1 | с оценкой ИИ: 10
-  средний  НЕТ  7.6¢ рынок  6.6% | ИИ 20.0% (medium) -> оценка 10.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Next Astra Model (6.1+) released by December 15, 2026?
-  слабый   ДА   5.3¢ рынок  5.1% | ИИ 7.8% (low) -> оценка 5.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
-  слабый   НЕТ  5.1¢ рынок  4.8% | ИИ 5.5% (medium) -> оценка 5.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Chen Ting-fei win the next Tainan Mayor election?
-  слабый   НЕТ  8.3¢ рынок  7.9% | ИИ 8.0% (low) -> оценка 8.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will PP win the most seats in La Rioja in the 2026 Spanish general ele
-  слабый   ДА  13.0¢ рынок 12.5% | ИИ 12.0% (low) -> оценка 12.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
-  слабый   ДА   7.0¢ рынок  6.5% | ИИ 6.5% (low) -> оценка 6.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Kuwait join the Abraham Accords before 2027?
+  ИИ: 6.0% (medium) при цене 9.8¢ — Will OpenAI announce a ring in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 15.0% (medium) при цене 6.9¢ — Houthis enter Aden by November 30, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 13.5% (low) при цене 14.5¢ — Will Anthropic have the #1 AI model at the end of November 2 [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 8 оценок из 16, бесплатно
+оценено: 30 | сильных: 1 | средних: 2 | с оценкой ИИ: 11
+  сильный  ДА   4.5¢ рынок  3.5% | ИИ 11.0% (medium) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | news+venue | Will Bad Bunny be featured on GTA VI: The Album?
+  средний  НЕТ  4.3¢ рынок  3.8% | ИИ 20.0% (medium) -> оценка 8.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Next Astra Model (6.1+) released by December 15, 2026?
+  средний  ДА   6.9¢ рынок  6.1% | ИИ 15.0% (medium) -> оценка 8.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Houthis enter Aden by November 30, 2026?
+  слабый   ДА   3.7¢ рынок  3.5% | ИИ 7.8% (low) -> оценка 4.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
+  слабый   НЕТ  8.9¢ рынок  8.3% | ИИ 12.0% (low) -> оценка 8.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will OpenAI have the best Text-to-Image AI at the end of November 2026
+  слабый   ДА  11.2¢ рынок 10.7% | ИИ 12.0% (low) -> оценка 10.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 53
+сильных сигналов: 1 отправлено | запросов к Polymarket: 51
