@@ -1,14 +1,15 @@
-живых рынков: 2093 | дешёвых исходов: 102
+живых рынков: 2096 | дешёвых исходов: 113
 подтверждения собраны по 16 исходам
-  ИИ: 5.6% (low) при цене 6.4¢ — Will Donald Trump rank in Google’s Top 5 Most Searched Peopl [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 2.0% (medium) при цене 4.0¢ — FAA outage attributed to hack? [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 2 оценок из 16, бесплатно
-оценено: 32 | сильных: 0 | средних: 1 | с оценкой ИИ: 12
-  средний  ДА   6.4¢ рынок  5.6% | ИИ 5.6% (low) -> оценка 5.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Donald Trump rank in Google’s Top 5 Most Searched People of 2026?
-  слабый   НЕТ 11.2¢ рынок 10.5% | ИИ 12.0% (low) -> оценка 10.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will OpenAI have the best Text-to-Image AI at the end of November 2026
-  слабый   ДА   7.9¢ рынок  7.3% | ИИ 7.8% (low) -> оценка 7.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
-  слабый   ДА   9.3¢ рынок  8.7% | ИИ 8.8% (low) -> оценка 8.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Ossoff's Democratic nomination odds dip to 10% by December 31?
-  слабый   ДА   8.7¢ рынок  8.1% | ИИ 7.0% (low) -> оценка 7.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Scott Bessent leave the Trump administration before 2027?
-  слабый   ДА   9.1¢ рынок  8.4% | ИИ 6.6% (low) -> оценка 8.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Aleksandar Vučić arrested by November 30, 2026?
+  ИИ: 20.0% (medium) при цене 7.6¢ — Next Astra Model (6.1+) released by December 15, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 6.5% (low) при цене 7.0¢ — Will Kuwait join the Abraham Accords before 2027? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 8.0% (low) при цене 8.3¢ — Will PP win the most seats in La Rioja in the 2026 Spanish g [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 5 оценок из 16, бесплатно
+оценено: 27 | сильных: 0 | средних: 1 | с оценкой ИИ: 10
+  средний  НЕТ  7.6¢ рынок  6.6% | ИИ 20.0% (medium) -> оценка 10.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Next Astra Model (6.1+) released by December 15, 2026?
+  слабый   ДА   5.3¢ рынок  5.1% | ИИ 7.8% (low) -> оценка 5.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
+  слабый   НЕТ  5.1¢ рынок  4.8% | ИИ 5.5% (medium) -> оценка 5.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Chen Ting-fei win the next Tainan Mayor election?
+  слабый   НЕТ  8.3¢ рынок  7.9% | ИИ 8.0% (low) -> оценка 8.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will PP win the most seats in La Rioja in the 2026 Spanish general ele
+  слабый   ДА  13.0¢ рынок 12.5% | ИИ 12.0% (low) -> оценка 12.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
+  слабый   ДА   7.0¢ рынок  6.5% | ИИ 6.5% (low) -> оценка 6.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Kuwait join the Abraham Accords before 2027?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 47
+сильных сигналов: 0 отправлено | запросов к Polymarket: 53

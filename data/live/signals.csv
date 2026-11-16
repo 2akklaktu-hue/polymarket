@@ -4,3 +4,6 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-14T08:24:27Z,digest,слабый,0x3de0f3d7d7efb40cde68e814d40a0b232832083653c8e78260eb999baa967de0,YES,0.0900,0.0850,0.1100,0.0887,,US strike on Cuba by December 31?,
 2026-11-15T10:44:29Z,digest,слабый,0x27748e74503ff93d998d1e857980c43eca77c38efd61f642dd43d41a18525250,YES,0.1046,0.1000,0.1200,0.1030,,"Will Jensen Huang rejoin NVIDIA by December 31, 2026?",
 2026-11-15T10:44:29Z,digest,слабый,0xe02cad0d9171720d7bd87f93919178fbe4e6fb5a8689bc5c98167f333eaa007f,NO,0.1160,0.1070,0.1200,0.1089,,Will OpenAI have the best Text-to-Image AI at the end of November 2026?,
+2026-11-16T11:02:40Z,digest,средний,0x36614664b2f4023d68eaaa0a003a0c574c617f390cc4b861c166ea287b65b571,NO,0.0757,0.0655,0.2000,0.1058,news,"Next Astra Model (6.1+) released by December 15, 2026?",
+2026-11-16T11:02:40Z,digest,слабый,0x6368d1c0daed920fb7cb4444636b605e8b02d700dfdf70bba2758a7c0c4054cb,YES,0.0529,0.0505,0.0780,0.0546,,"Will Jensen Huang rejoin NVIDIA by November 30, 2026?",
+2026-11-16T11:02:40Z,digest,слабый,0x3e99612283f8182aefc17bbb51087f43c423608e2e0b2196a1512e145160a648,NO,0.0509,0.0485,0.0550,0.0504,,Will Chen Ting-fei win the next Tainan Mayor election?,
