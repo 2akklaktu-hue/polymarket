@@ -65,12 +65,20 @@ MIN_DAYS, MAX_DAYS = 1.0, 60.0
 SKIP_CATS = ("sports", "crypto", "weather")
 _PRICE_LEVEL = re.compile(
     r"(?:\b(?:close|closes|finish|finishes|settle|settles)\s+(?:above|below|at)\b)"
-    r"|(?:\b(?:dip|drop|fall|rise|reach|hit)s?\s+(?:to\s+)?\$)"
+    # «(LOW)»/«(HIGH)» между глаголом и суммой: «Gold (GC) dip to (LOW) $3,000»
+    r"|(?:\b(?:dip|drop|fall|rise|reach|hit)s?\s+(?:to\s+)?(?:\([^)]*\)\s*)?\$)"
     r"|(?:\b(?:above|below|over|under)\s+\$[\d,.]+)"
     r"|(?:\bFDV\b)|(?:\bmarket cap\b)|(?:\ball[- ]time high\b)"
     # счётчики и уровни: число твитов, доходность облигаций — та же история,
     # что с курсами: исход решает цифра, а не новость
-    r"|(?:\btweets?\b)|(?:\byield\b)", re.I)
+    r"|(?:\btweets?\b)|(?:\byield\b)"
+    # число постов: «post 20-39 Truth Social posts», «200+ posts». Нужен
+    # диапазон или «+» перед словом — просто «Will Trump post about…» проходит
+    r"|(?:\b\d[\d,]*\s*(?:[-–]\s*\d[\d,]*|\+)\s+(?:[\w']+\s+){0,3}posts?\b)"
+    # чужие шансы: «Ossoff's nomination odds dip to 10%» — исход решает цена
+    # другого рынка, а не новость
+    r"|(?:\b(?:odds|chances?)\b[^?]{0,40}?\b(?:dip|drop|fall|rise|reach|hit|"
+    r"climb|exceed|surge)\w*\s+(?:to\s+|above\s+|below\s+)?\d[\d.]*\s*%)", re.I)
 
 # --- сколько работы за прогон --------------------------------------------
 N_EVIDENCE = 12           # самых «оживших» — на сбор подтверждений
