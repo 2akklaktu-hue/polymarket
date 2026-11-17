@@ -1,15 +1,15 @@
-живых рынков: 2035 | дешёвых исходов: 115
+живых рынков: 2098 | дешёвых исходов: 107
 подтверждения собраны по 16 исходам
-  ИИ: 12.0% (low) при цене 12.9¢ — Will Trump meet with Kim Jong Un by November 30, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 9.0% (medium) при цене 7.6¢ — Will Jensen Huang rejoin NVIDIA by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 14.0% (medium) при цене 15.5¢ — Trump meets with Kim Jong Un by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 6 оценок из 16, бесплатно
-оценено: 23 | сильных: 0 | средних: 3 | с оценкой ИИ: 6
-  средний  ДА   6.9¢ рынок  6.8% | ИИ 15.0% (medium) -> оценка 9.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Houthis enter Aden by November 30, 2026?
-  средний  ДА   7.6¢ рынок  7.2% | ИИ 9.0% (medium) -> оценка 7.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
-  средний  ДА   3.2¢ рынок  3.0% | ИИ 4.6% (low) -> оценка 3.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
-  слабый   ДА  12.9¢ рынок 12.2% | ИИ 12.0% (low) -> оценка 12.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Kim Jong Un by November 30, 2026?
-  слабый   ДА  15.5¢ рынок 14.0% | ИИ 14.0% (medium) -> оценка 14.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Trump meets with Kim Jong Un by December 31, 2026?
-  слабый   ДА   5.2¢ рынок  4.5% | ИИ 2.0% (high) -> оценка 3.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | OKX IPO in 2026?
+  ИИ: 4.7% (low) при цене 5.2¢ — Will annual inflation be 3.5% in November? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 10.0% (medium) при цене 10.5¢ — Will Huang Shih-chieh win the next Taoyuan Mayor election? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 7.0% (high) при цене 9.0¢ — Will Gavin Newsom announce a Presidential run by December 31 [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 9 оценок из 16, бесплатно
+оценено: 31 | сильных: 0 | средних: 2 | с оценкой ИИ: 11
+  средний  ДА   3.4¢ рынок  2.9% | ИИ 4.6% (low) -> оценка 3.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
+  средний  ДА  10.3¢ рынок  9.8% | ИИ 9.0% (medium) -> оценка 9.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
+  слабый   ДА   4.1¢ рынок  3.8% | ИИ 12.0% (low) -> оценка 5.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Kim Jong Un by November 30, 2026?
+  слабый   ДА   9.2¢ рынок  8.5% | ИИ 15.0% (medium) -> оценка 10.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Houthis enter Aden by November 30, 2026?
+  слабый   ДА   4.0¢ рынок  4.0% | ИИ 6.5% (low) -> оценка 4.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Kuwait join the Abraham Accords before 2027?
+  слабый   ДА   4.7¢ рынок  4.5% | ИИ 6.0% (medium) -> оценка 4.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will OpenAI announce a ring in 2026?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 56
+сильных сигналов: 0 отправлено | запросов к Polymarket: 61
