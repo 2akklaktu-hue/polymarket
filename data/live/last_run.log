@@ -1,15 +1,15 @@
-живых рынков: 2065 | дешёвых исходов: 109
+живых рынков: 2085 | дешёвых исходов: 103
 подтверждения собраны по 16 исходам
-  ИИ: 6.0% (medium) при цене 9.8¢ — Will OpenAI announce a ring in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 15.0% (medium) при цене 6.9¢ — Houthis enter Aden by November 30, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 13.5% (low) при цене 14.5¢ — Will Anthropic have the #1 AI model at the end of November 2 [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 8 оценок из 16, бесплатно
-оценено: 30 | сильных: 1 | средних: 2 | с оценкой ИИ: 11
-  сильный  ДА   4.5¢ рынок  3.5% | ИИ 11.0% (medium) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | news+venue | Will Bad Bunny be featured on GTA VI: The Album?
-  средний  НЕТ  4.3¢ рынок  3.8% | ИИ 20.0% (medium) -> оценка 8.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Next Astra Model (6.1+) released by December 15, 2026?
-  средний  ДА   6.9¢ рынок  6.1% | ИИ 15.0% (medium) -> оценка 8.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Houthis enter Aden by November 30, 2026?
-  слабый   ДА   3.7¢ рынок  3.5% | ИИ 7.8% (low) -> оценка 4.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
-  слабый   НЕТ  8.9¢ рынок  8.3% | ИИ 12.0% (low) -> оценка 8.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will OpenAI have the best Text-to-Image AI at the end of November 2026
-  слабый   ДА  11.2¢ рынок 10.7% | ИИ 12.0% (low) -> оценка 10.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
+  ИИ: 20.0% (high) при цене 14.8¢ — Will Trump meet with Kim Jong Un in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 4.6% (low) при цене 4.9¢ — Will Jensen Huang rejoin NVIDIA by November 30, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 2.0% (high) при цене 5.5¢ — OKX IPO in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 3 оценок из 16, бесплатно
+оценено: 26 | сильных: 0 | средних: 3 | с оценкой ИИ: 8
+  средний  НЕТ  4.2¢ рынок  3.7% | ИИ 20.0% (medium) -> оценка 8.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Next Astra Model (6.1+) released by December 15, 2026?
+  средний  ДА   7.3¢ рынок  6.7% | ИИ 15.0% (medium) -> оценка 9.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Houthis enter Aden by November 30, 2026?
+  средний  ДА   4.9¢ рынок  4.6% | ИИ 4.6% (low) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
+  слабый   ДА  14.8¢ рынок 13.5% | ИИ 20.0% (high) -> оценка 16.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Kim Jong Un in 2026?
+  слабый   ДА  11.2¢ рынок 10.8% | ИИ 12.0% (low) -> оценка 10.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
+  слабый   ДА   8.1¢ рынок  7.8% | ИИ 6.6% (low) -> оценка 7.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Aleksandar Vučić arrested by November 30, 2026?
 
-сильных сигналов: 1 отправлено | запросов к Polymarket: 51
+сильных сигналов: 0 отправлено | запросов к Polymarket: 47
