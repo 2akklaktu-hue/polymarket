@@ -1865,3 +1865,11 @@ id,cid,slug,question,end,neg
 1864,0xa5e072a6c5e8235714be21ecff9f366900bc8e4839134fb70b03c18fc008e217,bitcoin-above-64k-on-november-17-2026,"Will the price of Bitcoin be above $64,000 on November 17?",2026-11-17T17:00:00Z,0
 1865,0xde3642bec9ef6641e637e59825f01b54fa6d287afacef85909ffd62927013958,anthropic-ipo-closing-market-cap-above-1pt5t,Anthropic IPO closing market cap above $1.5T?,2028-01-01T04:59:00Z,0
 1866,0x03941fbf820ff565a37e985589a9c51d0fc262e1c67c0a0fd46f975fbd48e53f,next-gemini-flash-model-3pt9-released-by-november-30-2026,"Next Gemini Flash Model (3.9+) released by November 30, 2026?",2026-12-01T04:59:00Z,0
+1867,0x350f0bbfb5900db865c92d0d171ad9e511624134669adbe8540f74248f9012df,will-jeff-bezos-be-richest-person-on-december-31-243,Will Jeff Bezos be richest person on December 31?,2027-01-03T04:59:00Z,1
+1868,0x98229ee7d90d02e503a95dd8b983b6530e2cdcb5115cf7c4e7b89c6954508b57,atp-fils-jodar-2026-11-17,"ATP World Tour Finals, John McEnroe Group: Arthur Fils vs Rafael Jodar",2026-11-24T13:00:00Z,0
+1869,0xdaa8450cfea39fd06b06be8bc11966b2176ae978626f4802c6d202642ae443ae,atp-hemery-passaro-2026-11-17,Metz: Calvin Hemery vs Francesco Passaro,2026-11-24T11:30:00Z,0
+1870,0x7c9d09cfc53a863bff568c2cf1eb9aec351d9e2e3785059f7f8e2445dd198779,atp-cretu-djere-2026-11-17,Helsinki: Cezar Cretu vs Laslo Djere,2026-11-24T11:30:00Z,0
+1871,0x58bc51f94c4d38c1be22a4bd694019431154e112bafbe355836fb0a9d93b1382,will-alphabet-be-the-largest-company-in-the-world-by-market-cap-on-november-30-2026,"Will Alphabet be the largest company in the world by market cap on November 30, 2026?",2026-12-01T04:59:00Z,1
+1872,0x40107b6507c0049643bde815207ef7fc5b2225e11972402958e01853850c3841,will-jaxson-smith-njigba-win-the-2026-nfl-mvp,Will Jaxson Smith-Njigba win the 2026 NFL MVP?,2027-03-01T04:59:00Z,1
+1873,0x58a65e14256121c9e987bfe0392ee4faf302adc53092cd1bd9eebc7c9b1a08ac,bitcoin-above-64k-on-november-18-2026,"Will the price of Bitcoin be above $64,000 on November 18?",2026-11-18T17:00:00Z,0
+1874,0x914f77b6298fd736d6f477303de84c27fd5fef104fb3e81c1fbbce0cdd001b4e,government-shutdown-by-december-12,Government shutdown by December 12?,2026-12-13T04:59:00Z,0
