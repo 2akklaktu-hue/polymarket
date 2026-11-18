@@ -1,15 +1,15 @@
-живых рынков: 2098 | дешёвых исходов: 107
+живых рынков: 2083 | дешёвых исходов: 102
 подтверждения собраны по 16 исходам
-  ИИ: 4.7% (low) при цене 5.2¢ — Will annual inflation be 3.5% in November? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 10.0% (medium) при цене 10.5¢ — Will Huang Shih-chieh win the next Taoyuan Mayor election? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 7.0% (high) при цене 9.0¢ — Will Gavin Newsom announce a Presidential run by December 31 [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 9 оценок из 16, бесплатно
-оценено: 31 | сильных: 0 | средних: 2 | с оценкой ИИ: 11
-  средний  ДА   3.4¢ рынок  2.9% | ИИ 4.6% (low) -> оценка 3.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
-  средний  ДА  10.3¢ рынок  9.8% | ИИ 9.0% (medium) -> оценка 9.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by December 31, 2026?
-  слабый   ДА   4.1¢ рынок  3.8% | ИИ 12.0% (low) -> оценка 5.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Kim Jong Un by November 30, 2026?
-  слабый   ДА   9.2¢ рынок  8.5% | ИИ 15.0% (medium) -> оценка 10.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Houthis enter Aden by November 30, 2026?
-  слабый   ДА   4.0¢ рынок  4.0% | ИИ 6.5% (low) -> оценка 4.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Kuwait join the Abraham Accords before 2027?
+  ИИ: 4.0% (low) при цене 5.1¢ — Will Tatyana Ali win Dancing With the Stars: Season 35? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 2.0% (medium) при цене 6.0¢ — Will Russell Brand be the #1 searched actor on Google this y [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 13.5% (medium) при цене 14.5¢ — Will PSOE win the second-most seats in Madrid in the 2026 Sp [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 3 оценок из 16, бесплатно
+оценено: 33 | сильных: 0 | средних: 3 | с оценкой ИИ: 9
+  средний  ДА   7.4¢ рынок  7.0% | ИИ 15.0% (medium) -> оценка 9.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Houthis enter Aden by November 30, 2026?
+  средний  ДА   3.2¢ рынок  3.0% | ИИ 4.6% (low) -> оценка 3.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
+  средний  ДА   3.5¢ рынок  3.0% | ИИ не оценивал | venue | France declares state of emergency by December 31, 2026?
   слабый   ДА   4.7¢ рынок  4.5% | ИИ 6.0% (medium) -> оценка 4.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will OpenAI announce a ring in 2026?
+  слабый   ДА  10.2¢ рынок  9.4% | ИИ 12.0% (low) -> оценка 9.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Kim Jong Un by November 30, 2026?
+  слабый   НЕТ 14.5¢ рынок 13.5% | ИИ 13.5% (medium) -> оценка 13.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will PSOE win the second-most seats in Madrid in the 2026 Spanish gene
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 61
+сильных сигналов: 0 отправлено | запросов к Polymarket: 48
