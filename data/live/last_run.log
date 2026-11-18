@@ -1,15 +1,15 @@
-живых рынков: 2083 | дешёвых исходов: 102
+живых рынков: 2100 | дешёвых исходов: 114
 подтверждения собраны по 16 исходам
-  ИИ: 4.0% (low) при цене 5.1¢ — Will Tatyana Ali win Dancing With the Stars: Season 35? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 2.0% (medium) при цене 6.0¢ — Will Russell Brand be the #1 searched actor on Google this y [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 13.5% (medium) при цене 14.5¢ — Will PSOE win the second-most seats in Madrid in the 2026 Sp [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 3 оценок из 16, бесплатно
-оценено: 33 | сильных: 0 | средних: 3 | с оценкой ИИ: 9
+  ИИ: 7.0% (medium) при цене 10.5¢ — US imports Russian diesel by November 30? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 7.1% (low) при цене 8.3¢ — Will Dario Amodei be TIME Person of the Year 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 4.5% (low) при цене 5.2¢ — Will Marco Rubio be TIME Person of the Year 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 6 оценок из 16, бесплатно
+оценено: 29 | сильных: 0 | средних: 1 | с оценкой ИИ: 7
   средний  ДА   7.4¢ рынок  7.0% | ИИ 15.0% (medium) -> оценка 9.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Houthis enter Aden by November 30, 2026?
-  средний  ДА   3.2¢ рынок  3.0% | ИИ 4.6% (low) -> оценка 3.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Jensen Huang rejoin NVIDIA by November 30, 2026?
-  средний  ДА   3.5¢ рынок  3.0% | ИИ не оценивал | venue | France declares state of emergency by December 31, 2026?
-  слабый   ДА   4.7¢ рынок  4.5% | ИИ 6.0% (medium) -> оценка 4.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will OpenAI announce a ring in 2026?
-  слабый   ДА  10.2¢ рынок  9.4% | ИИ 12.0% (low) -> оценка 9.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Kim Jong Un by November 30, 2026?
-  слабый   НЕТ 14.5¢ рынок 13.5% | ИИ 13.5% (medium) -> оценка 13.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will PSOE win the second-most seats in Madrid in the 2026 Spanish gene
+  слабый   ДА   5.9¢ рынок  5.4% | ИИ 7.0% (high) -> оценка 6.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Gavin Newsom announce a Presidential run by December 31, 2026?
+  слабый   ДА   5.9¢ рынок  5.2% | ИИ 5.1% (low) -> оценка 5.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Kuwait recognize Israel by December 31?
+  слабый   ДА   5.2¢ рынок  4.7% | ИИ 4.5% (low) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Marco Rubio be TIME Person of the Year 2026?
+  слабый   ДА  10.5¢ рынок 10.2% | ИИ 7.0% (medium) -> оценка 9.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | US imports Russian diesel by November 30?
+  слабый   ДА   8.3¢ рынок  7.1% | ИИ 7.1% (low) -> оценка 7.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Dario Amodei be TIME Person of the Year 2026?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 48
+сильных сигналов: 0 отправлено | запросов к Polymarket: 43
