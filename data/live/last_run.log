@@ -1,15 +1,15 @@
-живых рынков: 2100 | дешёвых исходов: 108
+живых рынков: 2093 | дешёвых исходов: 89
 подтверждения собраны по 16 исходам
-  ИИ: 3.0% (medium) при цене 3.3¢ — FAA outage attributed to Iran? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 3.5% (medium) при цене 6.0¢ — Will Jensen Huang be TIME Person of the Year 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 3.0% (low) при цене 3.5¢ — JD Vance out as VP by December 31? [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 9 оценок из 16, бесплатно
-оценено: 26 | сильных: 0 | средних: 1 | с оценкой ИИ: 10
-  средний  ДА   6.6¢ рынок  6.3% | ИИ 7.0% (medium) -> оценка 6.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | US imports Russian diesel by November 30?
-  слабый   ДА   5.4¢ рынок  5.2% | ИИ 12.0% (low) -> оценка 6.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Kim Jong Un by November 30, 2026?
-  слабый   ДА   5.4¢ рынок  4.7% | ИИ 7.0% (high) -> оценка 5.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Gavin Newsom announce a Presidential run by December 31, 2026?
-  слабый   ДА  12.4¢ рынок 11.5% | ИИ 14.0% (medium) -> оценка 12.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Trump meets with Kim Jong Un by December 31, 2026?
+  ИИ: 7.0% (medium) при цене 15.5¢ — Will the Bank of Israel decrease the Bank of Israel Interest [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 5.0% (medium) при цене 9.5¢ — Will Yemeni forces enter Sanaa by December 31? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 14.3% (low) при цене 15.3¢ — Will the Bank of Israel make no change to the Bank of Israel [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 3 оценок из 16, бесплатно
+оценено: 25 | сильных: 0 | средних: 1 | с оценкой ИИ: 7
+  средний  ДА   5.3¢ рынок  5.0% | ИИ 7.0% (medium) -> оценка 5.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | US imports Russian diesel by November 30?
+  слабый   ДА   5.5¢ рынок  4.8% | ИИ 7.0% (high) -> оценка 5.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Gavin Newsom announce a Presidential run by December 31, 2026?
   слабый   ДА   3.5¢ рынок  3.5% | ИИ 3.0% (low) -> оценка 3.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | JD Vance out as VP by December 31?
-  слабый   ДА   7.1¢ рынок  6.4% | ИИ 7.1% (low) -> оценка 6.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Dario Amodei be TIME Person of the Year 2026?
+  слабый   НЕТ 15.3¢ рынок 14.3% | ИИ 14.3% (low) -> оценка 14.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the Bank of Israel make no change to the Bank of Israel Interest 
+  слабый   ДА  15.5¢ рынок 14.8% | ИИ 7.0% (medium) -> оценка 12.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the Bank of Israel decrease the Bank of Israel Interest Rate by 2
+  слабый   ДА   5.9¢ рынок  5.2% | ИИ 3.5% (medium) -> оценка 4.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Jensen Huang be TIME Person of the Year 2026?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 50
+сильных сигналов: 0 отправлено | запросов к Polymarket: 45
