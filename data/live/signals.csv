@@ -11,3 +11,6 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-17T13:13:08Z,digest,средний,0xea7f75f9bdedef80577109cf375cdb271b83d19b4e618288e03e0186200f2f4c,YES,0.0690,0.0680,0.1500,0.0926,news,"Houthis enter Aden by November 30, 2026?",
 2026-11-18T13:53:39Z,digest,слабый,0x52226ec4393285ffc942019f20e3210e9311fc64cf1c7a9d1e9fbf27237352a6,YES,0.0592,0.0535,0.0700,0.0604,,"Will Gavin Newsom announce a Presidential run by December 31, 2026?",
 2026-11-18T13:53:39Z,digest,слабый,0x01248b04a39b281ca18c0352a243e1d6f6cf5f99f36a21675e7b9e1f3b0deb72,YES,0.0590,0.0525,0.0510,0.0523,,Will Kuwait recognize Israel by December 31?,
+2026-11-19T12:54:01Z,digest,средний,0x7d542d01581ab32518a4131ef852dbc5167697c8dd9600f3fb0c24df2a417ce1,YES,0.0500,0.0480,0.0700,0.0546,venue,US imports Russian diesel by November 30?,
+2026-11-19T12:54:01Z,digest,слабый,0xa1ed5e3ec8604bac737a1ea5a4c82ef672d685462fd9cb56343c357223ccd0fb,YES,0.1270,0.1230,0.1500,0.1270,,"Israeli airspace closed by November 30, 2026?",
+2026-11-19T12:54:01Z,digest,слабый,0xe34a08b2a8d0f9e5033dc1bc1ee153509e414196c3e8044d5e99b64b974eeea6,YES,0.0360,0.0355,0.0350,0.0354,,Israel x Turkey military clash before 2027?,
