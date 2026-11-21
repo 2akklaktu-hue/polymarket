@@ -1,14 +1,15 @@
-живых рынков: 2032 | дешёвых исходов: 112
+живых рынков: 2036 | дешёвых исходов: 112
 подтверждения собраны по 16 исходам
-  ИИ: 2.0% (high) при цене 7.1¢ — Will the Fed Hike–Pause–Pause in the next three decisions (S [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 5.5% (low) при цене 5.9¢ — Will OpenAI announce another Millennium Prize solution by De [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 2 оценок из 16, бесплатно
-оценено: 32 | сильных: 0 | средних: 4 | с оценкой ИИ: 10
-  средний  ДА   7.4¢ рынок  7.2% | ИИ 80.0% (high) -> оценка 37.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Will 1 Fed rate hike happen in 2026?
-  средний  ДА   5.9¢ рынок  5.5% | ИИ 5.5% (low) -> оценка 5.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
-  средний  НЕТ  8.7¢ рынок  8.4% | ИИ 7.3% (high) -> оценка 7.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Another Fed rate hike in 2026?
-  средний  ДА   8.1¢ рынок  8.0% | ИИ 3.5% (high) -> оценка 6.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
-  слабый   ДА  11.4¢ рынок 11.1% | ИИ 15.0% (low) -> оценка 11.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Israeli airspace closed by November 30, 2026?
-  слабый   ДА   3.2¢ рынок  3.0% | ИИ 3.5% (low) -> оценка 3.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Israel x Turkey military clash before 2027?
+  ИИ: 10.0% (low) при цене 9.9¢ — Russia military action against an EU country by December 31, [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 6.0% (low) при цене 6.5¢ — Will AI solve 2 more Millennium Prize Problems in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 9.0% (low) при цене 9.5¢ — Will the Fed Hike–Pause–Hike in the next three decisions (Se [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 5 оценок из 16, бесплатно
+оценено: 25 | сильных: 0 | средних: 5 | с оценкой ИИ: 9
+  средний  ДА   9.2¢ рынок  8.9% | ИИ 80.0% (high) -> оценка 38.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Will 1 Fed rate hike happen in 2026?
+  средний  ДА   6.0¢ рынок  5.7% | ИИ 5.5% (low) -> оценка 5.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
+  средний  НЕТ  9.6¢ рынок  9.5% | ИИ 7.3% (high) -> оценка 8.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Another Fed rate hike in 2026?
+  средний  ДА   8.0¢ рынок  7.8% | ИИ 3.5% (high) -> оценка 6.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
+  средний  ДА   6.1¢ рынок  5.0% | ИИ не оценивал | venue | Ilhan Omar arrested by December 31, 2026?
+  слабый   ДА   9.9¢ рынок  9.8% | ИИ 10.0% (low) -> оценка 9.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Russia military action against an EU country by December 31, 2026?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 44
+сильных сигналов: 0 отправлено | запросов к Polymarket: 52
