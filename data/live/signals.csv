@@ -24,3 +24,4 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-22T11:57:39Z,alert,средний,0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0,YES,0.0666,0.0655,0.0700,0.0674,whales,Will there be no change in Fed interest rates after the December 2026 meeting?,
 2026-11-22T11:57:40Z,alert,средний,0x9b1a03b41a1a68c209e9c3caf3d8af3f878420d6dbe8cb8afffd66049e73b114,NO,0.0757,0.0705,0.0730,0.0716,whales,Another Fed rate hike in 2026?,
 2026-11-22T11:57:40Z,alert,средний,0x117f9132e15eeff2621be398fa57092cf446a2f02cbd7ee8e3714226705c4d3b,YES,0.0816,0.0775,0.0700,0.0764,venue,"Will OpenAI announce another Millennium Prize solution by December 31, 2026?",
+2026-11-22T16:54:46Z,alert,средний,0x714e151eb0978a38ea32673a3cbfaedcf2c34057b9ac819e25bc65a317a69b83,YES,0.1200,0.1150,0.1350,0.1180,venue,Will Trump meet with Flávio Bolsonaro in 2026?,
