@@ -1,15 +1,15 @@
-живых рынков: 2077 | дешёвых исходов: 100
+живых рынков: 2094 | дешёвых исходов: 114
 подтверждения собраны по 16 исходам
-  ИИ: 8.5% (medium) при цене 9.3¢ — Will OpenRouter process at least 775T tokens from Oct 26 to  [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 3.5% (low) при цене 3.7¢ — Will Russia capture Lyman by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 4.0% (medium) при цене 8.6¢ — Miguel Díaz-Canel out as leader of Cuba by December 31? [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 3 оценок из 16, бесплатно
-оценено: 33 | сильных: 0 | средних: 4 | с оценкой ИИ: 15
-  средний  ДА   8.0¢ рынок  7.8% | ИИ 80.0% (high) -> оценка 38.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Will 1 Fed rate hike happen in 2026?
-  средний  ДА   7.1¢ рынок  7.0% | ИИ 7.0% (high) -> оценка 7.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
-  средний  НЕТ  7.4¢ рынок  6.8% | ИИ 7.3% (high) -> оценка 7.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Another Fed rate hike in 2026?
-  средний  ДА   9.1¢ рынок  8.5% | ИИ не оценивал | venue | Will Donald Trump publicly insult Kevin Warsh by December 31, 2026?
-  слабый   ДА   4.6¢ рынок  4.5% | ИИ 5.0% (low) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the U.S. invade Cuba in 2026?
-  слабый   НЕТ  8.3¢ рынок  8.1% | ИИ 9.0% (low) -> оценка 8.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the Fed Hike–Pause–Hike in the next three decisions (Sep–Oct–Dec)
+  ИИ: 7.0% (low) при цене 8.2¢ — Will OpenAI announce another Millennium Prize solution by De [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 4.5% (low) при цене 4.0¢ — Nigel Farage out as Reform UK leader by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 6.8% (low) при цене 7.3¢ — Will Hsieh Lung-chieh win the next Tainan Mayor election? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 6 оценок из 16, бесплатно
+оценено: 33 | сильных: 0 | средних: 6 | с оценкой ИИ: 16
+  средний  ДА   7.0¢ рынок  6.9% | ИИ 80.0% (high) -> оценка 37.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Will 1 Fed rate hike happen in 2026?
+  средний  ДА   6.8¢ рынок  6.7% | ИИ 7.0% (high) -> оценка 6.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
+  средний  ДА   4.0¢ рынок  4.0% | ИИ 4.5% (low) -> оценка 4.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Nigel Farage out as Reform UK leader by December 31, 2026?
+  средний  НЕТ  7.6¢ рынок  7.3% | ИИ 7.3% (high) -> оценка 7.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Another Fed rate hike in 2026?
+  средний  ДА   8.2¢ рынок  7.8% | ИИ 7.0% (low) -> оценка 7.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
+  средний  ДА   9.1¢ рынок  8.0% | ИИ не оценивал | venue | Will Donald Trump publicly insult Kevin Warsh by December 31, 2026?
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 49
+сильных сигналов: 0 отправлено | запросов к Polymarket: 45
