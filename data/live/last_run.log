@@ -1,13 +1,12 @@
-живых рынков: 2100 | дешёвых исходов: 100
-подтверждения собраны по 12 исходам
-  ИИ: 5.5% (low) при цене 6.5¢ — Will the U.S. invade a Latin American country in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+живых рынков: 2069 | дешёвых исходов: 96
+подтверждения собраны по 9 исходам
 ИИ (OpenRouter, бесплатные модели): за сутки 11 оценок из 16, бесплатно
-оценено: 47 | сильных: 0 | средних: 1 | с оценкой ИИ: 16
+оценено: 50 | сильных: 0 | средних: 1 | с оценкой ИИ: 17
   средний  ДА   8.2¢ рынок  7.7% | ИИ 7.0% (low) -> оценка 7.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
   слабый   ДА   9.1¢ рынок  9.0% | ИИ 10.0% (low) -> оценка 9.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Russia military action against an EU country by December 31, 2026?
-  слабый   ДА   6.9¢ рынок  6.8% | ИИ 7.0% (high) -> оценка 6.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Will there be no change in Fed interest rates after the December 2026 
   слабый   НЕТ  6.8¢ рынок  6.7% | ИИ 9.0% (low) -> оценка 7.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the Fed Hike–Pause–Hike in the next three decisions (Sep–Oct–Dec)
+  слабый   ДА   6.8¢ рынок  6.7% | ИИ 7.0% (high) -> оценка 6.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Will there be no change in Fed interest rates after the December 2026 
   слабый   ДА   8.6¢ рынок  8.4% | ИИ 4.0% (medium) -> оценка 7.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Miguel Díaz-Canel out as leader of Cuba by December 31?
   слабый   ДА   3.8¢ рынок  3.7% | ИИ 5.0% (low) -> оценка 3.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the U.S. invade Cuba in 2026?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 43
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 37
