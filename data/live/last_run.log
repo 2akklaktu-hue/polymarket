@@ -1,15 +1,15 @@
-живых рынков: 2088 | дешёвых исходов: 103
+живых рынков: 2077 | дешёвых исходов: 100
 подтверждения собраны по 16 исходам
-  ИИ: 12.1% (low) при цене 12.6¢ — Will Tsai Yi-yu win the next Chiayi County Magistrate electi [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 12.0% (low) при цене 12.7¢ — Will Hsu Shu-hua win the next Nantou County Magistrate elect [nvidia/nemotron-3-ultra-550b-a55b:free]
-  ИИ: 3.5% (low) при цене 3.2¢ — NATO article 5 before 2027? [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 11 оценок из 16, бесплатно
-оценено: 31 | сильных: 0 | средних: 4 | с оценкой ИИ: 14
-  средний  ДА   8.4¢ рынок  8.2% | ИИ 80.0% (high) -> оценка 38.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Will 1 Fed rate hike happen in 2026?
-  средний  ДА   6.8¢ рынок  6.7% | ИИ 7.0% (high) -> оценка 6.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
-  средний  НЕТ  7.0¢ рынок  6.5% | ИИ 7.3% (high) -> оценка 6.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Another Fed rate hike in 2026?
-  средний  НЕТ 11.0¢ рынок 10.5% | ИИ не оценивал | venue | Will Trump speak to Mohammed bin Salman by November 30?
-  слабый   ДА   5.0¢ рынок  5.0% | ИИ 5.0% (low) -> оценка 5.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the U.S. invade Cuba in 2026?
+  ИИ: 8.5% (medium) при цене 9.3¢ — Will OpenRouter process at least 775T tokens from Oct 26 to  [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 3.5% (low) при цене 3.7¢ — Will Russia capture Lyman by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+  ИИ: 4.0% (medium) при цене 8.6¢ — Miguel Díaz-Canel out as leader of Cuba by December 31? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 3 оценок из 16, бесплатно
+оценено: 33 | сильных: 0 | средних: 4 | с оценкой ИИ: 15
+  средний  ДА   8.0¢ рынок  7.8% | ИИ 80.0% (high) -> оценка 38.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Will 1 Fed rate hike happen in 2026?
+  средний  ДА   7.1¢ рынок  7.0% | ИИ 7.0% (high) -> оценка 7.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
+  средний  НЕТ  7.4¢ рынок  6.8% | ИИ 7.3% (high) -> оценка 7.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Another Fed rate hike in 2026?
+  средний  ДА   9.1¢ рынок  8.5% | ИИ не оценивал | venue | Will Donald Trump publicly insult Kevin Warsh by December 31, 2026?
+  слабый   ДА   4.6¢ рынок  4.5% | ИИ 5.0% (low) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the U.S. invade Cuba in 2026?
   слабый   НЕТ  8.3¢ рынок  8.1% | ИИ 9.0% (low) -> оценка 8.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the Fed Hike–Pause–Hike in the next three decisions (Sep–Oct–Dec)
 
-сильных сигналов: 0 отправлено | запросов к Polymarket: 43
+сильных сигналов: 0 отправлено | запросов к Polymarket: 49
