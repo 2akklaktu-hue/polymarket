@@ -124,6 +124,8 @@ WATCH_MOVED = 0.15        # цена присланного сигнала уш�
 # --- когда источник считается «за» ---------------------------------------
 AI_RATIO = 1.5            # оценка ИИ не ниже полутора цен входа
 EST_RATIO = 1.2           # и после поправки к рынку остаётся запас 20%
+AI_OUTLIER_RATIO = 4.0    # ИИ выше рынка вчетверо...
+AI_OUTLIER_GAP = 0.20     # ...и на 20 п.п. — в одиночку такое не засчитывается
 VENUE_RATIO = 1.3         # другая площадка даёт на 30% больше цены входа
 VENUE_LOWER = 0.75        # а если на четверть меньше здешней — это предупреждение
 VENUE_SIM = 0.6           # без ИИ: рынок «тот же», если слова совпали на 60%
@@ -165,6 +167,19 @@ def _is_yes_no(m: dict) -> bool:
 
 def select(raw: list[dict], now: float) -> list[dict]:
     """Дешёвые стороны живых рынков. У рынка в диапазон попадает одна сторона."""
+    # Остальные исходы того же события — подсказка ИИ, как рынок понимает
+    # вопрос. 22.11 модель дала 80% исходу «ровно одно повышение ставки»,
+    # хотя по соседним исходам видно, что рынок ждёт два.
+    by_event: dict[str, list[tuple[str, str, float]]] = {}
+    for m in raw:
+        eid = str(((m.get("events") or [{}])[0]).get("id") or "")
+        b, s = _f(m.get("bestBid")), _f(m.get("bestAsk"))
+        # у мёртвого стакана бид 0.001 и аск 0.999: середина 0.5 ничего не значит
+        mid = (b + s) / 2.0 if b > 0.002 and s < 0.998 else _f(m.get("lastTradePrice"))
+        if eid and mid == mid:
+            by_event.setdefault(eid, []).append(
+                (str(m.get("conditionId")),
+                 str(m.get("groupItemTitle") or m.get("question") or ""), mid))
     out = []
     for m in raw:
         cid, q = m.get("conditionId"), str(m.get("question") or "")
@@ -209,6 +224,9 @@ def select(raw: list[dict], now: float) -> list[dict]:
                 "days": days, "end": end, "cat": cat,
                 "desc": str(m.get("description") or ""),
                 "event_title": str(ev.get("title") or ""),
+                "siblings": [(lbl, p) for k, lbl, p in sorted(
+                    by_event.get(str(ev.get("id") or ""), []), key=lambda x: -x[2])
+                    if k != str(cid)][:12],
                 "url": (f"https://polymarket.com/event/{ev_slug}/{slug}"
                         if ev_slug and slug else
                         f"https://polymarket.com/event/{ev_slug or slug}"),
@@ -343,16 +361,38 @@ def assess(c: dict, ev: dict | None, ai: dict | None) -> dict:
     a["n_smart"] = len(w.get("smart_for") or [])
     a["whales_ok"] = a["smart_for"] > 0 and a["smart_for"] > a["smart_against"]
 
+    # Расхождение с рынком в разы — чаще неверно понятый вопрос, чем находка.
+    # 22.11 бесплатная модель дала 80% исходу «ровно одно повышение ставки»,
+    # не заметив, что одно повышение в этом году уже было; рынок давал 7%.
+    # Такую оценку засчитываем, только если её поддержал другой источник.
+    a["ai_outlier"] = bool(ai and ai["p"] > max(AI_OUTLIER_RATIO * c["mkt"],
+                                                c["mkt"] + AI_OUTLIER_GAP))
+    if a["ai_ok"] and a["ai_outlier"] and not (a["venue_ok"] or a["whales_ok"]):
+        a["ai_ok"] = False
+    # ИИ уверенно посмотрел и запаса не увидел — тогда сигнала нет вовсе.
+    # 22.11 ушли два «средних» сигнала, где покупку кошелька перевесила бы
+    # оценка ИИ, равная цене: сообщение противоречило само себе. Неуверенная
+    # оценка (low) не решает ни за, ни против.
+    a["ai_against"] = bool(ai and ai["confidence"] != "low"
+                           and a["p_est"] < EST_RATIO * cost)
+
     n_ok = int(a["ai_ok"]) + int(a["venue_ok"]) + int(a["whales_ok"])
-    # ИИ посмотрел и запаса не увидел — два других источника его не перевесят
-    if a["p_est"] is not None and a["p_est"] < EST_RATIO * cost:
-        n_ok = min(n_ok, 1)
+    if a["ai_against"]:
+        n_ok = 0
     a["level"] = min(n_ok, 2)
     a["sources"] = "+".join(k for k, ok in (("news", a["ai_ok"]),
                                             ("venue", a["venue_ok"]),
                                             ("whales", a["whales_ok"])) if ok)
-    best = a["p_est"] if a["p_est"] is not None else (a["pv"] or c["mkt"])
-    a["ratio"] = best / cost
+    # Ориентир для сообщения — только из источника, который сам «за»:
+    # оценка ИИ, если он подтвердил, иначе цена на другой площадке.
+    # Прежде здесь стояла любая оценка ИИ, и при подтверждении с Kalshi
+    # сообщение показывало неуверенную оценку ниже цены входа.
+    a["guide"] = (a["p_est"] if a["ai_ok"]
+                  else a["pv"] if a["venue_ok"] else None)
+    a["ratio"] = (a["guide"] if a["guide"] is not None else c["mkt"]) / cost
+    a["note"] = ("ИИ против" if a["ai_against"] else
+                 "ИИ: расхождение подозрительно велико" if a["ai_outlier"]
+                 and not a["ai_ok"] else "")
     return a
 
 
@@ -373,7 +413,12 @@ def why_lines(c: dict, ai: dict | None, a: dict) -> list[str]:
     """Причины простыми словами — по строке на источник, которому есть что сказать."""
     L = []
     if ai and ai.get("reason"):
-        L.append(f"• <b>Новости:</b> {esc(ai['reason'])}")
+        if a["ai_ok"]:
+            L.append(f"• <b>Новости:</b> {esc(ai['reason'])}")
+        else:
+            # мнение ИИ полезно прочитать, но подтверждением оно не считается
+            L.append(f"• <b>Новости</b> (ИИ даёт {pct(ai['p'])}, в счёт не идёт): "
+                     f"{esc(ai['reason'])}")
     if a["venue"] is not None and a["pv"] is not None:
         v = a["venue"]
         word = "тот же исход" if a["venue_exact"] else "похожий рынок"
@@ -424,8 +469,8 @@ def news_lines(c: dict, ev: dict | None, now: float, n: int = 2) -> list[str]:
 def signal_message(c: dict, ev: dict | None, ai: dict | None, a: dict,
                    now: float, upgraded: bool = False) -> str:
     """Сообщение о сигнале, сильном или среднем. Уходит сразу, как найден."""
-    p = a["p_est"] if a["p_est"] is not None else a["pv"]
-    if a["p_est"] is not None:
+    p = a["guide"]
+    if a["ai_ok"]:
         guide = f", оценка бота — около <b>{pct(p)}</b>"
     elif p is not None:
         # без ИИ своей оценки нет: ориентир — цена того же исхода у соседей
@@ -490,6 +535,13 @@ def why_gone(prev: dict, m: dict | None, c: dict | None,
                 "или до конца осталось меньше суток"), px
     if asm is None:
         return "по рынку не удалось собрать свежие данные", c["cost"]
+    if asm["ai_outlier"] and not asm["ai_ok"]:
+        return (f"ИИ дал {pct(asm['p_ai'])} — в разы выше рынка ({pct(c['mkt'])}), "
+                f"похоже, он неверно понял вопрос, а другие источники его "
+                f"не поддержали"), c["cost"]
+    if asm["ai_against"]:
+        return (f"ИИ не видит запаса: его оценка {pct(asm['p_est'])}, "
+                f"рынок — {pct(c['mkt'])}"), c["cost"]
     parts = []
     if asm["p_est"] is not None:
         parts.append(f"оценка бота теперь {pct(asm['p_est'])}")
@@ -499,15 +551,27 @@ def why_gone(prev: dict, m: dict | None, c: dict | None,
     return "подтверждение пропало: " + ", ".join(parts), c["cost"]
 
 
-def gone_message(prev: dict, reason: str, px: float | None) -> str:
-    """Короткое «сигнал снят». Только факты: что было, что стало, почему."""
-    now_s = f", сейчас {cents(px)}" if px is not None else ""
-    return "\n".join([
-        "⚪ <b>Сигнал снят</b>", f"<b>{esc(prev.get('q') or '')}</b>", "",
-        f"{prev.get('side') or 'Ставка'}: при сигнале было "
-        f"{cents(float(prev.get('cost') or 0.0))}{now_s}.",
-        f"Причина: {esc(reason)}.",
-        f'<a href="{esc(prev.get("url") or "")}">Открыть рынок</a>'])
+def gone_message(items: list[tuple[dict, str, float | None]]) -> str:
+    """«Сигнал снят» — по одному или списком, если снято несколько сразу.
+
+    Только факты: что было, что стало, почему. Несколько снятий за прогон
+    уходят одним сообщением, чтобы не засыпать чат.
+    """
+    def body(prev: dict, reason: str, px: float | None) -> list[str]:
+        now_s = f", сейчас {cents(px)}" if px is not None else ""
+        return [f"<b>{esc(prev.get('q') or '')}</b>",
+                f"{prev.get('side') or 'Ставка'}: при сигнале было "
+                f"{cents(float(prev.get('cost') or 0.0))}{now_s}.",
+                f"Причина: {esc(reason)}.",
+                f'<a href="{esc(prev.get("url") or "")}">Открыть рынок</a>']
+
+    if len(items) == 1:
+        return "\n".join(["⚪ <b>Сигнал снят</b>", ""] + body(*items[0]))
+    L = [f"⚪ <b>Сняты сигналы: {len(items)}</b>"]
+    for i, it in enumerate(items, 1):
+        b = body(*it)
+        L += ["", f"{i}. {b[0]}"] + b[1:]
+    return "\n".join(L)
 
 
 def update_signals(rated: list[tuple], sent: dict, now: float) -> list[tuple]:
@@ -572,10 +636,10 @@ def digest_message(rows: list[tuple], n_cands: int, n_strong: int,
         L.append("<i>Новости оценивает бесплатная модель ИИ. Её оценке бот "
                  "доверяет меньше, чем цене рынка.</i>")
     for i, (c, ev, ai, a) in enumerate(rows, 1):
-        if a["p_est"] is not None:
-            est = f", оценка {pct(a['p_est'])}"
+        if a["ai_ok"]:
+            est = f", оценка {pct(a['guide'])}"
         else:                   # при выключенном ИИ повторять это в каждой строке незачем
-            est = ", ИИ не оценивал" if ai_on else ""
+            est = ", ИИ не оценивал" if ai_on and not ai else ""
         L += ["", f"{i}. <b>{esc(c['q'])}</b>",
               f"{c['side']} по {cents(c['cost'])} (выплата {1.0 / c['cost']:.0f}×) · "
               f"рынок {pct(c['mkt'])}{est} · <b>{STRENGTH_RU[a['level']]}</b>"]
@@ -856,9 +920,11 @@ def main() -> int:
         told = (f"ИИ {ai['p'] * 100:.1f}% ({ai['confidence']}) -> оценка "
                 f"{asm['p_est'] * 100:.1f}% [{ai.get('model', '?')}]" if ai
                 else "ИИ не оценивал")
+        note = f" ({asm['note']})" if asm["note"] else ""
         print(f"  {STRENGTH_RU[asm['level']]:8s} {c['side']:3s} {c['cost'] * 100:4.1f}¢ "
               f"рынок {c['mkt'] * 100:4.1f}% | {told} | "
-              f"{asm['sources'] or 'без подтверждений'} | {c['q'][:70]}", flush=True)
+              f"{asm['sources'] or 'без подтверждений'}{note} | {c['q'][:70]}",
+              flush=True)
 
     tg = None if a.dry else Telegram()
     log = log_load()
@@ -878,7 +944,8 @@ def main() -> int:
     by_cid = {str(m.get("conditionId")): m for m in raw}
     cand_by_key = {c["key"]: c for c in cands}
     rated_by_key = {t[0]["key"]: t for t in rated}
-    n_sent = n_gone = 0
+    n_sent = 0
+    gone: list[tuple] = []
     for kind, x in update_signals(rated, sent, now):
         if kind == "gone":
             prev, t = sent[x], rated_by_key.get(x)
@@ -891,14 +958,16 @@ def main() -> int:
             if res:
                 reason = "рынок закрылся, ставка " + (
                     "выиграла" if res == "win" else "проиграла")
-            out(gone_message(prev, reason, px))
-            n_gone += 1
+            gone.append((prev, reason, px))
             continue
         c, ev, ai, asm = x
         out(signal_message(c, ev, ai, asm, now, upgraded=kind == "up"))
         n_sent += 1
         if not a.dry:
             log_add(log, "strong" if asm["level"] >= 2 else "alert", c, asm)
+    if gone:
+        out(gone_message(gone))
+    n_gone = len(gone)
 
     # --- 5. сводка — раз в сутки
     hour = time.gmtime(now).tm_hour
