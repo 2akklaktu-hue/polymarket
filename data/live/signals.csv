@@ -25,3 +25,4 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-22T11:57:40Z,alert,средний,0x9b1a03b41a1a68c209e9c3caf3d8af3f878420d6dbe8cb8afffd66049e73b114,NO,0.0757,0.0705,0.0730,0.0716,whales,Another Fed rate hike in 2026?,
 2026-11-22T11:57:40Z,alert,средний,0x117f9132e15eeff2621be398fa57092cf446a2f02cbd7ee8e3714226705c4d3b,YES,0.0816,0.0775,0.0700,0.0764,venue,"Will OpenAI announce another Millennium Prize solution by December 31, 2026?",
 2026-11-22T16:54:46Z,alert,средний,0x714e151eb0978a38ea32673a3cbfaedcf2c34057b9ac819e25bc65a317a69b83,YES,0.1200,0.1150,0.1350,0.1180,venue,Will Trump meet with Flávio Bolsonaro in 2026?,
+2026-11-22T17:50:38Z,alert,средний,0x2bc145cc9c8c67e9a54360fc7f97a061d4a4f75e952c8bf627a40b035759e3e0,NO,0.0707,0.0600,,,venue,"Will ""Choosin' Texas - Ella Langley"" be the Billboard Hot 100 #1 song for the week of December 5?",
