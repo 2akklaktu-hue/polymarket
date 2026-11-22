@@ -8,9 +8,12 @@
   3. игроки    — дешёвую сторону покупают кошельки с прибыльной историей.
 
 Что присылает.
-  * Сильный сигнал — сразу: согласны минимум два источника из трёх.
-  * Сводка раз в сутки — три лучших кандидата с честной пометкой силы
-    и итогом по прошлым сигналам: сколько закрылось и сколько выиграло.
+  * Сигнал — сразу, в том же прогоне: сильный (согласны два источника из
+    трёх) и средний (один источник).
+  * Поправку к нему — тоже сразу: средний стал сильным, либо сигнал снят
+    (подтверждение пропало, цена ушла из диапазона, рынок закрылся).
+  * Сводку раз в сутки — до трёх действующих сигналов и итог по прошлым:
+    сколько закрылось и сколько выиграло.
 
 Чего НЕ обещает. Исход за 5 центов не может иметь «высокий шанс»: на 23 тысячах
 закрытых рынков такие исходы сбывались в 4-5% случаев (README, раздел 2).
@@ -29,6 +32,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import json
 import math
@@ -107,7 +111,15 @@ AI_TIME_S = 360.0         # дольше на ИИ за прогон не тра
                           # бывают медленными, а у задания в Actions 15 минут
 DIGEST_HOUR_UTC = _env_int("PM_DIGEST_HOUR_UTC", 9)
 DIGEST_TOP = 3
-RESEND_AFTER_H = 48.0
+
+# --- что слать сразу, не дожидаясь сводки --------------------------------
+ALERT_LEVEL = 1           # с какой силы: 1 — средние и сильные, 2 — только сильные
+MISS_RUNS = 2             # сигнала нет столько прогонов подряд — сообщаем «снят».
+                          # Один прогон без подтверждения бывает случайным:
+                          # площадка не ответила, цена качнулась через порог
+COOLDOWN_H = 12.0         # снятый сигнал не объявляется заново раньше этого,
+                          # иначе на границе порога бот дёргался бы туда-сюда
+WATCH_MOVED = 0.15        # цена присланного сигнала ушла на 15% — ИИ пересчитывает
 
 # --- когда источник считается «за» ---------------------------------------
 AI_RATIO = 1.5            # оценка ИИ не ниже полутора цен входа
@@ -409,18 +421,31 @@ def news_lines(c: dict, ev: dict | None, now: float, n: int = 2) -> list[str]:
     return ["• <b>Свежие новости</b> (бот их не оценивал):"] + out if out else []
 
 
-def strong_message(c: dict, ev: dict | None, ai: dict | None, a: dict,
-                   now: float) -> str:
+def signal_message(c: dict, ev: dict | None, ai: dict | None, a: dict,
+                   now: float, upgraded: bool = False) -> str:
+    """Сообщение о сигнале, сильном или среднем. Уходит сразу, как найден."""
     p = a["p_est"] if a["p_est"] is not None else a["pv"]
-    # без ИИ своей оценки у бота нет: ориентир — цена того же исхода у соседей
-    guide = (f"оценка бота — около <b>{pct(p)}</b>" if a["p_est"] is not None
-             else f"на {esc(a['venue']['venue'])} этот исход стоит <b>{pct(p)}</b>")
-    L = ["🎯 <b>Сильный сигнал</b>", f"<b>{esc(c['q'])}</b>", "",
+    if a["p_est"] is not None:
+        guide = f", оценка бота — около <b>{pct(p)}</b>"
+    elif p is not None:
+        # без ИИ своей оценки нет: ориентир — цена того же исхода у соседей
+        guide = f", на {esc(a['venue']['venue'])} этот исход стоит <b>{pct(p)}</b>"
+    else:
+        guide = "; своей оценки у бота нет"      # подтверждают только игроки
+    if a["level"] >= 2:
+        head = "🎯 <b>Сильный сигнал</b>" + (
+            " — был средним, подтвердился вторым источником" if upgraded else "")
+    else:
+        head = "🟡 <b>Средний сигнал</b> — подтверждает один источник"
+    L = [head, f"<b>{esc(c['q'])}</b>", "",
          f"Ставка: <b>{c['side']} по {cents(c['cost'])}</b> — выплата "
          f"{1.0 / c['cost']:.0f}×",
-         f"Рынок даёт {pct(c['mkt'])}, {guide}", "",
+         f"Рынок даёт {pct(c['mkt'])}{guide}", "",
          "<b>Почему рынок может ошибаться:</b>"]
-    L += why_lines(c, ai, a)
+    why = why_lines(c, ai, a)
+    if not why and a["p_ai"] is not None:
+        why = [f"• <b>Новости:</b> ИИ оценивает шанс в {pct(a['p_ai'])}"]
+    L += why
     if not ai:
         L += news_lines(c, ev, now)
     risks = []
@@ -431,20 +456,112 @@ def strong_message(c: dict, ev: dict | None, ai: dict | None, a: dict,
                      f"на ${a['smart_against']:,.0f}.")
     if risks:
         L += ["", "<b>Что может пойти не так:</b> " + " ".join(risks)]
-    lose = _clip(round((1.0 - p) * 10), 1, 9)
+    lose = _clip(round((1.0 - (p if p is not None else c["mkt"])) * 10), 1, 9)
     L += ["", f"Честно о шансах: даже при верной оценке такая ставка "
               f"проигрывает примерно в {lose:.0f} случаях из 10."]
-    k = evaluate(c["px"], p, c["rate"]).kelly * 0.25
+    k = evaluate(c["px"], p, c["rate"]).kelly * 0.25 if p is not None else 0.0
     if k > 0:
         L.append(f"Размер по четверти Келли: {k * 100:.1f}% банка.")
     L += [f"До конца: {c['days']:.0f} дн. · оборот за сутки ${c['vol24']:,.0f}",
           "", f'<a href="{esc(c["url"])}">Открыть рынок</a>',
-          "<i>Это оценка, а не рекомендация. Решение за тобой.</i>"]
+          "<i>Это оценка, а не рекомендация. Решение за тобой. Если сигнал "
+          "пропадёт, бот напишет об этом отдельно.</i>"]
     return "\n".join(L)
+
+
+def why_gone(prev: dict, m: dict | None, c: dict | None,
+             asm: dict | None) -> tuple[str, float | None]:
+    """Почему присланного сигнала больше нет и сколько исход стоит сейчас.
+
+    m — рынок из свежего списка (None: его там нет), c — он же как кандидат
+    (None: не прошёл отбор), asm — его оценка в этом прогоне (None: не оценён).
+    """
+    if m is None:
+        return "рынок закрылся или ушёл из числа активных", None
+    bid, ask = _f(m.get("bestBid")), _f(m.get("bestAsk"))
+    px = (ask if prev.get("yes") else 1.0 - bid) if bid == bid and ask == ask else None
+    if c is None:
+        if px is not None and px > P_HI:
+            return (f"цена выросла выше {cents(P_HI)} — дешёвым этот исход "
+                    f"бот больше не считает"), px
+        if px is not None and px < P_LO:
+            return f"цена упала ниже {cents(P_LO)}", px
+        return ("рынок перестал проходить отбор: мал оборот, широк спред "
+                "или до конца осталось меньше суток"), px
+    if asm is None:
+        return "по рынку не удалось собрать свежие данные", c["cost"]
+    parts = []
+    if asm["p_est"] is not None:
+        parts.append(f"оценка бота теперь {pct(asm['p_est'])}")
+    if asm["venue"] is not None and asm["pv"] is not None:
+        parts.append(f"{asm['venue']['venue']} даёт {pct(asm['pv'])}")
+    parts.append(f"рынок — {pct(c['mkt'])}")
+    return "подтверждение пропало: " + ", ".join(parts), c["cost"]
+
+
+def gone_message(prev: dict, reason: str, px: float | None) -> str:
+    """Короткое «сигнал снят». Только факты: что было, что стало, почему."""
+    now_s = f", сейчас {cents(px)}" if px is not None else ""
+    return "\n".join([
+        "⚪ <b>Сигнал снят</b>", f"<b>{esc(prev.get('q') or '')}</b>", "",
+        f"{prev.get('side') or 'Ставка'}: при сигнале было "
+        f"{cents(float(prev.get('cost') or 0.0))}{now_s}.",
+        f"Причина: {esc(reason)}.",
+        f'<a href="{esc(prev.get("url") or "")}">Открыть рынок</a>'])
+
+
+def update_signals(rated: list[tuple], sent: dict, now: float) -> list[tuple]:
+    """Что изменилось с прошлого прогона. Меняет `sent`, возвращает события.
+
+    ("new", t)    сигнал появился — t это (кандидат, данные, ИИ, оценка);
+    ("up", t)     средний стал сильным;
+    ("gone", key) сигнала нет MISS_RUNS прогонов подряд.
+
+    Раньше в Telegram сразу уходили только сильные, а средние ждали суточной
+    сводки. За сутки цена и новости успевают смениться, поэтому теперь сразу
+    уходит всё от ALERT_LEVEL и выше, а об исчезновении сигнала сообщается
+    отдельно — иначе старое сообщение висело бы в чате как действующее.
+    """
+    events: list[tuple] = []
+    live = {t[0]["key"]: t for t in rated if t[3]["level"] >= ALERT_LEVEL}
+    for key, t in live.items():
+        c, asm = t[0], t[3]
+        prev = sent.get(key)
+        if prev and prev.get("active"):
+            prev["miss"], prev["ts"] = 0, now
+            if asm["level"] > int(prev.get("level") or 0):
+                prev["level"] = asm["level"]
+                events.append(("up", t))
+            continue
+        if prev and now - float(prev.get("gone_ts") or 0) < COOLDOWN_H * 3600.0 \
+                and asm["level"] <= int(prev.get("level") or 0):
+            continue                      # недавно снят и сильнее не стал
+        sent[key] = {"ts": now, "active": True, "miss": 0, "level": asm["level"],
+                     "cost": round(c["cost"], 4), "cid": c["cid"], "yes": c["yes"],
+                     "side": c["side"], "q": c["q"], "url": c["url"]}
+        events.append(("new", t))
+    for key, prev in sent.items():
+        if not prev.get("active") or key in live:
+            continue
+        prev["miss"] = int(prev.get("miss") or 0) + 1
+        if prev["miss"] >= MISS_RUNS:
+            prev["active"], prev["gone_ts"], prev["ts"] = False, now, now
+            events.append(("gone", key))
+    return events
 
 
 def digest_message(rows: list[tuple], n_cands: int, n_strong: int,
                    ai_on: bool, ai_free: bool, card: str, now: float) -> str:
+    """Сводка: только средние и сильные — у слабых нет причины вне цены.
+
+    Слабые раньше занимали свободные места и размывали сводку (16.11 таких
+    было два из трёх). Если показать нечего — одна строка: видно, что бот
+    жив, а читать нечего.
+    """
+    if not rows:
+        return ("📋 <b>Дешёвые исходы за сутки:</b> сегодня ничего стоящего. "
+                f"Просмотрено {n_cands} исходов по {cents(P_LO)}–{cents(P_HI)}, "
+                "ни у одного нет подтверждения вне цены.")
     L = ["📋 <b>Дешёвые исходы за сутки</b>",
          f"Просмотрено {n_cands} исходов по {cents(P_LO)}–{cents(P_HI)}. "
          f"Сильных сигналов: {n_strong}."]
@@ -454,13 +571,6 @@ def digest_message(rows: list[tuple], n_cands: int, n_strong: int,
     elif ai_free:
         L.append("<i>Новости оценивает бесплатная модель ИИ. Её оценке бот "
                  "доверяет меньше, чем цене рынка.</i>")
-    if not rows:
-        L += ["", "Сегодня показать нечего: подходящих исходов не нашлось. "
-                  "Так бывает, и это не поломка."]
-    elif all(a["level"] == 0 for _c, _ev, _ai, a in rows):
-        # главное — первой строкой, чтобы не приходилось вычитывать её из пометок
-        L += ["", "<b>Сегодня сигналов нет:</b> ни у одного исхода нет "
-                  "подтверждения. Ниже три самых заметных — только для наблюдения."]
     for i, (c, ev, ai, a) in enumerate(rows, 1):
         if a["p_est"] is not None:
             est = f", оценка {pct(a['p_est'])}"
@@ -469,17 +579,19 @@ def digest_message(rows: list[tuple], n_cands: int, n_strong: int,
         L += ["", f"{i}. <b>{esc(c['q'])}</b>",
               f"{c['side']} по {cents(c['cost'])} (выплата {1.0 / c['cost']:.0f}×) · "
               f"рынок {pct(c['mkt'])}{est} · <b>{STRENGTH_RU[a['level']]}</b>"]
-        # без подтверждений исход попадает сюда только по активности торгов
-        L += why_lines(c, ai, a) or ["• Подтверждений нет: показан как один из "
-                                     "самых активных за сутки."]
+        why = why_lines(c, ai, a)
+        if not why and a["p_ai"] is not None:
+            # подтверждение дал ИИ, но без пояснения — показать хотя бы цифру
+            why = [f"• <b>Новости:</b> ИИ оценивает шанс в {pct(a['p_ai'])}"]
+        L += why
         if not ai:
             L += news_lines(c, ev, now)
         L.append(f'<a href="{esc(c["url"])}">Открыть рынок</a> · '
                  f'до конца {c["days"]:.0f} дн.')
     n_src = "трёх" if ai_on else "двух"
     L += ["", card, "",
-          f"<i>«Сильный» — согласны два источника из {n_src}, «средний» — один, "
-          "«слабый» — ни одного, показан только для наблюдения. Это оценки, "
+          f"<i>«Сильный» — согласны два источника из {n_src}, «средний» — один. "
+          "Исходы без подтверждений в сводку не попадают. Это оценки, "
           "а не рекомендации.</i>"]
     return "\n".join(L)
 
@@ -600,13 +712,20 @@ def state_save(st: dict, now: float) -> None:
                      encoding="utf-8")
 
 
-def ai_needed(c: dict, old: dict | None, now: float) -> bool:
+def ai_needed(c: dict, old: dict | None, now: float, watched: bool = False) -> bool:
+    """Нужна ли новая оценка ИИ. watched — по исходу уже прислан сигнал.
+
+    За присланным сигналом следим строже: как только цена ушла на
+    WATCH_MOVED, оценка пересчитывается, не дожидаясь суток.
+    """
     if not old:
         return True
     age_h = (now - float(old.get("ts") or 0)) / 3600.0
     if age_h >= AI_STALE_H:
         return True
     moved = abs(c["cost"] - float(old.get("cost") or c["cost"])) / c["cost"]
+    if watched:
+        return moved >= WATCH_MOVED
     return age_h >= AI_TTL_H and moved >= AI_MOVED
 
 
@@ -641,9 +760,17 @@ def main() -> int:
     def ev_age(c: dict) -> float:
         return now - float((st["ev"].get(c["cid"]) or {}).get("ts") or 0)
 
+    # Исходы, по которым сигнал уже прислан, проверяются в каждом прогоне и
+    # первыми: именно про них надо вовремя узнать, что ситуация изменилась.
+    watching = {k for k, v in st["sent"].items() if v.get("active")}
+    watch = [c for c in cands if c["key"] in watching]
     rest = sorted(cands[N_EVIDENCE:], key=lambda c: -ev_age(c))
-    todo = [c for c in cands[:N_EVIDENCE] + rest[:N_ROTATE]
-            if ev_age(c) > EV_TTL_H * 3600.0]
+    seen: set[str] = set()
+    todo = []
+    for c in watch + cands[:N_EVIDENCE] + rest[:N_ROTATE]:
+        if c["cid"] not in seen and ev_age(c) > EV_TTL_H * 3600.0:
+            seen.add(c["cid"])
+            todo.append(c)
     for c in todo:
         try:
             st["ev"][c["cid"]] = gather(api, c, st["wallets"])
@@ -659,7 +786,8 @@ def main() -> int:
     known = [c for c in cands if ev_of(c)]
     for c in known:
         c["score2"] = score2(c, ev_of(c), now)
-    known.sort(key=lambda c: -c["score2"])
+    # в очереди на ИИ первыми идут исходы с уже присланным сигналом
+    known.sort(key=lambda c: (0 if c["key"] in watching else 1, -c["score2"]))
 
     # --- 2. оценка ИИ: лучшие по бесплатным признакам, в пределах бюджета
     ai_on = judge.available() and not a.no_ai
@@ -677,7 +805,8 @@ def main() -> int:
         for c in known:
             if left <= 0 or time.time() - t_ai > AI_TIME_S:
                 break
-            if not ai_needed(c, st["ai"].get(c["key"]), now):
+            if not ai_needed(c, st["ai"].get(c["key"]), now,
+                             watched=c["key"] in watching):
                 continue
             ev = ev_of(c)
             try:
@@ -743,22 +872,39 @@ def main() -> int:
         else:
             tg.send(text)
 
-    # --- 4. сильные — сразу
-    n_sent = 0
-    for c, ev, ai, asm in strong:
-        prev = st["sent"].get(c["key"])
-        if prev and now - float(prev.get("ts") or 0) < RESEND_AFTER_H * 3600.0:
+    # --- 4. сигналы — сразу: новые, усилившиеся и снятые
+    # в пробном прогоне память об отправленном не трогаем: работаем с копией
+    sent = st["sent"] if not a.dry else copy.deepcopy(st["sent"])
+    by_cid = {str(m.get("conditionId")): m for m in raw}
+    cand_by_key = {c["key"]: c for c in cands}
+    rated_by_key = {t[0]["key"]: t for t in rated}
+    n_sent = n_gone = 0
+    for kind, x in update_signals(rated, sent, now):
+        if kind == "gone":
+            prev, t = sent[x], rated_by_key.get(x)
+            reason, px = why_gone(prev, by_cid.get(str(prev.get("cid"))),
+                                  cand_by_key.get(x), t[3] if t else None)
+            # если рынок закрылся, журнал уже знает исход — он важнее причины
+            side = "YES" if prev.get("yes") else "NO"
+            res = next((r["result"] for r in log if r["cid"] == prev.get("cid")
+                        and r["side"] == side and r.get("result")), "")
+            if res:
+                reason = "рынок закрылся, ставка " + (
+                    "выиграла" if res == "win" else "проиграла")
+            out(gone_message(prev, reason, px))
+            n_gone += 1
             continue
-        out(strong_message(c, ev, ai, asm, now))
+        c, ev, ai, asm = x
+        out(signal_message(c, ev, ai, asm, now, upgraded=kind == "up"))
         n_sent += 1
         if not a.dry:
-            st["sent"][c["key"]] = {"ts": now, "cost": round(c["cost"], 4)}
-            log_add(log, "strong", c, asm)
+            log_add(log, "strong" if asm["level"] >= 2 else "alert", c, asm)
 
     # --- 5. сводка — раз в сутки
     hour = time.gmtime(now).tm_hour
     if a.digest or (st.get("digest_day") != today and hour >= DIGEST_HOUR_UTC):
-        top = rated[:DIGEST_TOP]       # слабые попадают, только если мест хватает
+        # только средние и сильные; rated уже отсортирован по силе
+        top = [t for t in rated if t[3]["level"] >= 1][:DIGEST_TOP]
         out(digest_message(top, len(cands), len(strong), ai_on, ai_free,
                            scorecard(log), now))
         if not a.dry:
@@ -769,8 +915,9 @@ def main() -> int:
     if not a.dry:
         log_save(log)
     state_save(st, now)   # кэш сохраняется и в пробном прогоне: он стоит запросов
-    print(f"\nсильных сигналов: {n_sent}"
-          f"{' (пробный прогон, ничего не послано)' if a.dry else ' отправлено'}"
+    print(f"\nсигналов: новых и усилившихся {n_sent}, снятых {n_gone}"
+          f"{' (пробный прогон, ничего не послано)' if a.dry else ' — отправлено'}"
+          f" | под наблюдением: {sum(1 for v in sent.values() if v.get('active'))}"
           f" | запросов к Polymarket: {api.n_calls}")
     return 0
 
