@@ -2062,3 +2062,5 @@ id,cid,slug,question,end,neg
 2061,0xe64566267c71631d41795cc718921d7c4120f441efbc8448823e45c2849b153e,bitcoin-above-58k-on-november-23-2026,"Will the price of Bitcoin be above $58,000 on November 23?",2026-11-23T17:00:00Z,0
 2062,0x737b3756c5826dc9ab2a6414681808173bf728e17b9de7432df3759f2a83fb80,lal-lev-elc-2026-11-23-exact-score-any-other,Exact Score: Any Other Score?,2026-11-23T20:00:00Z,1
 2063,0x3a6d382899096cde8ae7589cb8c34670468dc3977644a5f027b335e44675d789,epl-bre-eve-2026-11-23-exact-score-any-other,Exact Score: Any Other Score?,2026-11-23T20:00:00Z,1
+2064,0x355608eef04905ef4a53e229502e9dd335143f67d616e9ccfeaadbfc2fb80fe1,will-joe-burrow-win-the-2026-nfl-mvp,Will Joe Burrow win the 2026 NFL MVP?,2027-03-01T04:59:00Z,1
+2065,0x27c71990c2515c25d0ad559a706351e8c2643d552a2ca8e94401f19801b46c35,will-ai-solve-4-more-millennium-prize-problems-in-2026,Will AI solve 4 more Millennium Prize Problems in 2026?,2027-01-01T04:59:00Z,1
