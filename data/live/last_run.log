@@ -1,12 +1,13 @@
-живых рынков: 2058 | дешёвых исходов: 111
-подтверждения собраны по 4 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 9 оценок из 16, бесплатно
-оценено: 38 | сильных: 0 | средних: 1 | с оценкой ИИ: 16
+живых рынков: 2062 | дешёвых исходов: 103
+подтверждения собраны по 5 исходам
+  ИИ: 3.5% (medium) при цене 6.6¢ — Will AI solve P versus NP in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 10 оценок из 16, бесплатно
+оценено: 40 | сильных: 0 | средних: 1 | с оценкой ИИ: 15
   средний  ДА   8.2¢ рынок  7.8% | ИИ 7.0% (low) -> оценка 7.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
   слабый   ДА   4.0¢ рынок  4.0% | ИИ 5.0% (low) -> оценка 4.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the U.S. invade Cuba in 2026?
-  слабый   ДА   7.0¢ рынок  6.9% | ИИ 80.0% (high) -> оценка 37.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ: расхождение подозрительно велико) | Will 1 Fed rate hike happen in 2026?
-  слабый   ДА   6.7¢ рынок  6.6% | ИИ 7.0% (high) -> оценка 6.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Will there be no change in Fed interest rates after the December 2026 
+  слабый   ДА   6.5¢ рынок  6.3% | ИИ 7.0% (high) -> оценка 6.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Will there be no change in Fed interest rates after the December 2026 
   слабый   ДА   8.6¢ рынок  8.4% | ИИ 4.0% (medium) -> оценка 7.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Miguel Díaz-Canel out as leader of Cuba by December 31?
-  слабый   ДА   6.6¢ рынок  6.2% | ИИ 2.0% (high) -> оценка 4.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will the Fed Hike–Pause–Pause in the next three decisions (Sep–Oct–Dec
+  слабый   ДА   7.0¢ рынок  6.8% | ИИ 80.0% (high) -> оценка 37.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ: расхождение подозрительно велико) | Will 1 Fed rate hike happen in 2026?
+  слабый   ДА   8.4¢ рынок  8.2% | ИИ 10.0% (low) -> оценка 8.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Russia military action against an EU country by December 31, 2026?
 
-сигналов: новых и усилившихся 0, снятых 3 — отправлено | под наблюдением: 1 | запросов к Polymarket: 28
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 38
