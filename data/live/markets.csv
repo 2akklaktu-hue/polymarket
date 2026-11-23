@@ -2109,3 +2109,6 @@ id,cid,slug,question,end,neg
 2108,0xfddc176a570a2373a272649344a4bb2f0a46f05774984d055d4ca7f00f2f0397,bitcoin-above-56k-on-november-24-2026,"Will the price of Bitcoin be above $56,000 on November 24?",2026-11-24T17:00:00Z,0
 2109,0x8411091fcee90ebde87cd80e63180ec285117f3586cc961c3472d288e1dbccf3,atp-ghetu-milesjo-2026-11-23,Hersonissos 4: Gabriel Ghetu vs Miles Jones,2026-11-30T08:00:00Z,0
 2110,0x480dbc73476f4246839be908b1dbbd1ee687b1205ddb64db376aacc28168e4a0,atp-chekhov-ozdemir-2026-11-23,Ankara: Anton Chekhov vs S Mert Ozdemir,2026-11-30T08:00:00Z,0
+2111,0x1cef653efb9be0d37575e1a3796f9a35da40cc53c34fee8771a731ddafa618c3,nfl-cin-was-2026-11-24,Bengals vs. Commanders,2026-11-24T01:15:00Z,0
+2112,0xc42460b4eca4c9f8871e21184ce28a6b7c1ae422bebad855962db1d6af550347,nba-okc-ind-2026-11-23,Thunder vs. Pacers,2026-11-24T00:30:00Z,0
+2113,0x2e85ddbfbaf15beb676fe9b2f269b70dbaecfce369e5befb77b2de36a255b5d7,cs2-tl1-gosh-2026-11-24,Counter-Strike: Liquid vs GOSH (BO1) - PGL Major Singapore Stage 1,2026-11-24T12:00:00Z,0

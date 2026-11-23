@@ -1,13 +1,13 @@
-живых рынков: 2076 | дешёвых исходов: 119
-подтверждения собраны по 8 исходам
-  ИИ: 5.3% (high) при цене 5.6¢ — Will there be no change in Fed interest rates after the Dece [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 7 оценок из 16, бесплатно
-оценено: 94 | сильных: 0 | средних: 2 | с оценкой ИИ: 20
+живых рынков: 2094 | дешёвых исходов: 121
+подтверждения собраны по 7 исходам
+  ИИ: 4.0% (medium) при цене 7.6¢ — Will AI solve the Collatz conjecture in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 8 оценок из 16, бесплатно
+оценено: 97 | сильных: 0 | средних: 1 | с оценкой ИИ: 21
   средний  НЕТ 10.1¢ рынок  9.5% | ИИ 20.0% (medium) -> оценка 12.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will "Avengers: Doomsday" score at least 65 on the Rotten Tomatoes Tom
-  средний  ДА   3.3¢ рынок  2.8% | ИИ не оценивал | venue | Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
-  слабый   ДА   5.8¢ рынок  5.2% | ИИ 5.0% (medium) -> оценка 5.1% [baidu/ernie-5.5-flash-preview:free] | venue (ИИ против) | Will Trump pardon Jensen Huang before 2027?
+  слабый   ДА   5.6¢ рынок  5.0% | ИИ 5.0% (medium) -> оценка 5.0% [baidu/ernie-5.5-flash-preview:free] | venue (ИИ против) | Will Trump pardon Jensen Huang before 2027?
   слабый   ДА   8.0¢ рынок  7.9% | ИИ 4.0% (medium) -> оценка 6.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Miguel Díaz-Canel out as leader of Cuba by December 31?
+  слабый   ДА   5.8¢ рынок  5.7% | ИИ 5.3% (high) -> оценка 5.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Will there be no change in Fed interest rates after the December 2026 
   слабый   ДА  10.1¢ рынок  9.9% | ИИ 9.9% (low) -> оценка 9.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
-  слабый   ДА   6.4¢ рынок  6.2% | ИИ 80.0% (high) -> оценка 37.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ: расхождение подозрительно велико) | Will 1 Fed rate hike happen in 2026?
+  слабый   ДА   6.2¢ рынок  6.0% | ИИ 80.0% (high) -> оценка 37.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ: расхождение подозрительно велико) | Will 1 Fed rate hike happen in 2026?
 
-сигналов: новых и усилившихся 0, снятых 1 — отправлено | под наблюдением: 1 | запросов к Polymarket: 43
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 33
