@@ -1,12 +1,13 @@
-живых рынков: 2076 | дешёвых исходов: 111
+живых рынков: 2098 | дешёвых исходов: 113
 подтверждения собраны по 8 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 1 оценок из 16, бесплатно
-оценено: 72 | сильных: 0 | средних: 0 | с оценкой ИИ: 17
+  ИИ: 3.4% (low) при цене 3.7¢ — Will TheBurntPeanut finish GTA VI by November 28? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 2 оценок из 16, бесплатно
+оценено: 71 | сильных: 0 | средних: 1 | с оценкой ИИ: 17
+  средний  ДА   3.0¢ рынок  2.6% | ИИ не оценивал | venue | Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
   слабый   ДА   8.3¢ рынок  8.2% | ИИ 10.0% (low) -> оценка 8.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Russia military action against an EU country by December 31, 2026?
-  слабый   ДА  10.0¢ рынок  9.8% | ИИ 9.9% (low) -> оценка 9.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
   слабый   ДА   3.0¢ рынок  2.9% | ИИ 5.0% (low) -> оценка 3.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will the U.S. invade Cuba in 2026?
-  слабый   ДА   5.8¢ рынок  5.7% | ИИ 7.0% (high) -> оценка 6.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Will there be no change in Fed interest rates after the December 2026 
-  слабый   ДА  13.8¢ рынок 13.2% | ИИ 10.0% (low) -> оценка 12.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will AI solve 2 more Millennium Prize Problems in 2026?
-  слабый   ДА   6.8¢ рынок  6.5% | ИИ 3.5% (medium) -> оценка 5.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will AI solve P versus NP in 2026?
+  слабый   ДА   6.0¢ рынок  5.8% | ИИ 80.0% (high) -> оценка 37.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ: расхождение подозрительно велико) | Will 1 Fed rate hike happen in 2026?
+  слабый   ДА  10.0¢ рынок  9.8% | ИИ 9.9% (low) -> оценка 9.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
+  слабый   ДА   6.6¢ рынок  6.4% | ИИ 7.0% (high) -> оценка 6.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Will there be no change in Fed interest rates after the December 2026 
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 35
+сигналов: новых и усилившихся 1, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 33
