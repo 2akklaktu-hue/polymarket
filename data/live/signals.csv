@@ -35,3 +35,4 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-23T16:29:48Z,strong,сильный,0x9b1a03b41a1a68c209e9c3caf3d8af3f878420d6dbe8cb8afffd66049e73b114,NO,0.0394,0.0335,0.0730,0.0501,news+whales,Another Fed rate hike in 2026?,
 2026-11-23T16:29:49Z,alert,средний,0x1d916047bbca1be9808076a0590c17ff113fb92986a4b4bc7f0f962642158827,YES,0.0440,0.0370,,,venue,Will there be at least 10000 measles cases in the U.S. in 2026?,
 2026-11-23T17:25:49Z,strong,сильный,0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0,YES,0.0303,0.0295,0.0530,0.0394,news+whales,Will there be no change in Fed interest rates after the December 2026 meeting?,
+2026-11-23T20:15:12Z,alert,средний,0xca5c9aac1854c8358c003993254bc069a21a58930ffe2cb2bfbebd4f7d34c214,YES,0.1460,0.1350,,,whales,"Kimberly Powell announced resignation or removal by November 30, 2026?",
