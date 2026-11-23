@@ -31,3 +31,4 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-23T08:19:19Z,alert,средний,0x9c5946d65cb7e529c95ce4aba59a79f4705501ed89e3b45ef40095b07fddd42c,NO,0.0434,0.0365,,,venue,"Will ""Obsession"" be the #2 US Netflix movie this week?",
 2026-11-23T09:53:06Z,digest,средний,0x5c81a3be20f0f627edde217d5ad2ac0d1b03830bfc163ec5ce6a31a66639180c,NO,0.1009,0.0950,0.2000,0.1265,venue,"Will ""Avengers: Doomsday"" score at least 65 on the Rotten Tomatoes Tomatometer?",
 2026-11-23T09:53:06Z,digest,средний,0xbb0d2443a9c76fce0910ca7a602f3a6d56bc676c9a1b078829fd20a782e2560f,YES,0.0333,0.0275,,,venue,Will Robert F. Kennedy Jr. leave the Trump administration before 2027?,
+2026-11-23T15:33:13Z,alert,средний,0x217ab3ce070831204e3b20bb7355ea10313ad465c0ffffbf230aa833dc6f68e1,NO,0.0505,0.0450,,,venue,"Will ""All I Want For Christmas Is You - Mariah Carey"" be the Billboard Hot 100 #2 song for the week of December 5?",
