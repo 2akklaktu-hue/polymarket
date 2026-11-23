@@ -27,3 +27,4 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-22T16:54:46Z,alert,средний,0x714e151eb0978a38ea32673a3cbfaedcf2c34057b9ac819e25bc65a317a69b83,YES,0.1200,0.1150,0.1350,0.1180,venue,Will Trump meet with Flávio Bolsonaro in 2026?,
 2026-11-22T17:50:38Z,alert,средний,0x2bc145cc9c8c67e9a54360fc7f97a061d4a4f75e952c8bf627a40b035759e3e0,NO,0.0707,0.0600,,,venue,"Will ""Choosin' Texas - Ella Langley"" be the Billboard Hot 100 #1 song for the week of December 5?",
 2026-11-23T01:43:41Z,alert,средний,0xbb0d2443a9c76fce0910ca7a602f3a6d56bc676c9a1b078829fd20a782e2560f,YES,0.0303,0.0255,,,venue,Will Robert F. Kennedy Jr. leave the Trump administration before 2027?,
+2026-11-23T04:33:36Z,alert,средний,0x5c81a3be20f0f627edde217d5ad2ac0d1b03830bfc163ec5ce6a31a66639180c,NO,0.1009,0.0950,,,venue,"Will ""Avengers: Doomsday"" score at least 65 on the Rotten Tomatoes Tomatometer?",
