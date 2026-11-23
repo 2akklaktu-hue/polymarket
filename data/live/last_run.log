@@ -1,12 +1,13 @@
-живых рынков: 2100 | дешёвых исходов: 105
-подтверждения собраны по 4 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 15 оценок из 16, бесплатно
-оценено: 99 | сильных: 0 | средних: 3 | с оценкой ИИ: 12
-  средний  ДА  12.4¢ рынок 11.8% | ИИ 12.0% (low) -> оценка 11.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
+живых рынков: 2016 | дешёвых исходов: 98
+подтверждения собраны по 9 исходам
+  ИИ: 12.5% (low) при цене 13.6¢ — Will Anthropic have the best AI model at the end of December [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 16 оценок из 16, бесплатно
+оценено: 94 | сильных: 0 | средних: 2 | с оценкой ИИ: 13
+  средний  ДА  13.2¢ рынок 12.0% | ИИ 12.0% (low) -> оценка 12.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
   средний  ДА   3.4¢ рынок  2.9% | ИИ 2.9% (low) -> оценка 2.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
-  средний  ДА  12.5¢ рынок 11.0% | ИИ не оценивал | venue | Will Anthropic have the best AI model at the end of December 2026?
-  слабый   ДА   4.5¢ рынок  4.2% | ИИ 5.5% (medium) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will there be at least 10000 measles cases in the U.S. in 2026?
+  слабый   ДА   4.4¢ рынок  4.2% | ИИ 5.5% (medium) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will there be at least 10000 measles cases in the U.S. in 2026?
+  слабый   ДА  11.5¢ рынок 11.3% | ИИ 10.0% (low) -> оценка 11.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Russia military action against an EU country by December 31, 2026?
   слабый   ДА  10.0¢ рынок  9.8% | ИИ 9.9% (low) -> оценка 9.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
   слабый   ДА  13.0¢ рынок 12.5% | ИИ 11.5% (low) -> оценка 12.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Flávio Bolsonaro in 2026?
 
-сигналов: новых и усилившихся 0, снятых 1 — отправлено | под наблюдением: 3 | запросов к Polymarket: 34
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 3 | запросов к Polymarket: 36
