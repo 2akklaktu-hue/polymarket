@@ -1,12 +1,13 @@
-живых рынков: 2084 | дешёвых исходов: 106
-подтверждения собраны по 12 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 12 оценок из 16, бесплатно
-оценено: 88 | сильных: 1 | средних: 4 | с оценкой ИИ: 12
-  сильный  ДА   3.0¢ рынок  2.9% | ИИ 5.3% (high) -> оценка 3.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | news+whales | Will there be no change in Fed interest rates after the December 2026 
+живых рынков: 1975 | дешёвых исходов: 93
+подтверждения собраны по 10 исходам
+  ИИ: 3.0% (high) при цене 3.1¢ — Will there be no change in Fed interest rates after the Dece [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 13 оценок из 16, бесплатно
+оценено: 84 | сильных: 0 | средних: 4 | с оценкой ИИ: 12
   средний  ДА  12.9¢ рынок 12.2% | ИИ 12.0% (low) -> оценка 12.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
-  средний  НЕТ  3.9¢ рынок  3.6% | ИИ 7.3% (high) -> оценка 5.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Another Fed rate hike in 2026?
-  средний  ДА   4.5¢ рынок  4.1% | ИИ не оценивал | venue | Will there be at least 10000 measles cases in the U.S. in 2026?
+  средний  НЕТ  4.0¢ рынок  3.8% | ИИ 7.3% (high) -> оценка 5.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Another Fed rate hike in 2026?
+  средний  ДА   4.5¢ рынок  4.2% | ИИ не оценивал | venue | Will there be at least 10000 measles cases in the U.S. in 2026?
   средний  ДА   3.4¢ рынок  2.9% | ИИ не оценивал | venue | Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
-  слабый   ДА   8.4¢ рынок  8.3% | ИИ 10.0% (low) -> оценка 8.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Russia military action against an EU country by December 31, 2026?
+  слабый   ДА  10.1¢ рынок  9.8% | ИИ 9.9% (low) -> оценка 9.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
+  слабый   ДА   3.1¢ рынок  3.0% | ИИ 3.0% (high) -> оценка 3.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Will there be no change in Fed interest rates after the December 2026 
 
-сигналов: новых и усилившихся 1, снятых 2 — отправлено | под наблюдением: 5 | запросов к Polymarket: 41
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 5 | запросов к Polymarket: 43
