@@ -1,12 +1,13 @@
-живых рынков: 2100 | дешёвых исходов: 97
-подтверждения собраны по 9 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 14 оценок из 16, бесплатно
-оценено: 87 | сильных: 0 | средних: 3 | с оценкой ИИ: 10
-  средний  ДА  12.4¢ рынок 11.7% | ИИ 12.0% (low) -> оценка 11.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
-  средний  ДА   3.4¢ рынок  2.9% | ИИ не оценивал | venue | Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
-  средний  ДА  14.6¢ рынок 13.5% | ИИ не оценивал | whales | Kimberly Powell announced resignation or removal by November 30, 2026?
+живых рынков: 2100 | дешёвых исходов: 107
+подтверждения собраны по 13 исходам
+  ИИ: 2.9% (low) при цене 3.4¢ — Will Robert F. Kennedy Jr. leave the Trump administration be [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 15 оценок из 16, бесплатно
+оценено: 96 | сильных: 0 | средних: 3 | с оценкой ИИ: 12
+  средний  ДА  12.4¢ рынок 11.8% | ИИ 12.0% (low) -> оценка 11.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
+  средний  ДА   3.4¢ рынок  2.9% | ИИ 2.9% (low) -> оценка 2.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
+  средний  ДА  12.5¢ рынок 11.0% | ИИ не оценивал | venue | Will Anthropic have the best AI model at the end of December 2026?
   слабый   ДА   4.5¢ рынок  4.2% | ИИ 5.5% (medium) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will there be at least 10000 measles cases in the U.S. in 2026?
-  слабый   ДА  10.1¢ рынок  9.9% | ИИ 9.9% (low) -> оценка 9.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
-  слабый   ДА  13.0¢ рынок 12.5% | ИИ 10.0% (low) -> оценка 12.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Russia military action against an EU country by December 31, 2026?
+  слабый   ДА  10.1¢ рынок  9.8% | ИИ 9.9% (low) -> оценка 9.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
+  слабый   ДА  13.0¢ рынок 12.5% | ИИ 11.5% (low) -> оценка 12.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump meet with Flávio Bolsonaro in 2026?
 
-сигналов: новых и усилившихся 1, снятых 1 — отправлено | под наблюдением: 4 | запросов к Polymarket: 38
+сигналов: новых и усилившихся 1, снятых 1 — отправлено | под наблюдением: 4 | запросов к Polymarket: 41
