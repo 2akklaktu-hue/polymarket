@@ -1,13 +1,12 @@
-живых рынков: 2099 | дешёвых исходов: 102
-подтверждения собраны по 9 исходам
-  ИИ: 12.0% (low) при цене 12.8¢ — Will OpenAI announce another Millennium Prize solution by De [nvidia/nemotron-3-ultra-550b-a55b:free]
+живых рынков: 2084 | дешёвых исходов: 106
+подтверждения собраны по 12 исходам
 ИИ (OpenRouter, бесплатные модели): за сутки 12 оценок из 16, бесплатно
-оценено: 82 | сильных: 1 | средних: 3 | с оценкой ИИ: 12
-  сильный  НЕТ  3.9¢ рынок  3.4% | ИИ 7.3% (high) -> оценка 5.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | news+whales | Another Fed rate hike in 2026?
-  средний  ДА  12.8¢ рынок 12.2% | ИИ 12.0% (low) -> оценка 12.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
-  средний  ДА   4.4¢ рынок  3.7% | ИИ не оценивал | venue | Will there be at least 10000 measles cases in the U.S. in 2026?
+оценено: 88 | сильных: 1 | средних: 4 | с оценкой ИИ: 12
+  сильный  ДА   3.0¢ рынок  2.9% | ИИ 5.3% (high) -> оценка 3.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | news+whales | Will there be no change in Fed interest rates after the December 2026 
+  средний  ДА  12.9¢ рынок 12.2% | ИИ 12.0% (low) -> оценка 12.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
+  средний  НЕТ  3.9¢ рынок  3.6% | ИИ 7.3% (high) -> оценка 5.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Another Fed rate hike in 2026?
+  средний  ДА   4.5¢ рынок  4.1% | ИИ не оценивал | venue | Will there be at least 10000 measles cases in the U.S. in 2026?
   средний  ДА   3.4¢ рынок  2.9% | ИИ не оценивал | venue | Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
   слабый   ДА   8.4¢ рынок  8.3% | ИИ 10.0% (low) -> оценка 8.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Russia military action against an EU country by December 31, 2026?
-  слабый   ДА  10.1¢ рынок  9.8% | ИИ 9.9% (low) -> оценка 9.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
 
-сигналов: новых и усилившихся 4, снятых 1 — отправлено | под наблюдением: 6 | запросов к Polymarket: 39
+сигналов: новых и усилившихся 1, снятых 2 — отправлено | под наблюдением: 5 | запросов к Polymarket: 41
