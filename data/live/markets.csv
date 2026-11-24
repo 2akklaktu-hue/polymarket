@@ -2150,3 +2150,6 @@ id,cid,slug,question,end,neg
 2149,0x5562553cf5717b530d3af948a1b1333d6cbd728f8db6ed83dcb3dba907f8eeac,h100-average-rental-price-in-december-2026-above-3pt10,Will the average Ornn H100 rental price in December 2026 be above $3.10?,2027-01-01T04:59:00Z,0
 2150,0x4b53c299653f4c5af7cce448734f003b00bf2036258f1ccd19a6599c07848102,bitcoin-above-64k-on-november-24-2026,"Will the price of Bitcoin be above $64,000 on November 24?",2026-11-24T17:00:00Z,0
 2151,0x1b2378126f9438e1fd6f87fa3a32583b9681b3b0bd396d3df34e88c6aca58603,section-232-rate-on-canadian-aluminum-end-of-2027-above-40-to-50,"Will the US Section 232 tariff rate on Canadian primary aluminum be >40-50% on December 31, 2027?",2027-12-31T05:01:00Z,1
+2152,0xa8b9b655949cdf27a2e82cf169db70c93663d7dbf79d57f55cd4e590ab804e39,atp-isomura-shirais-2026-11-23,Yokohama: Kokoro Isomura vs Hikaru Shiraishi,2026-12-01T01:00:00Z,0
+2153,0xdb30103301d8ef001189a24cc014d59de3b0bde807f59af7d7509a14548e709c,will-heroic-win-the-pgl-major-singapore-2026-1793811600000,Will HEROIC Win the PGL Major Singapore 2026?,2026-12-15T04:59:00Z,1
+2154,0x155dfbd24c328703ff45cb9d0910d3ef5bec43ad436144c1dc801d151d06d331,bitcoin-above-66k-on-november-24-2026,"Will the price of Bitcoin be above $66,000 on November 24?",2026-11-24T17:00:00Z,0
