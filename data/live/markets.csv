@@ -2183,3 +2183,6 @@ id,cid,slug,question,end,neg
 2182,0x9a41648970cdec30f0b01b8b1ad2ef1143621ca8ba7d46ef859293000a61116f,mls-sje-hou-2026-11-24-sje,Will San Jose Earthquakes win on 2026-11-24?,2026-11-25T03:00:00Z,1
 2183,0x4b161c9e7ad0ae952206b560f9a3649977f2efddb5e53907a0f2b9dcbff06405,b300-average-rental-price-in-january-2027-above-11pt00,Will the average Ornn B300 rental price in January 2027 be above $11.00?,2027-02-01T04:59:00Z,0
 2184,0x6c2aa658fdf29ed3efe819601c150d07c06a16b0aae47e4341fe110069ef2a03,atp-pietri-baena-2026-11-23,Hersonissos 4: Benjamin Pietri vs Roberto Carballes Baena,2026-11-30T16:00:00Z,0
+2185,0x98d88ce0020fb0b0539a2e80368fad48abe0fc109850d9316fdeb786403725cb,atp-guna-obradov-2026-11-24,Ankara: Robert Guna vs Dusan Obradovic,2026-12-01T12:30:00Z,0
+2186,0x6e259061a8675b955d691109f3c245f4bc4b1f7a8a0798ebdd08443cb479dcb2,atp-penisto-krutykh-2026-11-23,Hersonissos 4: Ryan Peniston vs Oleksii Krutykh,2026-11-30T08:00:00Z,0
+2187,0x13ad9911599703f07cb0f220ca8888fefc5228c9af06032542c1436c0544bb4f,will-bitcoin-dip-to-50k-november-23-29-2026,"Will Bitcoin dip to $50,000 November 23-29?",2026-11-30T05:00:00Z,0
