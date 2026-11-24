@@ -37,3 +37,4 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-23T17:25:49Z,strong,сильный,0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0,YES,0.0303,0.0295,0.0530,0.0394,news+whales,Will there be no change in Fed interest rates after the December 2026 meeting?,
 2026-11-23T20:15:12Z,alert,средний,0xca5c9aac1854c8358c003993254bc069a21a58930ffe2cb2bfbebd4f7d34c214,YES,0.1460,0.1350,,,whales,"Kimberly Powell announced resignation or removal by November 30, 2026?",
 2026-11-23T21:11:56Z,alert,средний,0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46,YES,0.1253,0.1100,,,venue,Will Anthropic have the best AI model at the end of December 2026?,
+2026-11-24T00:03:50Z,alert,средний,0x2fa62443d655983d31aeed0fcb2d803bc13586bc8c7a947063a79506c4101e46,NO,0.0707,0.0650,,,venue,Will Lindsay Clancy rank in Google’s Top 5 Most Searched People in the US of 2026?,
