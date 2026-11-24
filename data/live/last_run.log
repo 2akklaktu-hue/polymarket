@@ -1,13 +1,13 @@
-живых рынков: 2100 | дешёвых исходов: 88
-подтверждения собраны по 8 исходам
-  ИИ: 9.5% (high) при цене 10.2¢ — No change in Reserve Bank of Australia's interest rates at t [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 15 оценок из 16, бесплатно
-оценено: 88 | сильных: 0 | средних: 0 | с оценкой ИИ: 15
-  слабый   ДА   8.5¢ рынок  8.3% | ИИ 8.0% (medium) -> оценка 8.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
-  слабый   ДА   6.4¢ рынок  6.2% | ИИ 6.6% (medium) -> оценка 6.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
+живых рынков: 1858 | дешёвых исходов: 79
+подтверждения собраны по 6 исходам
+  ИИ: 1.5% (medium) при цене 3.7¢ — Will Jensen Huang join a new company by December 31, 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 16 оценок из 16, бесплатно
+оценено: 79 | сильных: 0 | средних: 1 | с оценкой ИИ: 18
+  средний  ДА  11.5¢ рынок 10.5% | ИИ 11.0% (low) -> оценка 10.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Kimberly Powell announced resignation or removal by November 30, 2026?
   слабый   ДА   4.3¢ рынок  4.2% | ИИ 5.3% (low) -> оценка 4.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Marco Rubio announce a presidential run before 2027?
-  слабый   ДА   4.4¢ рынок  4.2% | ИИ 4.0% (medium) -> оценка 4.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Miguel Díaz-Canel out as leader of Cuba by December 31?
-  слабый   ДА  14.1¢ рынок 13.5% | ИИ 11.5% (medium) -> оценка 12.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Marco Rubio out as Secretary of State by December 31, 2026?
-  слабый   ДА  14.1¢ рынок 13.5% | ИИ 10.0% (low) -> оценка 12.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will AI solve 2 more Millennium Prize Problems in 2026?
+  слабый   ДА   4.3¢ рынок  4.2% | ИИ 4.0% (medium) -> оценка 4.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Miguel Díaz-Canel out as leader of Cuba by December 31?
+  слабый   ДА   6.4¢ рынок  6.2% | ИИ 6.6% (medium) -> оценка 6.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
+  слабый   ДА   8.5¢ рынок  8.2% | ИИ 8.0% (medium) -> оценка 8.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
+  слабый   ДА  11.3¢ рынок 10.8% | ИИ 9.9% (low) -> оценка 10.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 35
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 37
