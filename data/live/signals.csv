@@ -1,20 +1,20 @@
 ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
-2026-11-14T08:24:27Z,digest,средний,0x969c4e277b9e771314a7bcb4d08d2013775ca554a88248d208181fe6657c341b,NO,0.1283,0.1225,0.1600,0.1338,venue,Trump declassifies new UFO files by December 31?,
+2026-11-14T08:24:27Z,digest,средний,0x969c4e277b9e771314a7bcb4d08d2013775ca554a88248d208181fe6657c341b,NO,0.1283,0.1225,0.1600,0.1338,venue,Trump declassifies new UFO files by December 31?,lose
 2026-11-14T08:24:27Z,digest,средний,0x8ccb9977b0134a3805e9a8b0520753dabea61215b5d8494ee78a1331eed1bc15,YES,0.0415,0.0395,0.0450,0.0411,venue,"Will Jensen Huang be arrested by December 31, 2026?",
 2026-11-14T08:24:27Z,digest,слабый,0x3de0f3d7d7efb40cde68e814d40a0b232832083653c8e78260eb999baa967de0,YES,0.0900,0.0850,0.1100,0.0887,,US strike on Cuba by December 31?,
-2026-11-15T10:44:29Z,digest,слабый,0x27748e74503ff93d998d1e857980c43eca77c38efd61f642dd43d41a18525250,YES,0.1046,0.1000,0.1200,0.1030,,"Will Jensen Huang rejoin NVIDIA by December 31, 2026?",
+2026-11-15T10:44:29Z,digest,слабый,0x27748e74503ff93d998d1e857980c43eca77c38efd61f642dd43d41a18525250,YES,0.1046,0.1000,0.1200,0.1030,,"Will Jensen Huang rejoin NVIDIA by December 31, 2026?",win
 2026-11-15T10:44:29Z,digest,слабый,0xe02cad0d9171720d7bd87f93919178fbe4e6fb5a8689bc5c98167f333eaa007f,NO,0.1160,0.1070,0.1200,0.1089,,Will OpenAI have the best Text-to-Image AI at the end of November 2026?,
-2026-11-16T11:02:40Z,digest,средний,0x36614664b2f4023d68eaaa0a003a0c574c617f390cc4b861c166ea287b65b571,NO,0.0757,0.0655,0.2000,0.1058,news,"Next Astra Model (6.1+) released by December 15, 2026?",
-2026-11-16T11:02:40Z,digest,слабый,0x6368d1c0daed920fb7cb4444636b605e8b02d700dfdf70bba2758a7c0c4054cb,YES,0.0529,0.0505,0.0780,0.0546,,"Will Jensen Huang rejoin NVIDIA by November 30, 2026?",
+2026-11-16T11:02:40Z,digest,средний,0x36614664b2f4023d68eaaa0a003a0c574c617f390cc4b861c166ea287b65b571,NO,0.0757,0.0655,0.2000,0.1058,news,"Next Astra Model (6.1+) released by December 15, 2026?",lose
+2026-11-16T11:02:40Z,digest,слабый,0x6368d1c0daed920fb7cb4444636b605e8b02d700dfdf70bba2758a7c0c4054cb,YES,0.0529,0.0505,0.0780,0.0546,,"Will Jensen Huang rejoin NVIDIA by November 30, 2026?",win
 2026-11-16T11:02:40Z,digest,слабый,0x3e99612283f8182aefc17bbb51087f43c423608e2e0b2196a1512e145160a648,NO,0.0509,0.0485,0.0550,0.0504,,Will Chen Ting-fei win the next Tainan Mayor election?,
-2026-11-16T20:58:16Z,strong,сильный,0xc613d3515fa3e87e6e0f9c2d0ae0a83d2271530caf877e8c4f4d80b393fb36c0,YES,0.0451,0.0355,0.1100,0.0578,news+venue,Will Bad Bunny be featured on GTA VI: The Album?,
+2026-11-16T20:58:16Z,strong,сильный,0xc613d3515fa3e87e6e0f9c2d0ae0a83d2271530caf877e8c4f4d80b393fb36c0,YES,0.0451,0.0355,0.1100,0.0578,news+venue,Will Bad Bunny be featured on GTA VI: The Album?,lose
 2026-11-17T13:13:08Z,digest,средний,0xea7f75f9bdedef80577109cf375cdb271b83d19b4e618288e03e0186200f2f4c,YES,0.0690,0.0680,0.1500,0.0926,news,"Houthis enter Aden by November 30, 2026?",
 2026-11-18T13:53:39Z,digest,слабый,0x52226ec4393285ffc942019f20e3210e9311fc64cf1c7a9d1e9fbf27237352a6,YES,0.0592,0.0535,0.0700,0.0604,,"Will Gavin Newsom announce a Presidential run by December 31, 2026?",
 2026-11-18T13:53:39Z,digest,слабый,0x01248b04a39b281ca18c0352a243e1d6f6cf5f99f36a21675e7b9e1f3b0deb72,YES,0.0590,0.0525,0.0510,0.0523,,Will Kuwait recognize Israel by December 31?,
 2026-11-19T12:54:01Z,digest,средний,0x7d542d01581ab32518a4131ef852dbc5167697c8dd9600f3fb0c24df2a417ce1,YES,0.0500,0.0480,0.0700,0.0546,venue,US imports Russian diesel by November 30?,
 2026-11-19T12:54:01Z,digest,слабый,0xa1ed5e3ec8604bac737a1ea5a4c82ef672d685462fd9cb56343c357223ccd0fb,YES,0.1270,0.1230,0.1500,0.1270,,"Israeli airspace closed by November 30, 2026?",
 2026-11-19T12:54:01Z,digest,слабый,0xe34a08b2a8d0f9e5033dc1bc1ee153509e414196c3e8044d5e99b64b974eeea6,YES,0.0360,0.0355,0.0350,0.0354,,Israel x Turkey military clash before 2027?,
-2026-11-20T11:26:21Z,digest,слабый,0x7c5b4ba0bbdaac06e5fbbe38f6aa582ef0278e162ac91e175d475ab887346c8a,YES,0.0576,0.0525,0.0650,0.0563,,Will Kai Cenat finish his GTA VI marathon by November 22?,
+2026-11-20T11:26:21Z,digest,слабый,0x7c5b4ba0bbdaac06e5fbbe38f6aa582ef0278e162ac91e175d475ab887346c8a,YES,0.0576,0.0525,0.0650,0.0563,,Will Kai Cenat finish his GTA VI marathon by November 22?,win
 2026-11-21T09:42:15Z,digest,средний,0x9db8905bffc0df478b336591504245614c631976329df65efd7609f32167a693,YES,0.0918,0.0895,0.8000,0.3879,news,Will 1 Fed rate hike happen in 2026?,
 2026-11-21T09:42:15Z,digest,средний,0x117f9132e15eeff2621be398fa57092cf446a2f02cbd7ee8e3714226705c4d3b,YES,0.0597,0.0565,0.0550,0.0563,venue,"Will OpenAI announce another Millennium Prize solution by December 31, 2026?",
 2026-11-21T09:42:15Z,digest,средний,0x9b1a03b41a1a68c209e9c3caf3d8af3f878420d6dbe8cb8afffd66049e73b114,NO,0.0959,0.0945,0.0730,0.0855,whales,Another Fed rate hike in 2026?,
@@ -28,7 +28,7 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-22T17:50:38Z,alert,средний,0x2bc145cc9c8c67e9a54360fc7f97a061d4a4f75e952c8bf627a40b035759e3e0,NO,0.0707,0.0600,,,venue,"Will ""Choosin' Texas - Ella Langley"" be the Billboard Hot 100 #1 song for the week of December 5?",
 2026-11-23T01:43:41Z,alert,средний,0xbb0d2443a9c76fce0910ca7a602f3a6d56bc676c9a1b078829fd20a782e2560f,YES,0.0303,0.0255,,,venue,Will Robert F. Kennedy Jr. leave the Trump administration before 2027?,
 2026-11-23T04:33:36Z,alert,средний,0x5c81a3be20f0f627edde217d5ad2ac0d1b03830bfc163ec5ce6a31a66639180c,NO,0.1009,0.0950,,,venue,"Will ""Avengers: Doomsday"" score at least 65 on the Rotten Tomatoes Tomatometer?",
-2026-11-23T08:19:19Z,alert,средний,0x9c5946d65cb7e529c95ce4aba59a79f4705501ed89e3b45ef40095b07fddd42c,NO,0.0434,0.0365,,,venue,"Will ""Obsession"" be the #2 US Netflix movie this week?",
+2026-11-23T08:19:19Z,alert,средний,0x9c5946d65cb7e529c95ce4aba59a79f4705501ed89e3b45ef40095b07fddd42c,NO,0.0434,0.0365,,,venue,"Will ""Obsession"" be the #2 US Netflix movie this week?",lose
 2026-11-23T09:53:06Z,digest,средний,0x5c81a3be20f0f627edde217d5ad2ac0d1b03830bfc163ec5ce6a31a66639180c,NO,0.1009,0.0950,0.2000,0.1265,venue,"Will ""Avengers: Doomsday"" score at least 65 on the Rotten Tomatoes Tomatometer?",
 2026-11-23T09:53:06Z,digest,средний,0xbb0d2443a9c76fce0910ca7a602f3a6d56bc676c9a1b078829fd20a782e2560f,YES,0.0333,0.0275,,,venue,Will Robert F. Kennedy Jr. leave the Trump administration before 2027?,
 2026-11-23T15:33:13Z,alert,средний,0x217ab3ce070831204e3b20bb7355ea10313ad465c0ffffbf230aa833dc6f68e1,NO,0.0505,0.0450,,,venue,"Will ""All I Want For Christmas Is You - Mariah Carey"" be the Billboard Hot 100 #2 song for the week of December 5?",

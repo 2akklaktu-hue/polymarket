@@ -1,12 +1,14 @@
-живых рынков: 2100 | дешёвых исходов: 97
+живых рынков: 2099 | дешёвых исходов: 90
 подтверждения собраны по 9 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 14 оценок из 16, бесплатно
-оценено: 97 | сильных: 0 | средних: 3 | с оценкой ИИ: 18
-  средний  ДА   9.0¢ рынок  8.0% | ИИ 8.0% (low) -> оценка 8.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Ilhan Omar arrested by December 31, 2026?
-  средний  ДА   4.5¢ рынок  4.4% | ИИ 4.4% (low) -> оценка 4.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
-  средний  ДА   7.3¢ рынок  6.5% | ИИ 7.5% (low) -> оценка 6.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Kimberly Powell announced resignation or removal by November 30, 2026?
+  ИИ: 8.3% (high) при цене 8.8¢ — Will Huang Shih-chieh win the next Taoyuan Mayor election? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 15 оценок из 16, бесплатно
+оценено: 90 | сильных: 0 | средних: 1 | ждут ИИ: 0 | с оценкой ИИ: 18
+  средний  ДА   4.5¢ рынок  4.5% | ИИ 4.4% (low) -> оценка 4.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (прислан) | Will there be no change in Fed interest rates after the December 2026 
   слабый   НЕТ  5.0¢ рынок  4.4% | ИИ 6.0% (high) -> оценка 5.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will Trump meet with Mohammed bin Salman in 2026?
-  слабый   ДА  14.7¢ рынок 14.3% | ИИ 11.0% (medium) -> оценка 13.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА   7.3¢ рынок  7.0% | ИИ 8.0% (medium) -> оценка 7.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
+  слабый   ДА  14.7¢ рынок 14.4% | ИИ 11.0% (medium) -> оценка 13.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
+  слабый   ДА   7.1¢ рынок  6.9% | ИИ 8.0% (medium) -> оценка 7.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
+  слабый   ДА  13.8¢ рынок 13.1% | ИИ 9.0% (low) -> оценка 12.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Puma Shen win the 2026 Taipei Mayoral Election by 8% or more?
+  слабый   ДА   8.8¢ рынок  8.3% | ИИ 8.3% (high) -> оценка 8.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Huang Shih-chieh win the next Taoyuan Mayor election?
+закрылось прошлых сигналов: 7
 
-сигналов: новых и усилившихся 1, снятых 2 — отправлено | под наблюдением: 2 | запросов к Polymarket: 33
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 2 | запросов к Polymarket: 36
