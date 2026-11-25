@@ -1,14 +1,14 @@
-живых рынков: 2099 | дешёвых исходов: 90
-подтверждения собраны по 9 исходам
-  ИИ: 8.3% (high) при цене 8.8¢ — Will Huang Shih-chieh win the next Taoyuan Mayor election? [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 15 оценок из 16, бесплатно
-оценено: 90 | сильных: 0 | средних: 1 | ждут ИИ: 0 | с оценкой ИИ: 18
-  средний  ДА   4.5¢ рынок  4.5% | ИИ 4.4% (low) -> оценка 4.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (прислан) | Will there be no change in Fed interest rates after the December 2026 
-  слабый   НЕТ  5.0¢ рынок  4.4% | ИИ 6.0% (high) -> оценка 5.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will Trump meet with Mohammed bin Salman in 2026?
-  слабый   ДА  14.7¢ рынок 14.4% | ИИ 11.0% (medium) -> оценка 13.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА   7.1¢ рынок  6.9% | ИИ 8.0% (medium) -> оценка 7.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
-  слабый   ДА  13.8¢ рынок 13.1% | ИИ 9.0% (low) -> оценка 12.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Puma Shen win the 2026 Taipei Mayoral Election by 8% or more?
+живых рынков: 2025 | дешёвых исходов: 83
+подтверждения собраны по 8 исходам
+  ИИ: 6.5% (high) при цене 7.1¢ — Will the Fed increase interest rates by 25 bps after the Dec [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 16 оценок из 16, бесплатно
+оценено: 83 | сильных: 0 | средних: 2 | ждут ИИ: 0 | с оценкой ИИ: 17
+  средний  ДА   7.4¢ рынок  6.6% | ИИ 4.3% (low) -> оценка 6.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Flávio Bolsonaro be the #1 searched person on Google this year?
+  средний  ДА   4.3¢ рынок  4.1% | ИИ 4.4% (low) -> оценка 4.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (прислан) | Will there be no change in Fed interest rates after the December 2026 
+  слабый   ДА  14.6¢ рынок 14.2% | ИИ 11.0% (medium) -> оценка 13.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
+  слабый   НЕТ  5.4¢ рынок  5.1% | ИИ 4.6% (high) -> оценка 4.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Another Fed rate hike in 2026?
   слабый   ДА   8.8¢ рынок  8.3% | ИИ 8.3% (high) -> оценка 8.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Huang Shih-chieh win the next Taoyuan Mayor election?
-закрылось прошлых сигналов: 7
+  слабый   ДА  13.9¢ рынок 13.2% | ИИ 9.0% (low) -> оценка 12.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Puma Shen win the 2026 Taipei Mayoral Election by 8% or more?
+  -> снят: Kimberly Powell announced resignation or removal by November — подтверждение пропало: оценка бота теперь 6.7%, рынок — 6.5%
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 2 | запросов к Polymarket: 36
+сигналов: новых и усилившихся 0, снятых 1 — отправлено | под наблюдением: 1 | запросов к Polymarket: 36
