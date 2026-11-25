@@ -1,12 +1,13 @@
-живых рынков: 2092 | дешёвых исходов: 104
-подтверждения собраны по 10 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 10 оценок из 16, бесплатно
-оценено: 104 | сильных: 0 | средних: 1 | с оценкой ИИ: 17
+живых рынков: 2092 | дешёвых исходов: 111
+подтверждения собраны по 8 исходам
+  ИИ: 0.5% (high) при цене 3.4¢ — Will AI solve 4 more Millennium Prize Problems in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 11 оценок из 16, бесплатно
+оценено: 109 | сильных: 0 | средних: 3 | с оценкой ИИ: 21
   средний  ДА   8.0¢ рынок  7.5% | ИИ 8.0% (low) -> оценка 7.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Ilhan Omar arrested by December 31, 2026?
+  средний  ДА   4.6¢ рынок  4.5% | ИИ 4.5% (low) -> оценка 4.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
+  средний  ДА   6.3¢ рынок  5.5% | ИИ 7.5% (low) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Kimberly Powell announced resignation or removal by November 30, 2026?
   слабый   ДА   8.0¢ рынок  7.8% | ИИ 8.0% (medium) -> оценка 7.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
-  слабый   НЕТ  4.2¢ рынок  4.2% | ИИ 4.6% (high) -> оценка 4.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Another Fed rate hike in 2026?
-  слабый   ДА   6.3¢ рынок  6.0% | ИИ 6.6% (medium) -> оценка 6.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
+  слабый   ДА  12.2¢ рынок 11.8% | ИИ 9.9% (low) -> оценка 11.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
   слабый   ДА  15.1¢ рынок 14.5% | ИИ 8.0% (medium) -> оценка 12.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jon Ossoff be TIME Person of the Year 2026?
-  слабый   ДА  12.9¢ рынок 12.2% | ИИ 9.9% (low) -> оценка 11.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 2 | запросов к Polymarket: 35
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 2 | запросов к Polymarket: 37
