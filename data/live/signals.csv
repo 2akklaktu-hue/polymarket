@@ -42,3 +42,4 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-24T16:18:39Z,alert,средний,0x48a3e95c0bc1b9305e56445a7affcb857fd61e0ae0d78a4778310a1108ceb08a,YES,0.0908,0.0850,,,venue,Will Marco Rubio leave the Trump administration before 2027?,
 2026-11-25T00:06:41Z,alert,средний,0x79047bbe7d17ba36eaed8d6317845819cfd3725838afd1638affac5d99fcfcec,YES,0.0474,0.0435,,,venue,Will Flávio Bolsonaro be the #1 searched person on Google this year?,
 2026-11-25T00:06:41Z,alert,средний,0x1d64e87444a527dc7363c4c4f9b1ba3d4096944d4e15f98ebb0c6ec065efc63b,NO,0.0585,0.0535,,,venue,Will Trump meet with Mohammed bin Salman in 2026?,
+2026-11-25T09:51:56Z,digest,средний,0xca5c9aac1854c8358c003993254bc069a21a58930ffe2cb2bfbebd4f7d34c214,YES,0.0733,0.0650,0.0750,0.0665,whales,"Kimberly Powell announced resignation or removal by November 30, 2026?",
