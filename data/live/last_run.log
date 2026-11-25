@@ -1,13 +1,13 @@
-живых рынков: 2088 | дешёвых исходов: 101
-подтверждения собраны по 10 исходам
-  ИИ: 4.4% (low) при цене 4.5¢ — Will there be no change in Fed interest rates after the Dece [nvidia/nemotron-3-ultra-550b-a55b:free]
-ИИ (OpenRouter, бесплатные модели): за сутки 13 оценок из 16, бесплатно
-оценено: 101 | сильных: 0 | средних: 3 | с оценкой ИИ: 21
-  средний  ДА   3.1¢ рынок  2.8% | ИИ 2.9% (low) -> оценка 2.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Robert F. Kennedy Jr. leave the Trump administration before 2027?
-  средний  ДА   4.5¢ рынок  4.4% | ИИ 4.4% (low) -> оценка 4.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
-  средний  НЕТ  5.0¢ рынок  4.4% | ИИ не оценивал | venue | Will Trump meet with Mohammed bin Salman in 2026?
-  слабый   ДА  15.1¢ рынок 14.8% | ИИ 11.0% (medium) -> оценка 13.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА  12.5¢ рынок 12.2% | ИИ 9.9% (low) -> оценка 11.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
+живых рынков: 2098 | дешёвых исходов: 97
+подтверждения собраны по 8 исходам
+  ИИ: 6.0% (high) при цене 5.0¢ — Will Trump meet with Mohammed bin Salman in 2026? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 14 оценок из 16, бесплатно
+оценено: 97 | сильных: 0 | средних: 1 | с оценкой ИИ: 18
+  средний  ДА   4.6¢ рынок  4.3% | ИИ 4.4% (low) -> оценка 4.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
+  слабый   НЕТ  5.0¢ рынок  4.4% | ИИ 6.0% (high) -> оценка 5.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will Trump meet with Mohammed bin Salman in 2026?
+  слабый   ДА  12.5¢ рынок 12.2% | ИИ 9.9% (low) -> оценка 11.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
+  слабый   ДА   7.3¢ рынок  7.1% | ИИ 8.0% (medium) -> оценка 7.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
   слабый   ДА  15.1¢ рынок 14.5% | ИИ 8.0% (medium) -> оценка 12.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jon Ossoff be TIME Person of the Year 2026?
+  слабый   ДА  14.7¢ рынок 14.1% | ИИ 11.0% (medium) -> оценка 13.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
 
-сигналов: новых и усилившихся 1, снятых 1 — отправлено | под наблюдением: 3 | запросов к Polymarket: 42
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 3 | запросов к Polymarket: 34
