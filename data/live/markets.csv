@@ -2221,3 +2221,8 @@ id,cid,slug,question,end,neg
 2220,0x8b751f3eebcfe45a36014c6fca09ca89db2a273f3c2f0b811d14d2d55f1eba0e,bitcoin-above-58k-on-november-25-2026,"Will the price of Bitcoin be above $58,000 on November 25?",2026-11-25T17:00:00Z,0
 2221,0xa68de0c01333c8a34c70d95ea604df672fa26c663699ce326a44cd52793bf521,atp-willwer-alve-2026-11-23,San Salvador: Benjamin Willwerth vs Mateus Cardoso Alves,2026-11-30T16:00:00Z,0
 2222,0xeb5cf0ef5953a5d3bc98f4066def7ac8b1fe85a8a1982add4b53b87826695cc9,jon-ossoff-democratic-nomination-odds-leader-on-december-31,Jon Ossoff Democratic nomination odds leader on December 31?,2026-12-31T17:00:00Z,1
+2223,0xbf35a5ba78db8bf7bde9798f8765bf8ab2d03def520b6a38bbaba2b721bbace2,ucl-shd-fen-2026-11-25-fen,Will Fenerbahçe SK win on 2026-11-25?,2026-11-25T20:00:00Z,1
+2224,0xcc1a0771e0ed6f11efef458d427d7716c95a5ab86103437c458af9c8e2719e71,b200-average-rental-price-in-december-2026-above-9pt40,Will the average Ornn B200 rental price in December 2026 be above $9.40?,2027-01-01T04:59:00Z,0
+2225,0x8a03ef36311ff7aefef9f43d749a04c7db4de13c9089225b41b657b8f0f06be9,ucl-lil-bay-2026-11-25-exact-score-any-other,Exact Score: Any Other Score?,2026-11-25T20:00:00Z,1
+2226,0x66827dbcfea1b78556b234313f9b8dea19ef6ecaf45b82541dd90d624b3d122e,will-anthropic-announce-a-millennium-prize-solution-by-december-31-2026,"Will Anthropic announce a Millennium Prize solution by December 31, 2026?",2027-01-01T04:59:00Z,0
+2227,0xb0bb7942c22576470a9b6bc8a91b5f35cebe3c1b55d2df090af460c09a84263e,h100-average-rental-price-in-january-2027-above-2pt80,Will the average Ornn H100 rental price in January 2027 be above $2.80?,2027-02-01T04:59:00Z,0

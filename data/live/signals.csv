@@ -40,3 +40,5 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-24T00:03:50Z,alert,средний,0x2fa62443d655983d31aeed0fcb2d803bc13586bc8c7a947063a79506c4101e46,NO,0.0707,0.0650,,,venue,Will Lindsay Clancy rank in Google’s Top 5 Most Searched People in the US of 2026?,
 2026-11-24T13:28:44Z,alert,средний,0xab345686c04663dea92c753a0d9e28080961b889cdfd1e37d400c272d4c72a94,NO,0.1149,0.1050,,,venue,Will Google have the third highest OpenRouter market share the week of November 23?,
 2026-11-24T16:18:39Z,alert,средний,0x48a3e95c0bc1b9305e56445a7affcb857fd61e0ae0d78a4778310a1108ceb08a,YES,0.0908,0.0850,,,venue,Will Marco Rubio leave the Trump administration before 2027?,
+2026-11-25T00:06:41Z,alert,средний,0x79047bbe7d17ba36eaed8d6317845819cfd3725838afd1638affac5d99fcfcec,YES,0.0474,0.0435,,,venue,Will Flávio Bolsonaro be the #1 searched person on Google this year?,
+2026-11-25T00:06:41Z,alert,средний,0x1d64e87444a527dc7363c4c4f9b1ba3d4096944d4e15f98ebb0c6ec065efc63b,NO,0.0585,0.0535,,,venue,Will Trump meet with Mohammed bin Salman in 2026?,
