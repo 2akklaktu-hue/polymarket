@@ -43,7 +43,14 @@ _MONTHS = set("""
 january february march april may june july august september october november
 december jan feb mar apr jun jul aug sep sept oct nov dec
 """.split())
-_TOKEN = re.compile(r"[A-Za-z][A-Za-z'&.]*|\d[\d,.]*")
+# Слово начинается с буквы любого алфавита: прежде «Flávio» распадался на
+# «fl» и «vio», и в поиск уходило «fl vio bolsonaro».
+_TOKEN = re.compile(r"[^\W\d_][\w'&.]*|\d[\d,.]*")
+
+
+def _norm(text: str) -> str:
+    return (text.replace("’", "'").replace("‘", "'")
+            .replace("-", " ").replace("/", " "))
 
 
 def _is_date_number(t: str) -> bool:
@@ -57,8 +64,10 @@ def _is_date_number(t: str) -> bool:
 def tokens(text: str) -> list[str]:
     """Значимые слова вопроса: без служебных, без дат."""
     out = []
-    for t in _TOKEN.findall(text.replace("-", " ").replace("/", " ")):
+    for t in _TOKEN.findall(_norm(text)):
         t = t.strip(".',").lower()
+        # «10,000» и «10000», «U.S.» и «US» — одно и то же
+        t = t.replace(",", "") if t[:1].isdigit() else t.replace(".", "")
         if not t or (len(t) < 2 and not t.isdigit()):
             continue
         if t in _STOP or t in _MONTHS or _is_date_number(t):
@@ -104,6 +113,73 @@ def similarity(a: str, b: str) -> float:
     if not A or not B:
         return 0.0
     return 2.0 * len(A & B) / (len(A) + len(B))
+
+
+# только целые названия месяцев: «dec[a-z]*» съел бы и «decisions», и «marathon»
+_MON = (r"(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?"
+        r"|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?"
+        r"|dec(?:ember)?)\b\.?")
+_DATE = re.compile(
+    rf"\b{_MON}\s+\d{{1,2}}(?:st|nd|rd|th)?\b"
+    rf"|\b\d{{1,2}}(?:st|nd|rd|th)?\s+(?:of\s+)?{_MON}"
+    r"|\b(?:19|20)\d{2}\b", re.I)
+_NUM = re.compile(r"\d[\d,]*(?:\.\d+)?")
+# «first» не берём: «first to», «first round» — чаще не номер места
+_ORDINAL = {"second": "2", "third": "3", "fourth": "4", "fifth": "5",
+            "sixth": "6", "seventh": "7", "eighth": "8", "ninth": "9",
+            "tenth": "10"}
+
+
+def numbers(text: str) -> set[str]:
+    """Числа условия: место, порог, количество. Даты и годы не в счёт.
+
+    «#1» и «#2», «top 5», «at least 65», «third highest» -> {1}, {2}, {5},
+    {65}, {3}. Даты выбрасываются: «December 31, 2026» и «Before Jan 1, 2027»
+    пишутся по-разному, а срок и так сверяется по дате закрытия.
+    """
+    t = _DATE.sub(" ", text.replace("’", "'"))
+    out = set()
+    for x in _NUM.findall(t):
+        try:
+            out.add(f"{float(x.replace(',', '')):g}")
+        except ValueError:
+            continue
+    for w in re.findall(r"[a-z]+", t.lower()):
+        if w in _ORDINAL:
+            out.add(_ORDINAL[w])
+    return out
+
+
+def names(text: str) -> set[str]:
+    """Имена и названия: слова с заглавной буквы, кроме служебных."""
+    out: set[str] = set()
+    for w in _TOKEN.findall(_norm(text)):
+        if w[:1].isupper():
+            out |= stems(w)
+    return out
+
+
+def same_terms(question: str, title: str) -> bool:
+    """Грубая проверка, что другая площадка спрашивает о том же самом.
+
+    Совпадения слов мало. «Will Anthropic have the best AI model…» совпал на
+    60% со строкой Kalshi «best coding model — OpenAI», а «Google third
+    highest OpenRouter share» на 67% — с «Google market share above 15%»;
+    оба раза бот засчитал чужую цену подтверждением. Поэтому нужно ещё:
+
+      * одни и те же числа условия — место, порог, количество;
+      * ни одно имя не подменено другим: у нас есть имя, которого там нет,
+        и одновременно там есть имя, которого нет у нас, — значит, это
+        другой участник того же спора.
+
+    Пропуск имени без замены допустим: Kalshi пишет «Choosin' Texas» без
+    исполнителя, а «Trump» — как «Donald Trump».
+    """
+    if numbers(question) != numbers(title):
+        return False
+    missing = names(question) - stems(title)
+    extra = names(title) - stems(question)
+    return not (missing and extra)
 
 
 def _get(url: str, params: dict | None = None, timeout: float = 15.0):

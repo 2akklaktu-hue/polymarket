@@ -9,7 +9,10 @@
 
 Что присылает.
   * Сигнал — сразу, в том же прогоне: сильный (согласны два источника из
-    трёх) и средний (один источник).
+    трёх) и средний (один источник). Если ИИ включён, сигнал сперва
+    оценивает он: без его оценки сообщение не уходит, а такие исходы стоят
+    в очереди к ИИ первыми. Новый сигнал проходит пороги входа, присланный
+    держится на мягких порогах удержания, чтобы не мигать от тика цены.
   * Поправку к нему — тоже сразу: средний стал сильным, либо сигнал снят
     (подтверждение пропало, цена ушла из диапазона, рынок закрылся).
   * Сводку раз в сутки — до трёх действующих сигналов и итог по прошлым:
@@ -64,6 +67,13 @@ P_LO, P_HI = 0.03, 0.15   # цена входа; ниже 3c переплата 
 MAX_SPREAD = 0.02         # абсолютный спред
 MAX_SPREAD_REL = 0.35     # и относительно цены: 2c спреда при цене 4c — много
 MIN_VOL24 = 1000.0        # $ оборота за сутки
+# Для уже присланного сигнала отбор мягче: прогон старых правил по истории
+# 22–25.11 показал, что сигналы снимались и оттого, что спред на час
+# расширялся с 2¢ до 2.5¢ или суточный оборот проседал ниже $1000. Это шум,
+# а не новость. Границы цены 3–15¢ остаются жёсткими: выход за них — новость.
+MAX_SPREAD_KEEP = 0.03
+MAX_SPREAD_REL_KEEP = 0.5
+MIN_VOL24_KEEP = 300.0
 MIN_DAYS, MAX_DAYS = 1.0, 60.0
 # Здесь слухи цену не двигают: спорт считают букмекеры, курс и погоду — модели.
 SKIP_CATS = ("sports", "crypto", "weather")
@@ -111,15 +121,19 @@ AI_TIME_S = 360.0         # дольше на ИИ за прогон не тра
                           # бывают медленными, а у задания в Actions 15 минут
 DIGEST_HOUR_UTC = _env_int("PM_DIGEST_HOUR_UTC", 9)
 DIGEST_TOP = 3
+SCORE_MIN_N = 30          # меньше закрытых исходов — итог в сводке с оговоркой
 
 # --- что слать сразу, не дожидаясь сводки --------------------------------
 ALERT_LEVEL = 1           # с какой силы: 1 — средние и сильные, 2 — только сильные
 MISS_RUNS = 2             # сигнала нет столько прогонов подряд — сообщаем «снят».
                           # Один прогон без подтверждения бывает случайным:
                           # площадка не ответила, цена качнулась через порог
-COOLDOWN_H = 12.0         # снятый сигнал не объявляется заново раньше этого,
-                          # иначе на границе порога бот дёргался бы туда-сюда
-WATCH_MOVED = 0.15        # цена присланного сигнала ушла на 15% — ИИ пересчитывает
+COOLDOWN_H = 48.0         # снятый сигнал не объявляется заново раньше этого, если
+                          # не стал сильнее. При 12 часах за 23–25.11 бот около семи
+                          # раз заново объявил рынки, которые сам же снимал
+WATCH_MOVED = 0.25        # цена присланного сигнала ушла на четверть — ИИ пересчитывает.
+                          # При 15% на цене 4¢ хватало одного тика, и суточный
+                          # бюджет ИИ уходил на повторные оценки одного рынка
 
 # --- когда источник считается «за» ---------------------------------------
 AI_RATIO = 1.5            # оценка ИИ не ниже полутора цен входа
@@ -132,6 +146,17 @@ VENUE_SIM = 0.6           # без ИИ: рынок «тот же», если с
 VENUE_DAYS = 3.0          # ...и срок отличается не больше чем на три дня
 VENUE_MAX_RATIO = 3.0     # ...и цена там не выше здешней втрое
 VENUE_MAX_GAP = 0.10      # (или на 10 п.п. — что больше): иначе вопрос не тот
+# Порог входа и порог удержания разные. Цены здесь 3–15¢ и ходят шагом 1¢,
+# поэтому при одном пороге сигнал включался и выключался от одного тика:
+# RFK Jr. по 3.0¢ против 4% на Kalshi — ×1.33, сигнал; по 3.1¢ — ×1.29, снят.
+# За 3,5 дня 23–25.11 так ушло 28 сигналов и 25 снятий. Присланный сигнал
+# теперь держится, пока источник выше мягкого порога, а новый требует ещё и
+# запаса не меньше тика: разница меньше 1¢ — это шум стакана, а не находка.
+AI_KEEP = 1.3             # вместо AI_RATIO
+EST_KEEP = 1.1            # вместо EST_RATIO; ниже — «ИИ против» и для присланного
+VENUE_KEEP = 1.15         # вместо VENUE_RATIO
+TICK = 0.01               # шаг цены; покупатели на Kalshi могут дать на тик меньше
+MIN_GAP = TICK            # новый сигнал: оценка выше цены входа хотя бы на тик
 # Подтверждением считается только площадка с настоящими деньгами.
 # На Manifold деньги игровые: его цена показывается, но в счёт не идёт.
 REAL_MONEY = ("Kalshi",)
@@ -165,8 +190,12 @@ def _is_yes_no(m: dict) -> bool:
     return [str(x).strip().lower() for x in o] == ["yes", "no"]
 
 
-def select(raw: list[dict], now: float) -> list[dict]:
-    """Дешёвые стороны живых рынков. У рынка в диапазон попадает одна сторона."""
+def select(raw: list[dict], now: float, watching: set[str] = frozenset()) -> list[dict]:
+    """Дешёвые стороны живых рынков. У рынка в диапазон попадает одна сторона.
+
+    watching — ключи присланных сигналов: для них спред и оборот проверяются
+    по мягким порогам (*_KEEP).
+    """
     # Остальные исходы того же события — подсказка ИИ, как рынок понимает
     # вопрос. 22.11 модель дала 80% исходу «ровно одно повышение ставки»,
     # хотя по соседним исходам видно, что рынок ждёт два.
@@ -196,7 +225,9 @@ def select(raw: list[dict], now: float) -> list[dict]:
         vol24 = _f(m.get("volume24hr"), 0.0)
         end = str(m.get("endDate") or "")
         days = (_end_ts(end) - now) / 86400.0
-        if vol24 < MIN_VOL24 or not (MIN_DAYS <= days <= MAX_DAYS):
+        watched = {f"{cid}|YES", f"{cid}|NO"} & set(watching)
+        if vol24 < (MIN_VOL24_KEEP if watched else MIN_VOL24) \
+                or not (MIN_DAYS <= days <= MAX_DAYS):
             continue
         spread, mid = ask - bid, (bid + ask) / 2.0
         for yes in (True, False):
@@ -204,8 +235,12 @@ def select(raw: list[dict], now: float) -> list[dict]:
             px = ask if yes else 1.0 - bid
             if not (P_LO <= px <= P_HI):
                 continue
-            if spread > MAX_SPREAD or spread / px > MAX_SPREAD_REL:
+            keep = f"{cid}|{'YES' if yes else 'NO'}" in watched
+            if (spread > (MAX_SPREAD_KEEP if keep else MAX_SPREAD)
+                    or spread / px > (MAX_SPREAD_REL_KEEP if keep else MAX_SPREAD_REL)):
                 continue
+            if not keep and vol24 < MIN_VOL24:
+                continue                 # мягкий оборот — только для присланной стороны
             rate = _fee_rate(m)
             chg1 = _f(m.get("oneDayPriceChange"), 0.0)
             chg7 = _f(m.get("oneWeekPriceChange"), 0.0)
@@ -296,20 +331,48 @@ def venue_bid(c: dict, v: dict, pv: float) -> float:
 def venue_guess(c: dict, ev: dict) -> tuple[dict, float] | None:
     """Без ИИ: похожий рынок другой площадки и его оценка нашей стороны.
 
-    Грубо и намеренно строго: слова совпали и срок почти тот же. «Тот же
+    Грубо и намеренно строго: слова совпали, срок почти тот же, числа
+    условия те же и ни одно имя не подменено (sources.same_terms). «Тот же
     вопрос до конца года» вместо «до 30 ноября» сюда не пройдёт.
+
+    Берётся самая похожая из подходящих строк. Если её цена невероятна, это
+    отказ, а не повод взять следующую: прежде бот шёл дальше по списку, и
+    «Anthropic — лучшая модель» (на Kalshi 58%, отброшено как «втрое дороже»)
+    подтвердился строкой «OpenAI», у которой цена оказалась ближе к нашей.
     """
     end = _end_ts(c["end"])
-    for v in ev.get("venues") or []:
+    for v in ev.get("venues") or []:          # от похожих к непохожим
         if v["sim"] < VENUE_SIM or not v.get("close"):
             continue
         close = _end_ts(v["close"] + "T00:00:00")
         if not (close == close) or abs(close - end) > VENUE_DAYS * 86400.0:
             continue
+        if not sources.same_terms(c["q"], v["title"]):
+            continue
         pv = v["prob"] if c["yes"] else 1.0 - v["prob"]
-        if venue_plausible(c, pv):
-            return v, pv
+        return (v, pv) if venue_plausible(c, pv) else None
     return None
+
+
+def ai_venue(c: dict, ev: dict | None, ai: dict) -> tuple[dict, float] | None:
+    """Рынок площадки, который ИИ признал тем же исходом, — по СВЕЖЕЙ цене.
+
+    Запись ИИ живёт до трёх суток, а цена Kalshi в ней та, что была в момент
+    оценки. Поэтому из записи берётся только, какой это рынок и какая там
+    наша сторона, а цена — из последнего сбора данных, если рынок в нём есть.
+    Слабая модель тоже путает участников, поэтому и её выбор проходит
+    ту же проверку чисел и имён, что и грубая догадка.
+    """
+    v0 = ai.get("venue")
+    if not v0 or not sources.same_terms(c["q"], v0.get("title") or ""):
+        return None
+    vp = float(ai["venue_side_prob"])
+    same_side = abs(vp - v0["prob"]) <= abs(vp - (1.0 - v0["prob"]))
+    v = next((x for x in (ev or {}).get("venues") or []
+              if x.get("venue") == v0.get("venue") and x.get("title") == v0.get("title")),
+             v0)
+    pv = v["prob"] if same_side else 1.0 - v["prob"]
+    return (v, pv) if venue_plausible(c, pv) else None
 
 
 def score2(c: dict, ev: dict, now: float) -> float:
@@ -329,11 +392,20 @@ def score2(c: dict, ev: dict, now: float) -> float:
     return s + min(fresh / 4.0, 1.0)
 
 
-def assess(c: dict, ev: dict | None, ai: dict | None) -> dict:
-    """Сводит три источника в одну оценку и считает, сколько из них «за»."""
+def assess(c: dict, ev: dict | None, ai: dict | None, keep: bool = False) -> dict:
+    """Сводит три источника в одну оценку и считает, сколько из них «за».
+
+    keep — сигнал уже прислан: тогда действуют мягкие пороги удержания
+    (*_KEEP), а не пороги входа. Иначе на ценах 3–15¢ сигнал включался и
+    выключался от одного тика.
+    """
     ev = ev or {}
     w = ev.get("whales") or {}
     cost = c["cost"]
+    ai_r, est_r, venue_r = ((AI_KEEP, EST_KEEP, VENUE_KEEP) if keep
+                            else (AI_RATIO, EST_RATIO, VENUE_RATIO))
+    gap = 0.0 if keep else MIN_GAP
+    bid_slack = TICK if keep else 0.0
     a: dict = {"p_ai": None, "p_est": None, "venue": None, "pv": None,
                "venue_exact": False}
 
@@ -342,19 +414,22 @@ def assess(c: dict, ev: dict | None, ai: dict | None) -> dict:
         # trust < 1 у бесплатных моделей: их оценка сдвигает цену слабее
         k = SHRINK[ai["confidence"]] * float(ai.get("trust", 1.0))
         a["p_est"] = c["mkt"] + k * (ai["p"] - c["mkt"])
-        if ai.get("venue") and venue_plausible(c, ai["venue_side_prob"]):
+        g = ai_venue(c, ev, ai)
+        if g:
             # ИИ подтвердил, что условия совпадают, и цена этому не противоречит
-            a["venue"], a["pv"], a["venue_exact"] = ai["venue"], ai["venue_side_prob"], True
+            a["venue"], a["pv"], a["venue_exact"] = g[0], g[1], True
     else:
         g = venue_guess(c, ev)    # ИИ не смотрел — остаётся грубая проверка
         if g:
             a["venue"], a["pv"] = g
     a["ai_ok"] = bool(ai and ai["confidence"] != "low" and ai["news_relevant"]
-                      and ai["p"] >= AI_RATIO * cost
-                      and a["p_est"] >= EST_RATIO * cost)
-    a["venue_ok"] = (a["pv"] is not None and a["pv"] >= VENUE_RATIO * cost
+                      and ai["p"] >= ai_r * cost
+                      and a["p_est"] >= est_r * cost
+                      and a["p_est"] - cost >= gap)
+    a["venue_ok"] = (a["pv"] is not None and a["pv"] >= venue_r * cost
+                     and a["pv"] - cost >= gap
                      and a["venue"]["venue"] in REAL_MONEY
-                     and venue_bid(c, a["venue"], a["pv"]) >= cost)
+                     and venue_bid(c, a["venue"], a["pv"]) >= cost - bid_slack)
 
     a["smart_for"] = _smart_usd(w, "smart_for")
     a["smart_against"] = _smart_usd(w, "smart_against")
@@ -374,7 +449,7 @@ def assess(c: dict, ev: dict | None, ai: dict | None) -> dict:
     # оценка ИИ, равная цене: сообщение противоречило само себе. Неуверенная
     # оценка (low) не решает ни за, ни против.
     a["ai_against"] = bool(ai and ai["confidence"] != "low"
-                           and a["p_est"] < EST_RATIO * cost)
+                           and a["p_est"] < est_r * cost)
 
     n_ok = int(a["ai_ok"]) + int(a["venue_ok"]) + int(a["whales_ok"])
     if a["ai_against"]:
@@ -426,7 +501,7 @@ def why_lines(c: dict, ai: dict | None, a: dict) -> list[str]:
                 if v.get("url") else esc(v["venue"]))
         if v["venue"] not in REAL_MONEY:
             name += " (игровые деньги)"
-        if a["pv"] >= VENUE_RATIO * c["cost"]:
+        if a["venue_ok"] or a["pv"] >= VENUE_RATIO * c["cost"]:
             tail = "" if a["venue_ok"] else " — в счёт не идёт"
             L.append(f"• <b>{name}:</b> {word} там оценивают в {pct(a['pv'])} "
                      f"(здесь {pct(c['mkt'])}){tail}")
@@ -574,7 +649,8 @@ def gone_message(items: list[tuple[dict, str, float | None]]) -> str:
     return "\n".join(L)
 
 
-def update_signals(rated: list[tuple], sent: dict, now: float) -> list[tuple]:
+def update_signals(rated: list[tuple], sent: dict, now: float,
+                   ready=lambda t: True) -> list[tuple]:
     """Что изменилось с прошлого прогона. Меняет `sent`, возвращает события.
 
     ("new", t)    сигнал появился — t это (кандидат, данные, ИИ, оценка);
@@ -585,20 +661,28 @@ def update_signals(rated: list[tuple], sent: dict, now: float) -> list[tuple]:
     сводки. За сутки цена и новости успевают смениться, поэтому теперь сразу
     уходит всё от ALERT_LEVEL и выше, а об исчезновении сигнала сообщается
     отдельно — иначе старое сообщение висело бы в чате как действующее.
+
+    У присланного сигнала оценка посчитана по порогам удержания (level), а
+    для «усилился» нужен порог входа (entry_level). ready(t) — можно ли
+    объявлять: при включённом ИИ новый сигнал ждёт его оценки. 23–25.11 две
+    трети сигналов ушли до неё, а через час-два ИИ их снимал.
     """
     events: list[tuple] = []
     live = {t[0]["key"]: t for t in rated if t[3]["level"] >= ALERT_LEVEL}
     for key, t in live.items():
         c, asm = t[0], t[3]
+        entry = int(asm.get("entry_level", asm["level"]))
         prev = sent.get(key)
         if prev and prev.get("active"):
             prev["miss"], prev["ts"] = 0, now
-            if asm["level"] > int(prev.get("level") or 0):
-                prev["level"] = asm["level"]
+            if entry > int(prev.get("level") or 0) and ready(t):
+                prev["level"] = entry
                 events.append(("up", t))
             continue
+        if entry < ALERT_LEVEL or not ready(t):
+            continue                      # не дотягивает до входа или ждёт ИИ
         if prev and now - float(prev.get("gone_ts") or 0) < COOLDOWN_H * 3600.0 \
-                and asm["level"] <= int(prev.get("level") or 0):
+                and entry <= int(prev.get("level") or 0):
             continue                      # недавно снят и сильнее не стал
         sent[key] = {"ts": now, "active": True, "miss": 0, "level": asm["level"],
                      "cost": round(c["cost"], 4), "cid": c["cid"], "yes": c["yes"],
@@ -701,9 +785,12 @@ def log_resolve(api: Api, rows: list[dict]) -> int:
     n = 0
     for i in range(0, len(open_cids), 20):
         try:
+            # Без closed=true gamma отдаёт по condition_ids только ОТКРЫТЫЕ рынки:
+            # закрытого в ответе просто нет. До 25.11 из-за этого журнал не
+            # получил ни одного итога, хотя закрылось 7 присланных исходов.
             got = api.get(f"{GAMMA}/markets",
                           [("condition_ids", x) for x in open_cids[i:i + 20]]
-                          + [("limit", 50)])
+                          + [("limit", 50), ("closed", "true")])
         except ApiError:
             continue
         for m in got or []:
@@ -729,16 +816,22 @@ def scorecard(rows: list[dict]) -> str:
     for r in rows:                   # исход считается один раз, по первой записи
         first.setdefault((r["cid"], r["side"]), r)
     L = []
+    n_done = 0
     for name in ("сильный", "средний", "слабый"):
         done = [r for r in first.values()
                 if r["strength"] == name and r.get("result")]
         if not done:
             continue
+        n_done += len(done)
         wins = [r for r in done if r["result"] == "win"]
         pnl = sum(1.0 / float(r["cost"]) - 1.0 for r in wins) - (len(done) - len(wins))
         L.append(f"• {name}: закрылось {len(done)}, выиграло {len(wins)}, "
                  f"итог {'+' if pnl >= 0 else '−'}${abs(pnl):.2f}")
     if L:
+        if n_done < SCORE_MIN_N:
+            # одна победа по 5¢ даёт +$19 — по десятку исходов это ещё случай
+            L.append(f"<i>Закрылось всего {n_done}: одна выигранная ставка по 5¢ "
+                     f"меняет итог на $20, поэтому выводов пока не сделать.</i>")
         return "\n".join(["<b>Как сыграли прошлые сигналы</b> "
                           "(если ставить $1 на каждый):"] + L)
     if first:
@@ -816,7 +909,11 @@ def main() -> int:
     if not raw:
         print("! gamma не отдала ни одного рынка")
         return 1
-    cands = select(raw, now)
+    # Исходы, по которым сигнал уже прислан: для них отбор и пороги мягче, их
+    # данные обновляются первыми, и к ИИ они идут сразу после ждущих сигналов —
+    # именно про них надо вовремя узнать, что ситуация изменилась.
+    watching = {k for k, v in st["sent"].items() if v.get("active")}
+    cands = select(raw, now, watching)
     cands.sort(key=lambda c: -c["score1"])
     print(f"живых рынков: {len(raw)} | дешёвых исходов: {len(cands)}", flush=True)
 
@@ -824,9 +921,6 @@ def main() -> int:
     def ev_age(c: dict) -> float:
         return now - float((st["ev"].get(c["cid"]) or {}).get("ts") or 0)
 
-    # Исходы, по которым сигнал уже прислан, проверяются в каждом прогоне и
-    # первыми: именно про них надо вовремя узнать, что ситуация изменилась.
-    watching = {k for k, v in st["sent"].items() if v.get("active")}
     watch = [c for c in cands if c["key"] in watching]
     rest = sorted(cands[N_EVIDENCE:], key=lambda c: -ev_age(c))
     seen: set[str] = set()
@@ -847,11 +941,22 @@ def main() -> int:
         ev = st["ev"].get(c["cid"])
         return ev if ev and now - float(ev.get("ts") or 0) < EV_KEEP_H * 3600.0 else None
 
+    def ai_of(c: dict) -> dict | None:
+        ai = st["ai"].get(c["key"])
+        # протухшая оценка хуже, чем никакой
+        return ai if ai and now - float(ai.get("ts") or 0) < AI_STALE_H * 3600.0 else None
+
     known = [c for c in cands if ev_of(c)]
     for c in known:
         c["score2"] = score2(c, ev_of(c), now)
-    # в очереди на ИИ первыми идут исходы с уже присланным сигналом
-    known.sort(key=lambda c: (0 if c["key"] in watching else 1, -c["score2"]))
+    # Ждут ИИ исходы, которые уже прошли бы как сигнал по площадке или игрокам,
+    # но ИИ их ещё не видел: без его оценки сигнал не уходит (update_signals).
+    pending = {c["key"] for c in known
+               if c["key"] not in watching and ai_of(c) is None
+               and assess(c, ev_of(c), None)["level"] >= ALERT_LEVEL}
+    # очередь на ИИ: ждущие сигналы, затем присланные, затем остальные
+    known.sort(key=lambda c: (0 if c["key"] in pending else
+                              1 if c["key"] in watching else 2, -c["score2"]))
 
     # --- 2. оценка ИИ: лучшие по бесплатным признакам, в пределах бюджета
     ai_on = judge.available() and not a.no_ai
@@ -862,15 +967,20 @@ def main() -> int:
     if ai_on:
         # Суточный потолок раздаётся по часам: иначе он кончался бы в первые
         # два прогона после полуночи, и на новость в середине дня не оставалось.
+        # Ждущий сигнал идёт вне этой раскладки, в пределах суточного потолка:
+        # иначе он ждал бы оценки по нескольку часов.
         hour_now = time.gmtime(now).tm_hour
         paced = math.ceil(AI_PER_DAY * (hour_now + 1) / 24.0)
-        left = min(AI_PER_RUN, paced - int(day["n"]))
+        used = 0
         t_ai = time.time()
         for c in known:
-            if left <= 0 or time.time() - t_ai > AI_TIME_S:
+            if (used >= AI_PER_RUN or int(day["n"]) >= AI_PER_DAY
+                    or time.time() - t_ai > AI_TIME_S):
                 break
-            if not ai_needed(c, st["ai"].get(c["key"]), now,
-                             watched=c["key"] in watching):
+            if c["key"] not in pending and (
+                    int(day["n"]) >= paced
+                    or not ai_needed(c, st["ai"].get(c["key"]), now,
+                                     watched=c["key"] in watching)):
                 continue
             ev = ev_of(c)
             try:
@@ -878,7 +988,7 @@ def main() -> int:
             except judge.JudgeOff as e:
                 print(f"! ИИ выключен до конца прогона: {e}", flush=True)
                 break
-            left -= 1
+            used += 1
             day["n"] = int(day["n"]) + 1
             if r is None:
                 continue
@@ -901,26 +1011,39 @@ def main() -> int:
     # --- 3. сводим источники
     rated = []
     for c in known:
-        ai = st["ai"].get(c["key"])
-        if ai and now - float(ai.get("ts") or 0) >= AI_STALE_H * 3600.0:
-            ai = None                      # протухшая оценка хуже, чем никакой
-        rated.append((c, ev_of(c), ai, assess(c, ev_of(c), ai)))
+        ev, ai = ev_of(c), ai_of(c)
+        asm = assess(c, ev, ai)
+        entry = asm["level"]
+        if c["key"] in watching:           # присланный держится на мягких порогах
+            asm = assess(c, ev, ai, keep=True)
+        asm["entry_level"] = entry
+        rated.append((c, ev, ai, asm))
+
+    def ready(t: tuple) -> bool:
+        """Можно ли объявлять сигнал: при включённом ИИ — только после его оценки."""
+        return not ai_on or t[2] is not None
+
     # При равной силе вперёд идут исходы, которые ИИ уже оценил: у них есть
     # объяснение. Иначе сводку занимали неоценённые — у них «запас» считается
     # от голой цены и почти одинаков, так что порядок выходил случайным.
     rated.sort(key=lambda t: (-t[3]["level"], 0 if t[2] else 1,
                               -t[3]["ratio"], -t[0]["score2"]))
-    strong = [t for t in rated if t[3]["level"] == 2]
+    strong = [t for t in rated if t[3]["level"] == 2 and ready(t)]
+    waiting = {t[0]["key"] for t in rated if t[0]["key"] not in watching
+               and t[3]["level"] >= ALERT_LEVEL and not ready(t)}
     print(f"оценено: {len(rated)} | сильных: {len(strong)} | средних: "
-          f"{sum(1 for t in rated if t[3]['level'] == 1)} | с оценкой ИИ: "
-          f"{sum(1 for t in rated if t[2])}", flush=True)
+          f"{sum(1 for t in rated if t[3]['level'] == 1 and ready(t))} | ждут ИИ: "
+          f"{len(waiting)} | с оценкой ИИ: {sum(1 for t in rated if t[2])}", flush=True)
     # Верх списка — в отчёт прогона: по нему видно, что бот думает о рынках,
     # даже когда в Telegram ничего не ушло.
     for c, _ev, ai, asm in rated[:6]:
         told = (f"ИИ {ai['p'] * 100:.1f}% ({ai['confidence']}) -> оценка "
                 f"{asm['p_est'] * 100:.1f}% [{ai.get('model', '?')}]" if ai
                 else "ИИ не оценивал")
-        note = f" ({asm['note']})" if asm["note"] else ""
+        note = "; ".join(x for x in (asm["note"],
+                                     "ждёт оценки ИИ" if c["key"] in waiting else "",
+                                     "прислан" if c["key"] in watching else "") if x)
+        note = f" ({note})" if note else ""
         print(f"  {STRENGTH_RU[asm['level']]:8s} {c['side']:3s} {c['cost'] * 100:4.1f}¢ "
               f"рынок {c['mkt'] * 100:4.1f}% | {told} | "
               f"{asm['sources'] or 'без подтверждений'}{note} | {c['q'][:70]}",
@@ -946,7 +1069,7 @@ def main() -> int:
     rated_by_key = {t[0]["key"]: t for t in rated}
     n_sent = 0
     gone: list[tuple] = []
-    for kind, x in update_signals(rated, sent, now):
+    for kind, x in update_signals(rated, sent, now, ready):
         if kind == "gone":
             prev, t = sent[x], rated_by_key.get(x)
             reason, px = why_gone(prev, by_cid.get(str(prev.get("cid"))),
@@ -959,8 +1082,14 @@ def main() -> int:
                 reason = "рынок закрылся, ставка " + (
                     "выиграла" if res == "win" else "проиграла")
             gone.append((prev, reason, px))
+            print(f"  -> снят: {str(prev.get('q') or '')[:60]} — {reason}", flush=True)
             continue
         c, ev, ai, asm = x
+        # что ушло в Telegram — в отчёт прогона: без этого проверить работу
+        # бота по истории нельзя (так было при проверке 25.11)
+        print(f"  -> {'усилился' if kind == 'up' else 'новый'} "
+              f"{STRENGTH_RU[asm['level']]}: {c['side']} {c['cost'] * 100:.1f}¢ | "
+              f"{asm['sources']} | {c['q'][:60]}", flush=True)
         out(signal_message(c, ev, ai, asm, now, upgraded=kind == "up"))
         n_sent += 1
         if not a.dry:
@@ -972,8 +1101,9 @@ def main() -> int:
     # --- 5. сводка — раз в сутки
     hour = time.gmtime(now).tm_hour
     if a.digest or (st.get("digest_day") != today and hour >= DIGEST_HOUR_UTC):
-        # только средние и сильные; rated уже отсортирован по силе
-        top = [t for t in rated if t[3]["level"] >= 1][:DIGEST_TOP]
+        # только средние и сильные, и только проверенные ИИ, если он включён;
+        # rated уже отсортирован по силе
+        top = [t for t in rated if t[3]["level"] >= 1 and ready(t)][:DIGEST_TOP]
         out(digest_message(top, len(cands), len(strong), ai_on, ai_free,
                            scorecard(log), now))
         if not a.dry:
