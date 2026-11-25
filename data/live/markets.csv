@@ -2228,3 +2228,6 @@ id,cid,slug,question,end,neg
 2227,0xb0bb7942c22576470a9b6bc8a91b5f35cebe3c1b55d2df090af460c09a84263e,h100-average-rental-price-in-january-2027-above-2pt80,Will the average Ornn H100 rental price in January 2027 be above $2.80?,2027-02-01T04:59:00Z,0
 2228,0x2156e4d2de1bd5ccdd4fcbd0683d624392828dee1c10febe4d412cbd2fb186a8,nfl-bal-hou-2026-11-29-total-46pt5,Ravens vs. Texans: O/U 46.5,2026-11-29T18:00:00Z,0
 2229,0xb5af1a1657125484fef6159ea091da17942ffc17b551439aa8b8b0cd4180c2a8,nfl-chi-det-2026-11-26,Bears vs. Lions,2026-11-26T18:00:00Z,0
+2230,0x1dae84f7aa36ddb8aa59239664a389ca17ef375bafd5c7b7eb9c857fbe049439,ucl-sf-fcb-2026-11-25-fcb,Will FC Barcelona win on 2026-11-25?,2026-11-25T17:45:00Z,1
+2231,0x106e86616f6e2442f23bcc7fe06a2a3c92a8d8ef7c5b8bd92e0fbfc6976edf0f,ucl-sf-fcb-2026-11-25-sf,Will Sabah FK win on 2026-11-25?,2026-11-25T17:45:00Z,1
+2232,0xdf13558e96bfc71ed246979e1db7d09b5a38ef56abd5e1369f18b0d286da65e2,will-maura-higgins-win-dancing-with-the-stars-season-35,Will Maura Higgins win Dancing With the Stars: Season 35?,2027-04-01T03:59:00Z,1

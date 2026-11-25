@@ -1,12 +1,13 @@
-живых рынков: 2098 | дешёвых исходов: 107
-подтверждения собраны по 8 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 2 оценок из 16, бесплатно
-оценено: 107 | сильных: 0 | средних: 3 | с оценкой ИИ: 19
+живых рынков: 2063 | дешёвых исходов: 105
+подтверждения собраны по 10 исходам
+  ИИ: 3.0% (medium) при цене 8.3¢ — Will One Nation win the most seats in the next Victorian Leg [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 3 оценок из 16, бесплатно
+оценено: 105 | сильных: 0 | средних: 3 | с оценкой ИИ: 18
   средний  ДА   5.4¢ рынок  4.7% | ИИ 4.3% (low) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Flávio Bolsonaro be the #1 searched person on Google this year?
-  средний  ДА   4.3¢ рынок  4.1% | ИИ 4.5% (low) -> оценка 4.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
+  средний  ДА   4.5¢ рынок  4.3% | ИИ 4.5% (low) -> оценка 4.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Will there be no change in Fed interest rates after the December 2026 
   средний  ДА  11.5¢ рынок 10.5% | ИИ 11.0% (low) -> оценка 10.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales | Kimberly Powell announced resignation or removal by November 30, 2026?
-  слабый   ДА  14.2¢ рынок 14.1% | ИИ 11.0% (medium) -> оценка 13.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА   3.5¢ рынок  3.5% | ИИ 4.0% (medium) -> оценка 3.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Miguel Díaz-Canel out as leader of Cuba by December 31?
-  слабый   ДА   8.1¢ рынок  7.9% | ИИ 8.0% (medium) -> оценка 7.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
+  слабый   ДА   8.0¢ рынок  7.8% | ИИ 8.0% (medium) -> оценка 7.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
+  слабый   ДА   6.0¢ рынок  5.8% | ИИ 6.6% (medium) -> оценка 6.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
+  слабый   ДА  11.4¢ рынок 11.1% | ИИ 9.9% (low) -> оценка 10.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 3 | запросов к Polymarket: 33
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 3 | запросов к Polymarket: 40
