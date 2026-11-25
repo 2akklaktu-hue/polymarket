@@ -2244,3 +2244,6 @@ id,cid,slug,question,end,neg
 2243,0xc8e83d7ba078e6a717cc1102d12536f3eb5a8c830b7e44d8101544c2f5476d5c,ucl-psg-rom-2026-11-25-psg,Will Paris Saint-Germain FC win on 2026-11-25?,2026-11-25T20:00:00Z,1
 2244,0xe1da03c9d541a24fe3c822b192f8629eece7623a35228c02f7a033f0a9a72886,ucl-atm-vf-2026-11-25-spread-away-1pt5,Spread: Viking FK (-1.5),2026-11-25T20:00:00Z,0
 2245,0xa6e19be478ccdf8163422cada2772f1ea98b9f5f1b824e75a96f6aab59fe4c63,nba-mia-phi-2026-11-25,Heat vs. 76ers,2026-11-25T22:00:00Z,0
+2246,0x0cf53c4f819e727b835fce1dd91d50a09c7d158f2586321c627184cf3c1c424b,atp-faurel-bilozer-2026-11-25,Ankara: Thomas Faurel vs Nikita Bilozertsev,2026-12-02T08:00:00Z,0
+2247,0xaef9dfe556082b10a374bee22470df845528e752cf74a25585131b434d2ad61c,will-saudi-arabia-win-group-a-at-the-2027-afc-asian-cup,Will Saudi Arabia win Group A at the 2027 AFC Asian Cup?,2027-02-06T04:59:00Z,1
+2248,0xd5ca2b5db28def21e03cd62fb4f1ab59a62c01558db2c8b5f985354f61be61c4,will-bitcoin-reach-68k-november-23-29-2026,"Will Bitcoin reach $68,000 November 23-29?",2026-11-30T05:00:00Z,0
