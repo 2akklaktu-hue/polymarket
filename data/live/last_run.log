@@ -1,12 +1,14 @@
-живых рынков: 2037 | дешёвых исходов: 114
-подтверждения собраны по 10 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 12 оценок из 16, бесплатно
-оценено: 112 | сильных: 0 | средних: 2 | ждут ИИ: 0 | с оценкой ИИ: 21
-  средний  ДА  13.6¢ рынок 12.5% | ИИ 14.0% (low) -> оценка 12.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (прислан) | Will AI solve the Birch and Swinnerton-Dyer Conjecture in 2026?
-  средний  ДА   3.7¢ рынок  3.6% | ИИ 4.4% (low) -> оценка 3.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (прислан) | Will there be no change in Fed interest rates after the December 2026 
-  слабый   НЕТ  8.5¢ рынок  8.1% | ИИ 6.0% (high) -> оценка 7.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will Trump meet with Mohammed bin Salman in 2026?
-  слабый   ДА  11.8¢ рынок 11.6% | ИИ 11.0% (medium) -> оценка 11.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА   3.0¢ рынок  2.9% | ИИ 3.8% (low) -> оценка 3.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Marco Rubio out as Secretary of State by November 30, 2026?
-  слабый   ДА   5.6¢ рынок  5.4% | ИИ 6.6% (medium) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
+живых рынков: 2090 | дешёвых исходов: 109
+подтверждения собраны по 12 исходам
+  ИИ: 8.0% (medium) при цене 10.1¢ — Will there be no next Claude Opus model (5.6+) release by No [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 13 оценок из 16, бесплатно
+оценено: 102 | сильных: 0 | средних: 1 | ждут ИИ: 0 | с оценкой ИИ: 18
+  средний  ДА   3.8¢ рынок  3.8% | ИИ 4.4% (low) -> оценка 3.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (прислан) | Will there be no change in Fed interest rates after the December 2026 
+  слабый   ДА   4.4¢ рынок  4.3% | ИИ 5.5% (medium) -> оценка 4.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will there be at least 10000 measles cases in the U.S. in 2026?
+  слабый   ДА  11.7¢ рынок 11.6% | ИИ 11.0% (medium) -> оценка 11.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will Trump pardon Jensen Huang before 2027?
+  слабый   ДА   7.4¢ рынок  7.2% | ИИ 8.0% (medium) -> оценка 7.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
+  слабый   ДА   5.7¢ рынок  5.4% | ИИ 6.6% (medium) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
+  слабый   ДА  12.8¢ рынок 12.2% | ИИ 9.0% (low) -> оценка 11.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Puma Shen win the 2026 Taipei Mayoral Election by 8% or more?
+  -> снят: Sweden snap election called in 2026? — рынок перестал проходить отбор: мал оборот, широк спред или до конца осталось меньше суток
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 3 | запросов к Polymarket: 36
+сигналов: новых и усилившихся 0, снятых 1 — отправлено | под наблюдением: 2 | запросов к Polymarket: 36
