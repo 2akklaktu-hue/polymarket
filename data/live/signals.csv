@@ -45,3 +45,5 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-25T09:51:56Z,digest,средний,0xca5c9aac1854c8358c003993254bc069a21a58930ffe2cb2bfbebd4f7d34c214,YES,0.0733,0.0650,0.0750,0.0665,whales,"Kimberly Powell announced resignation or removal by November 30, 2026?",
 2026-11-25T11:45:07Z,alert,средний,0x84064fc8eaa80d257f8673867b0a3c84c1935aeb9fda5a74cecd14b3a2c8b94c,YES,0.0797,0.0740,,,venue,"Ilhan Omar arrested by December 31, 2026?",
 2026-11-26T00:19:59Z,alert,средний,0xdf534da8c97a6b652a03140e40b621508d409ad95de50249d94a3c410b1b7621,YES,0.0807,0.0750,0.0800,0.0758,venue,Trump declassifies new UFO files by December 15?,
+2026-11-26T09:38:53Z,digest,средний,0xdf534da8c97a6b652a03140e40b621508d409ad95de50249d94a3c410b1b7621,YES,0.1211,0.1100,0.1200,0.1115,venue,Trump declassifies new UFO files by December 15?,
+2026-11-26T09:38:53Z,digest,средний,0x79047bbe7d17ba36eaed8d6317845819cfd3725838afd1638affac5d99fcfcec,YES,0.0565,0.0540,0.0430,0.0524,venue,Will Flávio Bolsonaro be the #1 searched person on Google this year?,
