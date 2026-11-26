@@ -2302,3 +2302,6 @@ id,cid,slug,question,end,neg
 2301,0x7bbebb476e6202c227e23d1d97da1b400f42c2a8a1a26fc8296e8d2073e77fde,cs2-imp11-tl1-2026-11-26,Counter-Strike: Imperial vs Liquid (BO3) - PGL Major Singapore Stage 1,2026-11-26T17:00:00Z,0
 2302,0x7246347c9b511d03c86fd42348e4d98e3180443e5af20f661259af09722f83b9,bitcoin-above-58k-on-november-26-2026,"Will the price of Bitcoin be above $58,000 on November 26?",2026-11-26T17:00:00Z,0
 2303,0x459bb1954c553022e8d64b02acf6e752287947c7402a59edb8f4beb754b7804f,will-bitcoin-dip-to-56k-november-23-29-2026,"Will Bitcoin dip to $56,000 November 23-29?",2026-11-30T05:00:00Z,0
+2304,0x3c413fb1007855fb3c844cd6a8db3590ab03bb9d88ab1b0b0119dbe3bf10fa37,b300-average-rental-price-in-february-2027-above-13pt00,Will the average Ornn B300 rental price in February 2027 be above $13.00?,2027-03-01T04:59:00Z,0
+2305,0x7e62974d299be606e7bb75e4d4b830618111b097ab8f5cd0d42c98922e9abd28,b300-average-rental-price-in-january-2027-above-12pt00,Will the average Ornn B300 rental price in January 2027 be above $12.00?,2027-02-01T04:59:00Z,0
+2306,0x6da4587cbe08611824fbf6cea1d99a30c30decef4e6ca0ef3410927f5d281263,will-hyperliquid-dip-to-40-by-december-31-2026-from-june-8-272,"Will Hyperliquid dip to $40 by December 31, 2026?",2027-01-01T05:00:00Z,0
