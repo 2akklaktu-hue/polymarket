@@ -1,12 +1,14 @@
-живых рынков: 2040 | дешёвых исходов: 92
-подтверждения собраны по 12 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 16 оценок из 16, бесплатно
-оценено: 92 | сильных: 0 | средних: 2 | ждут ИИ: 0 | с оценкой ИИ: 16
-  средний  ДА   7.0¢ рынок  6.5% | ИИ 4.3% (low) -> оценка 6.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Flávio Bolsonaro be the #1 searched person on Google this year?
-  средний  ДА   4.3¢ рынок  4.1% | ИИ 4.4% (low) -> оценка 4.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (прислан) | Will there be no change in Fed interest rates after the December 2026 
-  слабый   ДА  14.5¢ рынок 14.1% | ИИ 11.0% (medium) -> оценка 13.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА   7.7¢ рынок  7.3% | ИИ 8.0% (medium) -> оценка 7.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
-  слабый   ДА  14.0¢ рынок 13.4% | ИИ 6.0% (medium) -> оценка 11.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will AI solve P versus NP in 2026?
-  слабый   НЕТ  5.4¢ рынок  5.1% | ИИ 4.6% (high) -> оценка 4.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Another Fed rate hike in 2026?
+живых рынков: 2100 | дешёвых исходов: 99
+подтверждения собраны по 10 исходам
+  ИИ: 8.0% (low) при цене 8.1¢ — Trump declassifies new UFO files by December 15? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 1 оценок из 16, бесплатно
+оценено: 99 | сильных: 0 | средних: 2 | ждут ИИ: 0 | с оценкой ИИ: 17
+  средний  ДА   8.1¢ рынок  7.5% | ИИ 8.0% (low) -> оценка 7.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Trump declassifies new UFO files by December 15?
+  средний  ДА   4.4¢ рынок  4.3% | ИИ 4.4% (low) -> оценка 4.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (прислан) | Will there be no change in Fed interest rates after the December 2026 
+  слабый   ДА   7.7¢ рынок  7.4% | ИИ 8.0% (medium) -> оценка 7.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
+  слабый   ДА  14.6¢ рынок 14.1% | ИИ 11.0% (medium) -> оценка 13.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump pardon Jensen Huang before 2027?
+  слабый   НЕТ  5.0¢ рынок  4.8% | ИИ 4.6% (high) -> оценка 4.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Another Fed rate hike in 2026?
+  слабый   ДА  14.1¢ рынок 13.4% | ИИ 9.0% (low) -> оценка 12.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Puma Shen win the 2026 Taipei Mayoral Election by 8% or more?
+  -> новый средний: ДА 8.1¢ | venue | Trump declassifies new UFO files by December 15?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 43
+сигналов: новых и усилившихся 1, снятых 0 — отправлено | под наблюдением: 2 | запросов к Polymarket: 36
