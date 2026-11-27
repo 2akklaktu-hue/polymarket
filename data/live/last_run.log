@@ -1,12 +1,13 @@
-живых рынков: 2099 | дешёвых исходов: 106
-подтверждения собраны по 7 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 2 оценок из 16, бесплатно
-оценено: 100 | сильных: 0 | средних: 1 | ждут ИИ: 0 | с оценкой ИИ: 19
-  средний  ДА   6.1¢ рынок  5.0% | ИИ 5.0% (low) -> оценка 5.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Sweden snap election called in 2026?
-  слабый   ДА  10.2¢ рынок  9.8% | ИИ 11.0% (medium) -> оценка 10.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will Trump pardon Jensen Huang before 2027?
+живых рынков: 2086 | дешёвых исходов: 96
+подтверждения собраны по 10 исходам
+  ИИ: 10.5% (high) при цене 11.1¢ — Will Alberto Núñez Feijóo be the next Prime Minister of Spai [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 3 оценок из 16, бесплатно
+оценено: 91 | сильных: 0 | средних: 0 | ждут ИИ: 0 | с оценкой ИИ: 15
+  слабый   ДА  10.5¢ рынок 10.1% | ИИ 11.0% (medium) -> оценка 10.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will Trump pardon Jensen Huang before 2027?
+  слабый   ДА   7.8¢ рынок  7.6% | ИИ 8.0% (medium) -> оценка 7.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will 7 or more Jensen Huang affairs be reported by December 31?
   слабый   ДА   3.7¢ рынок  3.6% | ИИ 4.4% (low) -> оценка 3.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will there be no change in Fed interest rates after the December 2026 
   слабый   ДА   7.4¢ рынок  7.2% | ИИ 8.0% (medium) -> оценка 7.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Jensen Huang be TIME Person of the Year 2026?
   слабый   ДА   5.7¢ рынок  5.4% | ИИ 6.6% (medium) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
-  слабый   НЕТ  4.8¢ рынок  4.6% | ИИ 4.6% (high) -> оценка 4.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Another Fed rate hike in 2026?
+  слабый   НЕТ 11.1¢ рынок 10.5% | ИИ 10.5% (high) -> оценка 10.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Alberto Núñez Feijóo be the next Prime Minister of Spain?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 33
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 38
