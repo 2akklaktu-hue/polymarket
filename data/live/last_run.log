@@ -1,14 +1,12 @@
-живых рынков: 2099 | дешёвых исходов: 94
-подтверждения собраны по 7 исходам
-  ! ИИ: nvidia/nemotron-3-ultra-550b-a55b:free не ответила (0: ReadTimeout)
-  ИИ: 12.0% (low) при цене 14.0¢ — Will AI solve Beal's conjecture in 2026? [baidu/ernie-5.5-flash-preview:free]
+живых рынков: 2036 | дешёвых исходов: 92
+подтверждения собраны по 9 исходам
 ИИ (OpenRouter, бесплатные модели): за сутки 12 оценок из 16, бесплатно
-оценено: 94 | сильных: 0 | средних: 1 | ждут ИИ: 0 | с оценкой ИИ: 21
-  средний  ДА  12.5¢ рынок 11.5% | ИИ 14.0% (low) -> оценка 11.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will AI solve the Birch and Swinnerton-Dyer Conjecture in 2026?
-  слабый   ДА  12.1¢ рынок 11.9% | ИИ 10.2% (medium) -> оценка 11.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Pedro Sánchez be the next Prime Minister of Spain?
+оценено: 89 | сильных: 0 | средних: 0 | ждут ИИ: 0 | с оценкой ИИ: 21
+  слабый   ДА  11.1¢ рынок 10.9% | ИИ 10.2% (medium) -> оценка 10.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Pedro Sánchez be the next Prime Minister of Spain?
   слабый   ДА   5.6¢ рынок  5.5% | ИИ 6.6% (medium) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
-  слабый   НЕТ  3.8¢ рынок  3.8% | ИИ 4.6% (high) -> оценка 4.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Another Fed rate hike in 2026?
-  слабый   ДА   9.1¢ рынок  8.8% | ИИ 10.0% (low) -> оценка 9.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА  12.2¢ рынок 11.8% | ИИ 11.0% (low) -> оценка 11.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
+  слабый   ДА   9.1¢ рынок  8.9% | ИИ 10.0% (low) -> оценка 9.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
+  слабый   ДА   3.9¢ рынок  3.8% | ИИ 4.4% (low) -> оценка 3.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will there be no change in Fed interest rates after the December 2026 
+  слабый   ДА  12.2¢ рынок 11.8% | ИИ 11.0% (low) -> оценка 11.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
+  слабый   ДА  15.5¢ рынок 14.8% | ИИ 10.0% (low) -> оценка 14.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will AI solve 2 more Millennium Prize Problems in 2026?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 35
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 34
