@@ -2405,3 +2405,9 @@ id,cid,slug,question,end,neg
 2404,0x67c28e16ea8703894cc403c85ccaf7d0c45ca9a83732e5fd2833d22b76ca58b6,b200-average-rental-price-in-february-2027-above-7pt50,Will the average Ornn B200 rental price in February 2027 be above $7.50?,2027-03-01T04:59:00Z,0
 2405,0xdbf66636d6fc1ad6b96c5f1d5338ccec7edf39928638e830d4f437cd1919ad77,cs2-ast10-imp11-2026-11-28,Counter-Strike: Astralis vs Imperial (BO1) - PGL Major Singapore Stage 2,2026-11-28T11:00:00Z,0
 2406,0x067d8ceeacb847496393ed2c0cb5a4e1c3978c309c0a71b245dd5091602e75f2,cs2-fut-fly-2026-11-27,Counter-Strike: FUT Esports vs FlyQuest (BO1) - PGL Major Singapore Stage 2,2026-11-28T10:00:00Z,0
+2407,0xd37ecfa8ee7a0c5aad6ff364ca1be5f5e1c590bb7d7d2280a347bb7a4bc801b1,wta-lepchen-samson-2026-11-27,Buenos Aires: Varvara Lepchenko vs Laura Samson,2026-12-04T15:00:00Z,0
+2408,0x04849bbf94a8879d686e4eb9f3f843bdb568ab8a51ba73d1cb0b6178db211d75,atp-si-ambrogi-2026-11-27,San Salvador: Lucas Da Silva vs Luciano Emanuel Ambrogi,2026-12-04T16:00:00Z,0
+2409,0xabc47aa81f4ec195c867df3b5ab87f02e1c832c3d27277f957c7ccfd0dbade23,h200-average-rental-price-in-february-2027-above-7pt00,Will the average Ornn H200 rental price in February 2027 be above $7.00?,2027-03-01T04:59:00Z,0
+2410,0x28f53da84435e00edb8d574dcd998f7401ad0c88844ce2bfa24c388005396a6b,h100-average-rental-price-in-january-2027-above-3pt10,Will the average Ornn H100 rental price in January 2027 be above $3.10?,2027-02-01T04:59:00Z,0
+2411,0xbed0e64ffa45a47f8c11e84fa4b265943dfb702064c0874f8de6026f7857033d,h200-average-rental-price-in-december-2026-above-6pt75,Will the average Ornn H200 rental price in December 2026 be above $6.75?,2027-01-01T04:59:00Z,0
+2412,0x10f6ababeeecda1b71e62729add5d2e2a65cd7b508c5fcffbb9ab1d8ee8accbe,elon-musk-of-tweets-november-26-november-28-2026-0-39,"Will Elon Musk post <40 tweets from November 26 to November 28, 2026?",2026-11-28T17:00:00Z,1
