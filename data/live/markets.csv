@@ -2353,3 +2353,11 @@ id,cid,slug,question,end,neg
 2352,0x8c1ab168dbf87db731e56db2cb7346ea38f326379f4e626452c1376f3b2cc965,b200-average-rental-price-in-january-2027-above-9pt00,Will the average Ornn B200 rental price in January 2027 be above $9.00?,2027-02-01T04:59:00Z,0
 2353,0xb2e5be9825da736daf802470a3bcfe791c25d9f290ebe79cc12d0e9cc0ce5862,ethereum-above-1800-on-november-27-2026,"Will the price of Ethereum be above $1,800 on November 27?",2026-11-27T17:00:00Z,0
 2354,0xb26f6f822a47ccc97b028c532dfe4c2109c05d97611dbf0a5918e34af1bdad0d,b300-average-rental-price-in-march-2027-above-15pt00,Will the average Ornn B300 rental price in March 2027 be above $15.00?,2027-04-01T03:59:00Z,0
+2355,0x0115ee78461f91d6396d80eb9ee2785d3b539d1b537104917761852df3545090,atp-legout-poling-2026-11-25,San Salvador: Timo Legout vs Karl Poling,2026-12-02T16:00:00Z,0
+2356,0xae96c6f3a068cfc5a99a6312ea8fa2fa3cd4e44bc3b8764145b39f1cee6f7ea0,cs2-m80-100t-2026-11-27,Counter-Strike: M80 vs 100 Thieves (BO3) - PGL Major Singapore Stage 1,2026-11-27T17:00:00Z,0
+2357,0x65eb03a8fffbcc270f072c3f8638cf9708b0db22cdee415b54da0c06f63b262d,b300-average-rental-price-in-december-2026-above-11pt50,Will the average Ornn B300 rental price in December 2026 be above $11.50?,2027-01-01T04:59:00Z,0
+2358,0xbb4e285cf526ed887f61a8d804643a8251399c8aa48931b2b5f64dccf9a02b42,h100-average-rental-price-in-march-2027-above-3pt00,Will the average Ornn H100 rental price in March 2027 be above $3.00?,2027-04-01T03:59:00Z,0
+2359,0x472c71eddcb3efc4790df01c309ec0bfdc8913f5045772b9a6bcdca8c2e6a234,b300-average-rental-price-in-march-2027-above-12pt00,Will the average Ornn B300 rental price in March 2027 be above $12.00?,2027-04-01T03:59:00Z,0
+2360,0xa0a1d391918df41b7a4dae06ac2a3be562422a30f045571eff842bbca4e50f4e,nba-lal-sas-2026-11-27,Lakers vs. Spurs,2026-11-28T02:30:00Z,0
+2361,0x617291b57122421aa1e468a11fe03c9726a1d5ff5213b15cb7ac3c6cd8d6e9da,netanyahu-out-by-march-31-2027,"Netanyahu out by March 31, 2027?",2027-04-01T03:59:00Z,0
+2362,0xc2f06bac7d0cca90da955eb02c9e726235ab42456e8ce88f1f0a3b50fb5d9e3b,b300-average-rental-price-in-december-2026-above-10pt50,Will the average Ornn B300 rental price in December 2026 be above $10.50?,2027-01-01T04:59:00Z,0
