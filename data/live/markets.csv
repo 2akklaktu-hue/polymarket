@@ -2365,3 +2365,5 @@ id,cid,slug,question,end,neg
 2364,0x6916f272b22f98cfd265b81cccb29d1e0ce9137aa1a4617339d2a4bc93af8beb,bitcoin-above-62k-on-november-27-2026,"Will the price of Bitcoin be above $62,000 on November 27?",2026-11-27T17:00:00Z,0
 2365,0x38d1e6f33b214cd873cf41ce03338bf3e8e3b4000ab825b40b4eaec8609a5705,bitcoin-above-64k-on-november-27-2026,"Will the price of Bitcoin be above $64,000 on November 27?",2026-11-27T17:00:00Z,0
 2366,0xc33bd29d1eff249a98ea8ecf19074704107b572707250c9a9847f77e695749e3,bitcoin-above-58k-on-november-27-2026,"Will the price of Bitcoin be above $58,000 on November 27?",2026-11-27T17:00:00Z,0
+2367,0xff89cc3bc445960784b9c0bbc6579228c2f681f2e0b2b0b50e2b75b5606ea790,will-amir-albazi-be-the-ufc-flyweight-champion-on-december-31-2026,"Will Amir Albazi be the UFC Flyweight Champion on December 31, 2026?",2027-01-01T04:59:00Z,1
+2368,0xc737a342a77e801497ad180b50741a1de46646e44fda94f12cb3a71011991053,cfb-tx-txam-2026-11-27-spread-away-10pt5,Spread: Texas (-10.5),2026-11-28T00:30:00Z,0
