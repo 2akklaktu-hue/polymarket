@@ -1,13 +1,12 @@
-живых рынков: 2066 | дешёвых исходов: 101
-подтверждения собраны по 8 исходам
-  ИИ: 8.0% (low) при цене 8.9¢ — Will Chiang Wan-an win the 2026 Taipei Mayoral Election by 1 [nvidia/nemotron-3-ultra-550b-a55b:free]
+живых рынков: 2090 | дешёвых исходов: 97
+подтверждения собраны по 7 исходам
 ИИ (OpenRouter, бесплатные модели): за сутки 10 оценок из 16, бесплатно
-оценено: 96 | сильных: 0 | средних: 1 | ждут ИИ: 0 | с оценкой ИИ: 22
+оценено: 94 | сильных: 0 | средних: 1 | ждут ИИ: 0 | с оценкой ИИ: 22
   средний  ДА  12.5¢ рынок 11.5% | ИИ 14.0% (low) -> оценка 11.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will AI solve the Birch and Swinnerton-Dyer Conjecture in 2026?
-  слабый   НЕТ  6.1¢ рынок  5.5% | ИИ 5.5% (medium) -> оценка 5.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | Will "Steps" be the top US Netflix movie this week?
+  слабый   ДА   8.4¢ рынок  8.3% | ИИ 5.0% (medium) -> оценка 7.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Trump speak to Kim Jong Un by December 31?
+  слабый   ДА  10.9¢ рынок 10.8% | ИИ 10.2% (medium) -> оценка 10.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Pedro Sánchez be the next Prime Minister of Spain?
   слабый   ДА   5.6¢ рынок  5.5% | ИИ 6.6% (medium) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Jensen Huang divorce by December 31, 2026?
   слабый   ДА  10.1¢ рынок  9.9% | ИИ 10.0% (low) -> оценка 9.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
   слабый   ДА   3.7¢ рынок  3.6% | ИИ 4.4% (low) -> оценка 3.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will there be no change in Fed interest rates after the December 2026 
-  слабый   ДА  10.2¢ рынок 10.0% | ИИ 10.2% (medium) -> оценка 10.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Pedro Sánchez be the next Prime Minister of Spain?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 42
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 38
