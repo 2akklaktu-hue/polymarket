@@ -1,12 +1,14 @@
-живых рынков: 2095 | дешёвых исходов: 78
-подтверждения собраны по 9 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 14 оценок из 16, бесплатно
-оценено: 78 | сильных: 0 | средних: 0 | ждут ИИ: 0 | с оценкой ИИ: 18
-  слабый   ДА   9.6¢ рынок  9.4% | ИИ 10.0% (low) -> оценка 9.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА   8.2¢ рынок  8.0% | ИИ 4.3% (low) -> оценка 7.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Flávio Bolsonaro be the #1 searched person on Google this year?
-  слабый   ДА   3.8¢ рынок  3.7% | ИИ 4.4% (low) -> оценка 3.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will there be no change in Fed interest rates after the December 2026 
-  слабый   ДА  12.9¢ рынок 12.4% | ИИ 10.2% (medium) -> оценка 11.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Pedro Sánchez be the next Prime Minister of Spain?
-  слабый   ДА  12.2¢ рынок 11.8% | ИИ 11.0% (low) -> оценка 11.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
-  слабый   НЕТ  4.3¢ рынок  4.2% | ИИ 4.6% (high) -> оценка 4.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | whales (ИИ против) | Another Fed rate hike in 2026?
+живых рынков: 2059 | дешёвых исходов: 83
+подтверждения собраны по 7 исходам
+  ИИ: 12.0% (low) при цене 13.3¢ — Will OpenAI announce another Millennium Prize solution by De [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 15 оценок из 16, бесплатно
+оценено: 83 | сильных: 0 | средних: 2 | ждут ИИ: 0 | с оценкой ИИ: 20
+  средний  ДА   4.5¢ рынок  4.4% | ИИ 4.0% (low) -> оценка 4.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will Donald Trump rank in Google’s Top 5 Most Searched People of 2026?
+  средний  ДА  13.3¢ рынок 12.2% | ИИ 12.0% (low) -> оценка 12.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue | Will OpenAI announce another Millennium Prize solution by December 31,
+  слабый   ДА   8.0¢ рынок  7.8% | ИИ 4.3% (low) -> оценка 7.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Flávio Bolsonaro be the #1 searched person on Google this year?
+  слабый   ДА  13.1¢ рынок 12.8% | ИИ 10.2% (medium) -> оценка 12.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Pedro Sánchez be the next Prime Minister of Spain?
+  слабый   ДА   9.2¢ рынок  8.9% | ИИ 10.0% (low) -> оценка 9.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
+  слабый   ДА   3.7¢ рынок  3.6% | ИИ 4.4% (low) -> оценка 3.7% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will there be no change in Fed interest rates after the December 2026 
+  -> новый средний: ДА 13.3¢ | venue | Will OpenAI announce another Millennium Prize solution by De
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 34
+сигналов: новых и усилившихся 1, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 33
