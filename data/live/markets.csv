@@ -2464,3 +2464,7 @@ id,cid,slug,question,end,neg
 2463,0xbf77bacabf36281dcf4ef617153a67cb7c723680a88468366b6935d39648aa9e,h200-average-rental-price-in-march-2027-above-6pt00,Will the average Ornn H200 rental price in March 2027 be above $6.00?,2027-04-01T03:59:00Z,0
 2464,0x7bb6a24c932a69a04ea2b88edee11ffe904765e459ff7862ebb6355961ec0b42,will-bournemouth-win-the-2026-27-english-premier-league-epl-championship-20260701200428752,Will Bournemouth win the 2026-27 English Premier League (EPL) Championship?,2027-05-30T23:59:00Z,1
 2465,0x70fb735901f36bf74a9e2ef1f1911f1dc1b93873fd8d7a1f33e7ef72374783ab,daviscup-norrie-jodar-2026-11-28,Davis Cup: Cameron Norrie vs. Rafael Jodar,2026-12-05T11:00:00Z,0
+2466,0xfed19b6b9d99ff70117ffede743a0a6be18d162873ad6a46b50b03b084235b95,b300-average-rental-price-in-january-2027-above-11pt50,Will the average Ornn B300 rental price in January 2027 be above $11.50?,2027-02-01T04:59:00Z,0
+2467,0xafcefe7bc13ef2f510fcd863be6fc25730f734504552b784c0f57d53b8afaf38,atp-pankin-tabacco-2026-11-28,Monastir 2: Semen Pankin vs Giorgio Tabacco,2026-12-05T10:00:00Z,0
+2468,0x3777f9a4558ae4b349c678002119d1a7d4eac95a4e8bdb67d94a914a96f62910,daviscup-fery-alcaraz-2026-11-28,Davis Cup: Arthur Fery vs. Carlos Alcaraz,2026-12-05T12:10:00Z,0
+2469,0xc60f219821ca6a6d2745347132233a8ab8b5d6f119cf3884a956569aa7cb6fc1,will-chiang-wan-an-win-the-2026-taipei-mayoral-election-4-8-20261103233704873,Will Chiang Wan-an win the 2026 Taipei Mayoral Election by between 4% and 8%?,2026-11-29T04:59:00Z,1
