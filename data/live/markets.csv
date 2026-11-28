@@ -2443,3 +2443,7 @@ id,cid,slug,question,end,neg
 2442,0xcb2e074d28ebe46a5320b49e0f61f4983e5d95b29cd89a9279d61f0591c1d90d,h200-average-rental-price-in-december-2026-above-6pt25,Will the average Ornn H200 rental price in December 2026 be above $6.25?,2027-01-01T04:59:00Z,0
 2443,0x1b7529244dfdaa22cb9a18e9d2cd31f1b2c8f9ff76fe5effa5356801a4afd71e,cfb-arzst-arz-2026-11-28,Arizona State vs. Arizona,2026-11-29T02:00:00Z,0
 2444,0xb134565d858a8374bef1c7626d4eeda24ac9702dd4fa24bfec373d982813723b,h200-average-rental-price-in-february-2027-above-6pt00,Will the average Ornn H200 rental price in February 2027 be above $6.00?,2027-03-01T04:59:00Z,0
+2445,0xa099d73e7bc898b6694315460e69c9014158e19e6d1248d017ba2cdef9b11aaa,h100-average-rental-price-in-march-2027-above-2pt80,Will the average Ornn H100 rental price in March 2027 be above $2.80?,2027-04-01T03:59:00Z,0
+2446,0xc0314ef22bcc412b2445a83109b3274429e4f6c68d0117e61819463ad9c5d286,nba-phi-hou-2026-11-28,76ers vs. Rockets,2026-11-29T01:30:00Z,0
+2447,0x530a65bc119b34c2ec37c0b4ba47d2036c2cb9c6117e5822cdbcbc67660ebf02,atp-honda-matsuok-2026-11-27,Yokohama: Naoya Honda vs Hayato Matsuoka,2026-12-05T01:00:00Z,0
+2448,0x3e99612283f8182aefc17bbb51087f43c423608e2e0b2196a1512e145160a648,will-chen-ting-fei-win-the-next-tainan-mayor-election-20260813125857502,Will Chen Ting-fei win the next Tainan Mayor election?,2026-11-29T04:59:00Z,1
