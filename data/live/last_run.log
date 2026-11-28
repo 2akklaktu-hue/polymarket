@@ -1,12 +1,14 @@
-живых рынков: 2099 | дешёвых исходов: 75
-подтверждения собраны по 6 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 12 оценок из 16, бесплатно
-оценено: 75 | сильных: 0 | средних: 0 | ждут ИИ: 0 | с оценкой ИИ: 20
+живых рынков: 2098 | дешёвых исходов: 67
+подтверждения собраны по 9 исходам
+  ИИ: 28.0% (medium) при цене 13.0¢ — Will Sheikh Hasina return to Bangladesh by December 17? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 13 оценок из 16, бесплатно
+оценено: 67 | сильных: 0 | средних: 1 | ждут ИИ: 0 | с оценкой ИИ: 16
+  средний  ДА  13.0¢ рынок 12.5% | ИИ 28.0% (medium) -> оценка 17.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | news | Will Sheikh Hasina return to Bangladesh by December 17?
   слабый   ДА   4.9¢ рынок  4.5% | ИИ 4.3% (medium) -> оценка 4.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | venue (ИИ против) | GTA VI Online released by December 31, 2026?
-  слабый   ДА   9.1¢ рынок  8.9% | ИИ 10.0% (low) -> оценка 9.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА  12.4¢ рынок 12.2% | ИИ 11.0% (low) -> оценка 12.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
-  слабый   ДА   3.7¢ рынок  3.6% | ИИ 4.4% (low) -> оценка 3.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will there be no change in Fed interest rates after the December 2026 
+  слабый   ДА  10.5¢ рынок 10.3% | ИИ 7.5% (low) -> оценка 9.9% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Flávio Bolsonaro be the #1 searched person on Google this year?
+  слабый   ДА   9.4¢ рынок  9.2% | ИИ 10.0% (low) -> оценка 9.4% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
   слабый   ДА   6.2¢ рынок  6.0% | ИИ 6.0% (low) -> оценка 6.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Ukraine signs peace deal with Russia by December 31, 2026?
-  слабый   ДА  11.1¢ рынок 10.7% | ИИ 7.5% (low) -> оценка 10.2% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Flávio Bolsonaro be the #1 searched person on Google this year?
+  слабый   ДА  12.4¢ рынок 12.0% | ИИ 11.0% (low) -> оценка 11.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
+  -> новый средний: ДА 13.0¢ | news | Will Sheikh Hasina return to Bangladesh by December 17?
 
-сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 35
+сигналов: новых и усилившихся 1, снятых 0 — отправлено | под наблюдением: 1 | запросов к Polymarket: 37

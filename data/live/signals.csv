@@ -52,3 +52,4 @@ ts,kind,strength,cid,side,cost,mkt,p_ai,p_est,sources,question,result
 2026-11-26T19:46:34Z,alert,средний,0xa5773c68b749cfb85b05d58d32816096d72b6b3da65f10a9e9f8c1c29dc5f852,YES,0.0464,0.0395,0.0400,0.0396,venue,Will Donald Trump rank in Google’s Top 5 Most Searched People of 2026?,
 2026-11-27T07:18:43Z,alert,средний,0xb7e58bb8beb863161f6e85c1ee06f1f912125bbab0f0eddf2c40f6967aecbef6,YES,0.1039,0.0990,0.1000,0.0992,venue,Will Trump pardon Jensen Huang before 2027?,
 2026-11-28T00:31:02Z,alert,средний,0x4f45b9afc02517d9e859cb11e4cdd1e27e19a083778f970fd1d8ca48e6d08ffb,NO,0.0505,0.0450,0.0450,0.0450,venue,"Will ""Steps"" be the top global Netflix movie this week?",
+2026-11-28T18:42:51Z,alert,средний,0x29c56e4a6b8cc8d889f3c0f928312f18ed79300b863c88dab941e7bd68946d19,YES,0.1300,0.1250,0.2800,0.1715,news,Will Sheikh Hasina return to Bangladesh by December 17?,
