@@ -1,13 +1,13 @@
-живых рынков: 2099 | дешёвых исходов: 83
-подтверждения собраны по 10 исходам
-ИИ (OpenRouter, бесплатные модели): за сутки 8 оценок из 16, бесплатно
-оценено: 83 | сильных: 0 | средних: 0 | ждут ИИ: 0 | с оценкой ИИ: 15
-  слабый   ДА   9.4¢ рынок  9.2% | ИИ 10.0% (low) -> оценка 9.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
-  слабый   ДА  12.1¢ рынок 11.8% | ИИ 10.2% (medium) -> оценка 11.3% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Pedro Sánchez be the next Prime Minister of Spain?
+живых рынков: 2096 | дешёвых исходов: 80
+подтверждения собраны по 8 исходам
+  ИИ: 13.5% (low) при цене 14.6¢ — Spain General Election: PP + Vox Majority? [nvidia/nemotron-3-ultra-550b-a55b:free]
+ИИ (OpenRouter, бесплатные модели): за сутки 9 оценок из 16, бесплатно
+оценено: 80 | сильных: 0 | средних: 0 | ждут ИИ: 0 | с оценкой ИИ: 13
+  слабый   ДА  11.5¢ рынок 11.3% | ИИ 10.2% (medium) -> оценка 11.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Pedro Sánchez be the next Prime Minister of Spain?
+  слабый   ДА   3.8¢ рынок  3.8% | ИИ 4.4% (low) -> оценка 3.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will there be no change in Fed interest rates after the December 2026 
+  слабый   ДА   7.9¢ рынок  7.6% | ИИ 10.0% (low) -> оценка 8.0% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Trump pardon Jensen Huang before 2027?
   слабый   ДА  12.3¢ рынок 11.9% | ИИ 11.0% (low) -> оценка 11.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Avengers: Doomsday be the top grossing movie of 2026?
-  слабый   ДА   3.6¢ рынок  3.5% | ИИ 4.4% (low) -> оценка 3.6% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will there be no change in Fed interest rates after the December 2026 
-  слабый   ДА   6.1¢ рынок  5.8% | ИИ 6.0% (low) -> оценка 5.8% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Ukraine signs peace deal with Russia by December 31, 2026?
   слабый   НЕТ 12.1¢ рынок 11.5% | ИИ 10.5% (high) -> оценка 11.1% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений (ИИ против) | Will Alberto Núñez Feijóo be the next Prime Minister of Spain?
-  -> снят: Will Flávio Bolsonaro be the #1 searched person on Google th — подтверждение пропало: оценка бота теперь 9.2%, Kalshi даёт 9.5%, рынок — 9.6%
+  слабый   НЕТ  8.2¢ рынок  7.7% | ИИ 13.0% (low) -> оценка 8.5% [nvidia/nemotron-3-ultra-550b-a55b:free] | без подтверждений | Will Google be the second-best AI Agent Lab at the end of November 202
 
-сигналов: новых и усилившихся 0, снятых 1 — отправлено | под наблюдением: 0 | запросов к Polymarket: 38
+сигналов: новых и усилившихся 0, снятых 0 — отправлено | под наблюдением: 0 | запросов к Polymarket: 36
