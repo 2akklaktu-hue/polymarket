@@ -2435,3 +2435,7 @@ id,cid,slug,question,end,neg
 2434,0x3e4d20cb627ab0bcfab0e7fb48753765b3436dd121999befd2596572a6d2dc36,lal-ray-bil-2026-10-10-bil,Will Athletic Club win on 2026-10-10?,2026-12-09T19:00:00Z,1
 2435,0xa0996a2e100ea502040335bf116a5ce635fa214d25b8ecd6e8eeb0d1541575de,lal-ray-bil-2026-10-10-ray,Will Rayo Vallecano de Madrid win on 2026-10-10?,2026-12-09T19:00:00Z,1
 2436,0x5fa4502442a0e0cb04abedb7dbab908460c5138c9e94d012201565703274d27c,open-source-model-ranked-1-on-arena-by-december-31-2027,"Will an open-source model be ranked #1 on Arena by December 31, 2027?",2028-01-01T04:59:00Z,0
+2437,0xae5bd803a7b6507b2c17f2c7c4be8d0d76dc4764a4679ffa34e07c8209a52fe1,bitcoin-above-62k-on-november-28-2026,"Will the price of Bitcoin be above $62,000 on November 28?",2026-11-28T17:00:00Z,0
+2438,0x403893a785828d37b2c3565e105afc2f77e66a8a36504d226728465d7351b17c,lal-rea-ala-2026-11-28-ala,Will Deportivo Alavés win on 2026-11-28?,2026-11-28T20:00:00Z,1
+2439,0x0b94d97e2f1a1b374d0ef1f167208073a0afbae9086610f50cb4be3e0a0c79b0,open-source-model-ranked-1-on-arena-by-june-30-2027,"Will an open-source model be ranked #1 on Arena by June 30, 2027?",2027-07-01T03:59:00Z,0
+2440,0x70f08e5b189bfad9bcc4b7c01c5e355e67cdd2acec23c3d93ef86e55536a71ff,will-chiang-wan-an-win-the-2026-taipei-mayoral-election-12-or-more-20261103233704871,Will Chiang Wan-an win the 2026 Taipei Mayoral Election by 12% or more?,2026-11-29T04:59:00Z,1
